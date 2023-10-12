@@ -1,0 +1,146 @@
+/* ---FONTS--- */
+// ---size---
+$fs-xs: 17px;
+$fs-s: 22px;
+$fs-m: 25px;
+$fs-ml: 27px;
+$fs-l: 95px;
+$fs-xl: 109px;
+// ---/size---
+
+// ---weight---
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+$fw-extra-bold: 900;
+// ---/weight---
+
+// ---breakpoints---
+//$breakpoint-xs-max: 576px - 1px;
+//$breakpoint-sm-min: 576px;
+//$breakpoint-sm-max: 768px - 1px;
+//$breakpoint-md-min: 768px;
+//$breakpoint-md-max: 992px - 1px;
+//$breakpoint-lg-min: 992px;
+//$breakpoint-lg-max: 1200px - 1px;
+//$breakpoint-xl-min: 1200px;
+//$breakpoint-xl-max: 1400px - 1px;
+//$breakpoint-xxl-min: 1400px;
+// ---/breakpoints---
+
+/* /FONTS */
+
+
+ @function strip-unit($value) {
+
+     @return $value / ($value * 0 + 1);
+ }
+ @function rem($pxValue) {
+
+     @return (strip-unit($pxValue) / 16) * 1rem;
+ }
+
+$breakpoints: (
+        xs: 576px,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px
+);
+$font-sizes: (
+        xs: rem(16px),
+        s: rem(24px),
+        sm: rem(30px),
+        md: rem(44px),
+        lg: rem(60px),
+        xl: rem(110px)
+);
+$base: rem(4px);
+
+/*stylelint-disable*/
+@mixin font-size($font-size) {
+  font-size: map-get($font-sizes, $font-size);
+}
+@mixin media-query($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+
+      @content;
+    }
+  }
+  @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+/*stylelint-enable*/
+
+@mixin button-style($color, $background) {
+  color: $color;
+  cursor: pointer;
+  background-color: $background;
+  border: none;
+  transition: 0.2s ease-in-out;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: color.scale($background, $lightness: 10%);
+    outline: none;
+    box-shadow: 0 0 10px 2px rgb($background, 57%);
+  }
+
+  &:hover {
+    color: $color;
+    background-color: color.scale($background, $lightness: 20%);
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: color.scale($background, $lightness: -10%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: color.scale($background, $lightness: -17%);
+    }
+  }
+  /*stylelint-disable*/
+  &:active,
+  &.active,
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+      outline: none;
+    }
+  }
+  /*stylelint-enable*/
+}
+@mixin link-style($color, $decoration) {
+  color: $color;
+  transition: 0.2s ease-in-out;
+
+  &,
+  &:active,
+  &:hover {
+    text-decoration: $decoration;
+  }
+
+  &:active { color: color.adjust($color, $lightness: -20%); }
+  &:hover { color: color.adjust($color, $lightness: 20%); }
+
+  &:focus {
+    filter: blur(0.1px);
+    outline: none;
+  }
+}
