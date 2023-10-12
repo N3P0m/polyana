@@ -32,77 +32,10 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZTZ3VH"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<header class="main-header">
-    <div class="container">
-        <div class="main-header-logo-wrapper">
-            <div class="main-logo"><a href="/" class="link main-header-logo"><img src="assets/img/polyana_logo.svg"
-                                                                                  alt="Поляна лого" width="250"
-                                                                                  height="56"/></a></div>
-        </div>
-        <div class="main-header-phone-wrapper">
-            <div class="btn btn-light bnt-main-header-phone"><a href="tel:+74912500005" class="link main-header-phone">500-005</a>
-            </div>
-        </div>
-        <button class="btn btn-burger">
-            <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80">
-                <path class="line top"
-                      d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"/>
-                <path class="line middle" d="m 30,50 h 40"/>
-                <path class="line bottom"
-                      d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"/>
-            </svg>
-        </button>
-        <nav class="main-header-nav">
-            <div class="container container-main-header">
-                <div class="main-header-nav-wrapper">
-                    <ul class="site-navigation">
-                        <li class="site-navigation-item"><a href="#location" class="link link-item">Расположение</a>
-                        </li>
-                        <li class="site-navigation-item"><a href="#conception" class="link link-item">Концепция</a></li>
-                        <li class="site-navigation-item"><a href="#projects" class="link link-item">Проекты</a></li>
-                        <li class="site-navigation-item"><a href="#improvement"
-                                                            class="link link-item">Благоустройство</a></li>
-                        <li class="site-navigation-item"><a href="#advantages" class="link link-item">Преимущества</a>
-                        </li>
-                        <li class="site-navigation-item"><a href="#details" class="link link-item">Контакты</a></li>
-                    </ul>
-                    <div class="main-header-phone-wrapper">
-                        <div class="btn btn-light bnt-main-header-phone"><a href="tel:+74912500005"
-                                                                            class="link main-header-phone">500-005</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="main-header-footer"><a class="btn btn-secondary" data-micromodal-trigger="popup-form">Оставить
-            заявку</a>
-            <ul class="socials">
-                <li class="social social-telegram"><a href="https://t.me/marmax_ru" target="_blank"
-                                                      class="link link-social"><img src="assets/img/tg_ico.svg" alt=""/></a>
-                </li>
-                <li class="social social-youtube"><a href="https://www.youtube.com/channel/UCE2g8NfTmxmBKRl3-aB5GwQ"
-                                                     target="_blank" class="link link-social"><img
-                        src="assets/img/yt_ico.svg" alt=""/></a></li>
-                <li class="social social-vk"><a href="https://vk.com/club74295490" target="_blank"
-                                                class="link link-social"><img src="assets/img/vk_ico.svg" alt=""/></a>
-                </li>
-                <li class="social social-dzen"><a href="https://zen.yandex.ru/id/5f6c44065f40d13f9ed690ce"
-                                                  target="_blank" class="link link-social"><img
-                        src="assets/img/dzen_ico.svg" alt=""/></a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+<include src="./components/header.html">
 <main>
     <h1 class="visually-hidden">Поляна - резиденция загородной жизни</h1>
-    <section class="promo">
-        <div class="container-xl promo__container">
-            <div class="promo__content"><h2 class="title promo__title">Загородная резиденция</h2><span
-                    class="promo__subtitle">нового формата</span> <a class="btn btn-secondary"
-                                                                     data-micromodal-trigger="popup-form">Узнать
-                подробности</a></div>
-        </div>
-    </section>
+    <include src="./components/main-page/main-view.html">
     <section class="about">
         <div class="container">
             <div class="promo-text-wrapper">
@@ -114,101 +47,9 @@
             </div>
         </div>
     </section>
-    <section id="location" class="location">
-        <div class="container container-location">
-            <div class="location-wrapper">
-                <div class="location-top"><h2 class="location-title">Расположение</h2>
-                    <div class="location-subtitle">10 минут на автомобиле и вы в центре событий.</div>
-                </div>
-            </div>
-            <div class="location-info">
-                <div class="location-map"><img src="assets/img/polyana-map.svg" alt="Карта Поляна" class="location-img"
-                                               width="600" height="684"/></div>
-                <div class="location-text"><p class="location-shosse">Посёлок расположен в 8 км от Рязани по
-                    Солотчинскому шоссе рядом с посёлком Поляны и загородными туристическими объектами.</p>
-                    <p class="location-walker">Несколько минут пешком:</p>
-                    <ul class="walker-list">
-                        <li class="walker-item">Развлекательный комплекс «В некотором царстве»</li>
-                        <li class="walker-item">Частная «Школа 360» — прямой выход с территории посёлка</li>
-                        <li class="walker-item">Турбаза ФаZOOнда</li>
-                    </ul>
-                    <div class="location-car">На автомобиле доступны:</div>
-                    <ul class="car-list">
-                        <li class="car-item"><span class="car-item-min">5 минут</span> <span class="car-info">биатлонный комплекс «Алмаз»</span>
-                        </li>
-                        <li class="car-item"><span class="car-item-min">6 минут</span> <span class="car-info">туристические комплексы «Экопарк Поляны» с термальным бассейном и аквапарк «Окская жемчужина»</span>
-                        </li>
-                        <li class="car-item"><span class="car-item-min">11 минут</span> <span class="car-info">гостиница и ресторан «Рыбацкая деревня»</span>
-                        </li>
-                        <li class="car-item"><span class="car-item-min">13 минут</span><span class="car-info">центр Солотчи с её достопримечательностями и инфраструктурой</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    <include src="./components/main-page/location.html">
     <include src="./components/concept-selection.html">
-    <section class="container-xl">
-        <div class="location-btn"><a class="btn btn-light btn-promo link promo-link"
-                                     data-micromodal-trigger="popup-form">Забронировать первым</a></div>
-    </section>
-    <section id="conception" class="conception">
-        <div class="container-xl container-conception">
-            <div class="conception-wrapper">
-                <div class="conception-top-wrapper">
-                    <div class="conception-top"><h2 class="conception-title">Концепция</h2>
-                        <div class="conception-subtitle">Выбирайте вариант, который отражает ваши представления о
-                            комфортной жизни
-                        </div>
-                    </div>
-                </div>
-                <div class="conception-list container-s">
-                    <div class="conception-item">
-                        <div class="conception-item-ico"><img src="assets/img/concept-ico-1.webp" alt=""
-                                                              class="conception-ico" width="134" height="134"/></div>
-                        <div class="conception-item-container"><h3 class="conception-item-title">Квартира</h3>
-                            <div class="conception-item-subtitle">7&nbsp;многоквартирных домов по&nbsp;4&nbsp;этажа
-                            </div>
-                        </div>
-                        <div class="conception-item-text">Продуманные планировки и двухуровневые квартиры со вторым
-                            светом и французскими балконами. Вид на современную загородную архитектуру и благоустроенную
-                            территорию с озеленением. Функциональные планировки и веранды для квартир на первых этажах.
-                        </div>
-                    </div>
-                    <div class="conception-item">
-                        <div class="conception-item-ico"><img src="assets/img/concept-ico-2.webp" alt=""
-                                                              class="conception-ico" width="134" height="134"/></div>
-                        <div class="conception-item-container"><h3 class="conception-item-title">Таунхаус</h3>
-                            <div class="conception-item-subtitle">95 таунхаусов<br>в&nbsp;посёлке</div>
-                        </div>
-                        <div class="conception-item-text">Три этажа комфорта и собственная парковка. Ваш личный задний
-                            двор с лужайкой и зоной отдыха, куда вы попадаете прямо из гостиной на первом этаже.
-                        </div>
-                    </div>
-                    <div class="conception-item">
-                        <div class="conception-item-ico"><img src="assets/img/concept-ico-3.webp" alt=""
-                                                              class="conception-ico" width="134" height="134"/></div>
-                        <div class="conception-item-container"><h3 class="conception-item-title">Дом</h3>
-                            <div class="conception-item-subtitle">45&nbsp;участков от&nbsp;6&nbsp;до&nbsp;11&nbsp;соток
-                                с&nbsp;домами
-                            </div>
-                        </div>
-                        <div class="conception-item-text">Выбор из четырёх вариантов планировки, в каждом — просторная
-                            веранда с выходом на собственный земельный участок. Возможность добавить в проект
-                            строительства камин для дополнительного уюта. Панорамные окна с видом на современную
-                            загородную архитектуру.
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <section class="container-xl">
-                        <div class="location-btn"><a class="btn btn-dark btn-promo link promo-link"
-                                                     data-micromodal-trigger="popup-form">Оставить заявку</a></div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="projects" class="projects">
         <div class="container-s container-projects"><h2 class="projects-title">Лёгкость и свобода загородной жизни</h2>
             <div class="projects-info projects-info-wrap">

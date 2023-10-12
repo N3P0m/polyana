@@ -13,6 +13,9 @@
     &.active a {
     }
   }
+  .tab.disabled {
+    pointer-events: none;
+  }
 }
 
 .tab a {
@@ -82,11 +85,15 @@
   .tab-contents {
       padding: 10px;
      display: none;
-    animation: fade-out 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
 
     &.active {
       display: block;
-    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    &.fade-out {
+      animation: fade-out 0.4s ease-out both;
     }
   }
 }
