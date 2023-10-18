@@ -1,0 +1,52 @@
+.callback-wrapper {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none
+}
+
+.callback-wrapper .btn-callback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    background-color: #2d2d39;
+    border: none;
+    border-radius: 100%;
+    box-shadow: 0 0 20px -10px rgb(44 43 56 / 60%);
+}
+
+.callback-wrapper .btn-callback__text {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url("../assets/img/callback-text.svg");
+    background-size: contain;
+    animation: rotate-center 30s linear infinite;
+}
+
+.icon-phone {
+    display: block;
+    width: 27px;
+    height: 45px;
+    background-image: url("../assets/img/icon-phone.svg");
+    background-size: contain
+}
+
+@keyframes rotate-center {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (width <= 575px) {
+    .callback-wrapper {
+        display: block
+    }
+}

@@ -1,0 +1,132 @@
+.location {
+
+    @include rfs(150px, margin-bottom);
+}
+
+.location-wrapper {
+    display: flex;
+    justify-content: center
+}
+
+.location-top {
+    text-align: center
+}
+
+.location-title {
+    padding-bottom: 32px;
+    margin: 0
+}
+
+.location-subtitle {
+    max-width: 520px
+}
+
+.location-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.location-text {
+    width: 568px;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 120%
+}
+
+.location-text p {
+    font-size: 14px;
+    line-height: 120%
+}
+
+.location-shosse p {
+    margin-bottom: 31px
+}
+
+.location-walker::before {
+    display: inline-block;
+    width: 22px;
+    height: 33px;
+    margin-right: 5px;
+    color: rgb(0 0 0 / 0%);
+    content: " ";
+    background: url("../assets/img/walker_ico.png") 0 13px #fff no-repeat
+}
+
+
+.walker-list {
+    padding: 0;
+    padding-bottom: 32px;
+    padding-left: 30px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 140%
+}
+
+.location-car {
+    margin-bottom: 10px
+}
+
+.location-car::before {
+    display: inline-block;
+    width: 22px;
+    height: 25px;
+    margin-right: 5px;
+    color: rgb(0 0 0 / 0%);
+    content: " ";
+    background: url("../assets/img/car_ico.png") 0 8px #fff no-repeat
+}
+
+.car-list {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 48px;
+    list-style: none
+}
+
+.car-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px
+}
+
+.car-item-min {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 85px;
+    padding: 7px 12px;
+    margin-right: 14px;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 140%;
+    border-color: #f2cfbe;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 13px
+}
+@media (max-width: 1199px) {
+
+}
+
+@media (width <= 767px) {
+    .container-location {
+        .centering-wrap {
+            text-align: center;
+        }
+    }
+    .location-map img {
+        width: 500px;
+        height: auto
+    }
+}
+@media (width <= 575px) {
+    .location-map img {
+        width: 310px
+    }
+
+    .location-text {
+        padding: 0
+    }
+}

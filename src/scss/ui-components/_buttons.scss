@@ -1,0 +1,91 @@
+.btn {
+
+    @include button-default();
+
+    &--primary {
+        $color: #2d2d39;
+        $background: #f2cfbe;
+
+
+        @include rfs(280px, min-width);
+        @include button-style($color, $background);
+    }
+    
+    &--secondary {
+        $color: #fff;
+        $background: #2D2D39;
+
+        @include rfs(280px, min-width);
+        @include button-style($color, $background)
+	}
+
+    &--xs {
+        padding: 0 0 2px;
+    }
+
+    &--burger {
+        display: block;
+        width: 80px;
+        height: 80px;
+        padding: 0 !important;
+    }
+}
+
+
+@media (width <= 575px)  {
+    .btn {
+        @include rfs(16px 60px, padding);
+    }
+}
+
+
+// burger btn svg styles
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-transition: -webkit-transform 400ms;
+    transition: -webkit-transform 400ms;
+    transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.hamRotate.active {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.hamRotate180.active {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.line {
+    fill: none;
+    -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #f2cfbe;
+    stroke-width: 5.5;
+    stroke-linecap: round
+}
+
+.ham1 .top {
+    stroke-dasharray: 40 139
+}
+
+.ham1 .bottom {
+    stroke-dasharray: 40 180
+}
+
+.ham1.active .top {
+    stroke-dashoffset: -98px
+}
+
+.ham1.active .bottom {
+    stroke-dashoffset: -138px
+}
+// /burger btn svg styles
+

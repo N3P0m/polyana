@@ -1,4 +1,4 @@
-//@use "sass:color";
+@use "sass:color";
 
 //@import "utils/vars";
 //@import "utils/colors";
@@ -18,6 +18,8 @@
 // версия с прода
 @import "./utils";
 @import "./restore/resore";
+@import "./layout";
+@import "./ui-components";
 // /версия с прода
 
 @import "components";

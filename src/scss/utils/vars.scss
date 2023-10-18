@@ -33,11 +33,11 @@ $fw-extra-bold: 900;
 
  @function strip-unit($value) {
 
-     @return $value / ($value * 0 + 1);
+     @return calc($value / $value * 0 + 1);
  }
  @function rem($pxValue) {
 
-     @return (strip-unit($pxValue) / 16) * 1rem;
+     @return calc(strip-unit($pxValue) / 16) * 1rem;
  }
 
 $breakpoints: (
@@ -74,6 +74,33 @@ $base: rem(4px);
   }
 }
 /*stylelint-enable*/
+@mixin button-default() {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Grafita, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  white-space: nowrap;
+  line-height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: .3s ease-out;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  -webkit-tap-highlight-color: transparent;
+
+
+  &:active {
+    transform: scale(0.95)
+  }
+
+  @include rfs(18px, font-size);
+  @include rfs(21px 33px, padding);
+
+}
 
 @mixin button-style($color, $background) {
   color: $color;

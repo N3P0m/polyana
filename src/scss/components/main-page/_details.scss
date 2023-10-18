@@ -1,0 +1,51 @@
+.details {
+	padding-top: 80px
+}
+
+.details-title {
+	margin: 0;
+	text-align: center;
+	font-size: 48px;
+	line-height: 100%;
+	padding-bottom: 20px
+}
+
+.details-subtitle {
+	font-size: 20px;
+	line-height: 140%;
+	text-align: center
+}
+
+.details-form-wrap {
+	padding-top: 30px;
+	padding-bottom: 120px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center
+}
+
+
+.details-form {
+	width: 280px
+}
+
+@media (max-width: 767px) {
+	/*h2*/
+	.details-title {
+		font-size: 38px;
+		line-height: 100%
+	}
+
+	.success-message {
+		height: 270px
+	}
+
+	.details-form-wrap {
+		padding-bottom: 44px
+	}
+
+
+}

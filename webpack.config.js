@@ -170,22 +170,6 @@ const rules = {
                 }
             }
         },
-        // {
-        //     test: /\.js$/,
-        //     exclude: /node_modules/,
-        //     use: ['babel-loader']
-        // },
-        // JS
-        // {
-        //   test: /\.json$/,
-        //   exclude: /node_modules/,
-        //   // use: ['json-loader'],
-        //   type: 'asset/resource',
-        //   generator: {
-        //     filename: 'assets/test/[name][ext]'
-        //   }
-        // },
-
         // CSS, PostCSS, Sass
         {
             test: /\.(scss|css)$/,

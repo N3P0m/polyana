@@ -1,0 +1,115 @@
+.container-comfort {
+    min-height: 660px;
+    padding-top: 84px
+}
+
+.comfort {
+    background-image: url("../assets/img/comfort_bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.comfort-wrapper {
+    width: 770px;
+    margin: 0 auto
+}
+
+.comfort-title {
+    margin: 0;
+    font-family: Grafita, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center
+}
+
+.comfort-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.comfort-item {
+    width: 360px;
+    height: 380px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url("../assets/img/comfort_item_bg.svg") center/contain no-repeat;
+}
+
+.comfort-item-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+.comfort-item-title {
+    padding: 18px 0 10px;
+    font-family: Steppe, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: center
+}
+
+.comfort-item-text {
+    padding: 0 50px;
+    font-family: Steppe, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%
+}
+
+@media (width <= 1199px) {
+    .comfort {
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover
+    }
+}
+@media (width <= 991px) {
+    .container-comfort {
+        padding: 84px 50px
+    }
+
+    .comfort-wrapper {
+        width: auto;
+        margin: 0
+    }
+
+    .comfort-list {
+        grid-gap: 11px;
+        gap: 11px
+    }
+}
+@media (width <= 767px) {
+    .container-comfort {
+        padding: 44px 10px
+    }
+
+    .comfort-list {
+        flex-direction: column;
+        align-items: center
+    }
+
+}
+@media (width <= 575px) {
+    .comfort-item {
+        width: 300px;
+        height: 316px;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 34%
+    }
+
+    .comfort-item-img {
+        margin-top: 30px
+    }
+
+    .comfort-item-text {
+        padding: 0 30px
+    }
+}
