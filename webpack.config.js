@@ -26,7 +26,7 @@ function generateHtmlPlugins (templateDir) {
             result = new HtmlWebpackPlugin({
                 filename: `${name}.html`,
                 template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-                chunks: ['main']
+                chunks: [name]
             })
         }
         return result
@@ -204,7 +204,8 @@ const rules = {
 }
 const config = {
     entry: {
-        main: path.resolve(__dirname, './src/entry.js')
+        index: path.resolve(__dirname, './src/entry.js'),
+        'choosing-house': path.resolve(__dirname, './src/choosing-house.js')
     },
     resolve: {
         alias: {

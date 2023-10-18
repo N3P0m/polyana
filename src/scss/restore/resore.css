@@ -61,6 +61,31 @@ body {
     margin: 0 auto
 }
 
+/*TODO: ВЫНЕСТИ*/
+
+.wrapper-main {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.wrapper-outer {
+    width: 100%
+}
+
+.wrapper-inner-sm {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.wrapper-inner-xl {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
 
 .main-logo, .container-main-header {
     display: -webkit-box;

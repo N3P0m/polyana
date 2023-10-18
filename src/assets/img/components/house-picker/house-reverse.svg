@@ -1,0 +1,45 @@
+<svg width="234" height="54" viewBox="0 0 234 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 26 27)" fill="#3D3D58"/>
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 26 52)" fill="#4A4A60"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 36 48)" fill="#595977"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 36 15)" fill="#595977"/>
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 78 27)" fill="#3D3D58"/>
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 78 52)" fill="#4A4A60"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 88 48)" fill="#595977"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 88 15)" fill="#595977"/>
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 130 27)" fill="#3D3D58"/>
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 130 52)" fill="#4A4A60"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 140 48)" fill="#595977"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 140 15)" fill="#595977"/>
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 182 27)" fill="#3D3D58"/>
+<rect width="26" height="25" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 182 52)" fill="#4A4A60"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 192 48)" fill="#595977"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 192 15)" fill="#595977"/>
+<rect width="26" height="54" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 0 54)" fill="#4A4A60"/>
+<rect width="13" height="54" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 13 54)" fill="#2D2D39"/>
+<path d="M26 27L13 27L26 2L26 27Z" fill="#3D3D58"/>
+<path d="M26 27L13 27L26 52L26 27Z" fill="#4A4A60"/>
+<rect x="234" y="54" width="26" height="54" transform="rotate(180 234 54)" fill="#2D2D39"/>
+<rect x="221" y="54" width="13" height="54" transform="rotate(180 221 54)" fill="#4A4A60"/>
+<rect x="221" y="54" width="13" height="27" transform="rotate(180 221 54)" fill="#565671"/>
+<path d="M208 27L221 27L208 2L208 27Z" fill="#3D3D58"/>
+<path d="M208 27L221 27L208 52L208 27Z" fill="#4A4A60"/>
+<rect width="26" height="52" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 52 52)" fill="#4A4A60"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 62 48)" fill="#595977"/>
+<rect width="13" height="27" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 52 27)" fill="#3D3D58"/>
+<rect width="13" height="27" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 65 27)" fill="#3D3D58"/>
+<path d="M65 27L78 2L78 -1.1365e-06L65 0L65 27Z" fill="#2D2D39"/>
+<path d="M52 2L65 27L65 -1.1365e-06L52 0L52 2Z" fill="#4A4A60"/>
+<rect width="26" height="52" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 104 52)" fill="#4A4A60"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 114 48)" fill="#595977"/>
+<rect width="13" height="27" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 104 27)" fill="#3D3D58"/>
+<rect width="13" height="27" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 117 27)" fill="#3D3D58"/>
+<path d="M117 27L130 2L130 -1.1365e-06L117 0L117 27Z" fill="#2D2D39"/>
+<path d="M104 2L117 27L117 -1.1365e-06L104 0L104 2Z" fill="#4A4A60"/>
+<rect width="26" height="52" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 156 52)" fill="#4A4A60"/>
+<rect width="6" height="8" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 166 48)" fill="#595977"/>
+<rect width="13" height="27" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 156 27)" fill="#3D3D58"/>
+<rect width="13" height="27" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 169 27)" fill="#3D3D58"/>
+<path d="M169 27L182 2L182 -1.1365e-06L169 0L169 27Z" fill="#2D2D39"/>
+<path d="M156 2L169 27L169 -1.1365e-06L156 0L156 2Z" fill="#4A4A60"/>
+</svg>
