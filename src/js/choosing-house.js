@@ -1,2 +1,2 @@
-// import './html-components'
+import './html-components'
 // import './index(old)'

@@ -2,6 +2,7 @@
     position: relative;
     z-index: 0;
     padding: 60px 0 0;
+    overflow: hidden;
     background: url("../assets/img/components/house-picker/house-picker-bg.svg") top/contain no-repeat;
 
     &::before {
@@ -18,6 +19,58 @@
         transform: translateX(-50%);
 
         @include rfs(464px, width);
+    }
+
+    &__location-info {
+        position: absolute;
+        font-family: Steppe, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 80%;
+        color: #F2CFBE;
+        text-align: center;
+        background-color: #fff;
+
+        &--up {
+            top: 0;
+            //right: 207;
+
+            @include rfs(207px, right);
+        }
+
+        &--right {
+            top: 42%;
+            padding-top: 20px;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+
+            @include rfs(50px, right);
+        }
+
+        &--left {
+            top: 0;
+            left: 9px;
+        }
+
+    }
+
+    &__location-info-compass {
+        display: block;
+        width: 74px;
+        height: 74px;
+        padding-top: 6px;
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzQiIGhlaWdodD0iNzQiIHZpZXdCb3g9IjAgMCA3NCA3NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIzLjM2NDEgMTIuODQwN0MyMi44OTQ4IDEyLjg0MDcgMjIuNDUxNyAxMi43NTI3IDIyLjAzNDYgMTIuNTc2OEMyMS42MjQgMTIuMzk0MyAyMS4yNjIzIDEyLjE0NjYgMjAuOTQ5NCAxMS44MzM4QzIwLjYzNjYgMTEuNTIxIDIwLjM4OSAxMS4xNDk1IDIwLjIwNjUgMTAuNzE5M0MyMC4wMzA1IDEwLjI4MjcgMTkuOTQyNSA5LjgxMDE4IDE5Ljk0MjUgOS4zMDE4NEMxOS45NDI1IDguNzkzNDkgMjAuMDMwNSA4LjMyNDI1IDIwLjIwNjUgNy44OTQxMUMyMC4zODkgNy40NTc0NiAyMC42MzY2IDcuMDgyNzIgMjAuOTQ5NCA2Ljc2OTg5QzIxLjI2MjMgNi40NTcwNiAyMS42MjcyIDYuMjEyNjYgMjIuMDQ0MyA2LjAzNjdDMjIuNDY4IDUuODU0MjIgMjIuOTE3NyA1Ljc2Mjk3IDIzLjM5MzQgNS43NjI5N0MyMy45MTQ4IDUuNzYyOTcgMjQuMzcxIDUuODI4MTUgMjQuNzYyIDUuOTU4NDlDMjUuMTUzMSA2LjA4ODg0IDI1LjQ5NTIgNi4yNDg1MSAyNS43ODg1IDYuNDM3NTFMMjUuNTUzOSA2LjkzNjA4QzI0LjgxNzQgNi42MTAyMiAyNC4xMjMzIDYuNDQ3MjkgMjMuNDcxNiA2LjQ0NzI5QzIzLjA2MSA2LjQ0NzI5IDIyLjY4NjMgNi41MTg5NyAyMi4zNDc0IDYuNjYyMzVDMjIuMDA4NSA2Ljc5OTIyIDIxLjcxNTIgNi45OTQ3MyAyMS40Njc2IDcuMjQ4OTFDMjEuMjI2NCA3LjQ5NjU2IDIxLjAzNzQgNy43OTYzNSAyMC45MDA2IDguMTQ4MjlDMjAuNzcwMiA4LjQ5MzcgMjAuNzA1IDguODc4MjIgMjAuNzA1IDkuMzAxODRDMjAuNzA1IDkuNzE4OTQgMjAuNzczNSAxMC4xMDM1IDIwLjkxMDMgMTAuNDU1NEMyMS4wNDcyIDEwLjgwNzMgMjEuMjM2MiAxMS4xMTA0IDIxLjQ3NzMgMTEuMzY0NUMyMS43MjUgMTEuNjEyMiAyMi4wMTUgMTEuODA3NyAyMi4zNDc0IDExLjk1MTFDMjIuNjg2MyAxMi4wODggMjMuMDU3OCAxMi4xNTY0IDIzLjQ2MTggMTIuMTU2NEMyMy44NDY0IDEyLjE1NjQgMjQuMjE3OCAxMi4xMTQgMjQuNTc2MyAxMi4wMjkzQzI0LjkzNDcgMTEuOTQ0NiAyNS4yOTMyIDExLjgxNzUgMjUuNjUxNiAxMS42NDhMMjUuOTI1NCAxMi4xMzY4QzI1LjY1ODIgMTIuMzEyOCAyNS4zMTkzIDEyLjQ3NTcgMjQuOTA4NyAxMi42MjU2QzI0LjUwNDYgMTIuNzY5IDIzLjk4OTcgMTIuODQwNyAyMy4zNjQxIDEyLjg0MDdaIiBmaWxsPSIjMkQyRTNBIi8+CjxwYXRoIGQ9Ik0yOC45Nzc1IDcuNzY0NEw0Mi41NTM3IDMzLjc0NjdMNDQuNTA2NSA2NS43MTkyTDMwLjIxMTQgMzcuMDUzOEwyOC45Nzc1IDcuNzY0NFoiIGZpbGw9IiNGMkNGQkUiLz4KPHBhdGggZD0iTTY1LjcxOTcgMjguOTc3OEwzOS43MzczIDQyLjU1NEw3Ljc2NDY4IDQ0LjUwNjhMMzYuNDMwMiAzMC4yMTE3TDY1LjcxOTcgMjguOTc3OFoiIGZpbGw9IiNGMkNGQkUiLz4KPHBhdGggZD0iTTI4Ljk3NzUgNy43NjQ0TDQyLjU1MzcgMzMuNzQ2N0w0NC41MDY1IDY1LjcxOTJMMzAuMjExNCAzNy4wNTM4TDI4Ljk3NzUgNy43NjQ0WiIgZmlsbD0iI0YyQ0ZCRSIvPgo8cGF0aCBkPSJNMjkuMDA2OCA3LjkzMDQyTDQwLjQ5NTcgMzAuMDIwNkwzNi44OTE3IDM2LjI4NTVMMjkuMDA2OCA3LjkzMDQyWiIgZmlsbD0iI0RDQjRBMSIvPgo8L3N2Zz4K") no-repeat center center/contain;
+    }
+
+
+    &__location-info-bellow-heading {
+        display: block;
+        font-size: 12px;
+    }
+
+    &__location-info-heading {
+        display: block;
+        font-size: 16px;
     }
 
     &__row {
@@ -82,6 +135,7 @@
                 &::before {
                     opacity: 0;
                 }
+
                 //background: #F2CFBE;
                 //backdrop-filter: blur(10px);
                 //background: transparent;
@@ -93,8 +147,6 @@
             }
         }
     }
-
-
 
     &__house {
         //width: 234px;
@@ -143,9 +195,23 @@
 }
 
 
+@media (width <= 992px) {
+    .house-picker {
+        &__location-info--right,
+        &__location-info--left {
+            display: none;
+        }
+    }
+}
 @media (width <= 767px) {
     .house-picker {
         background: transparent;
+
+        @include rfs(30px 0 0, padding);
+
+        &__location-info {
+            display: none;
+        }
 
         &__info {
 

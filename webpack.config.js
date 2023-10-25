@@ -205,7 +205,8 @@ const rules = {
 const config = {
     entry: {
         index: path.resolve(__dirname, './src/entry.js'),
-        'choosing-house': path.resolve(__dirname, './src/choosing-house.js')
+        'choosing-house': path.resolve(__dirname, './src/choosing-house.js'),
+        'choosing-townhouse': path.resolve(__dirname, './src/choosing-townhouse.js')
     },
     resolve: {
         alias: {

@@ -1,0 +1,244 @@
+.townhouse-picker {
+    &__pin-list {
+        display: flex;
+        padding-bottom: 20px;
+        justify-content: center;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+
+    &__item {
+        margin-right: -2px;
+    }
+
+    &__item-window {
+        display: none;
+        position: absolute;
+        top: -10px;
+        bottom: -10px;
+        left: 20px;
+        //height: 240px;
+        z-index: 1000;
+        width: auto;
+        border: 2px solid #F2CFBE;
+        border-radius: 10px;
+
+        &::before {
+            position: absolute;
+            top: 30px;
+            left: - 1px;
+            display: block;
+            width: 2px;
+            height: 2px;
+            content: '';
+            background: red;
+        }
+
+        &::after {
+            position: absolute;
+            top: 30px;
+            right: + 1px;
+            display: block;
+            width: 2px;
+            height: 2px;
+            content: '';
+            background: red;
+        }
+    }
+
+    &__townhouse {
+        position: relative;
+        transition: 0.3s ease-out;
+
+        &[data-townhouse-type="1"] {
+            width: 124px;
+            height: 216px;
+            background: url('../assets/img/components/townhouse-picker/townhouse-big.svg') no-repeat center/contain;
+
+            @include rfs(124px, width);
+            @include rfs(216px, height);
+        }
+
+        &[data-townhouse-type="2"] {
+            width: 101px;
+            height: 208px;
+            background: url('../assets/img/components/townhouse-picker/townhouse-simple.svg') no-repeat center/contain;
+
+            @include rfs(101px, width);
+            @include rfs(208px, height);
+        }
+
+        &[data-townhouse-type="3"] {
+            width: 101px;
+            height: 216px;
+            background: url('../assets/img/components/townhouse-picker/townhouse-roof.svg') no-repeat center/contain;
+
+            @include rfs(101px, width);
+            @include rfs(216px, height);
+        }
+
+        &[data-townhouse-type="4"] {
+            width: 124px;
+            height: 216px;
+            background: url('../assets/img/components/townhouse-picker/townhouse-big-reverse.svg') no-repeat center/contain;
+
+            @include rfs(124px, width);
+            @include rfs(216px, height);
+        }
+
+        &--sale {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                content: '';
+                background: white;
+                opacity: 0.6;
+            }
+
+            &::after {
+                position: absolute;
+                display: flex;
+                padding: 6px 15px 5px;
+                font-family: Grafita;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: #F9CDBB;
+                text-align: center;
+                content: 'Продано';
+                background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODQiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCA4NCAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTg0IDEyLjQ5NzhMODMuOTgxOSAxNC40NzQ0TDgzLjkzMiAxNS42Mjg5TDgzLjg1MDUgMTYuNTk0OEw4My43MzI2IDE3LjQ0MzhMODMuNTgzMSAxOC4yMTJMODMuNDAxOSAxOC45MjE4TDgzLjE4NDQgMTkuNTczMkw4Mi45MzUyIDIwLjE3OTdMODIuNjU0MiAyMC43NDU3TDgyLjMzNyAyMS4yNzEzTDgxLjk4ODEgMjEuNzU2NUw4MS42MDMgMjIuMjEwMkw4MS4xODYxIDIyLjYyMzVMODAuNzI4NCAyMy4wMDU0TDgwLjIzOTEgMjMuMzUxM0w3OS43MDg5IDIzLjY2NThMNzkuMTM4IDIzLjk0NDNMNzguNTI2MyAyNC4xOTE0TDc3Ljg2OTIgMjQuNDA3TDc3LjE1MzMgMjQuNTg2N0w3Ni4zNzg1IDI0LjczNUw3NS41MjIxIDI0Ljg1MThMNzQuNTQ3OSAyNC45MzI2TDczLjM4MzMgMjQuOTgyTDQyLjQ0NDIgMjVMMTAuNjE2NyAyNC45ODJMOS40NTIxOCAyNC45MzI2TDguNDc3OTYgMjQuODUxOEw3LjYyMTU1IDI0LjczNUw2Ljg0NjcxIDI0LjU4NjdMNi4xMzA3NyAyNC40MDdMNS40NzM3NCAyNC4xOTE0TDQuODYyMDMgMjMuOTQ0M0w0LjI5MTA5IDIzLjY2NThMMy43NjA5MyAyMy4zNTEzTDMuMjcxNTYgMjMuMDA1NEwyLjgxMzkgMjIuNjIzNUwyLjM5NzAzIDIyLjIxMDJMMi4wMTE4NyAyMS43NTY1TDEuNjYyOTcgMjEuMjcxM0wxLjM0NTc4IDIwLjc0NTdMMS4wNjQ4NCAyMC4xNzk3TDAuODE1NjI0IDE5LjU3MzJMMC41OTgxMjQgMTguOTIxOEwwLjQxNjg3NCAxOC4yMTJMMC4yNjczNDMgMTcuNDQzOEwwLjE0OTUzMSAxNi41OTQ4TDAuMDY3OTY4NyAxNS42Mjg5TDAuMDE4MTI1IDE0LjQ3NDRMMCAxMi41MDIyTDAuMDE4MTI1IDEwLjUyNTZMMC4wNjc5Njg3IDkuMzcxMDdMMC4xNDk1MzEgOC40MDUyMUwwLjI2NzM0MyA3LjU1NjE1TDAuNDE2ODc0IDYuNzg3OTZMMC41OTgxMjQgNi4wNzgxN0wwLjgxNTYyNCA1LjQyNjc4TDEuMDY0ODQgNC44MjAzMUwxLjM0NTc4IDQuMjU0MjdMMS42NjI5NyAzLjcyODY2TDIuMDExODcgMy4yNDM0OUwyLjM5NzAzIDIuNzg5NzZMMi44MTM5IDIuMzc2NDZMMy4yNzE1NiAxLjk5NDYxTDMuNzYwOTMgMS42NDg3TDQuMjkxMDkgMS4zMzQyM0w0Ljg2MjAzIDEuMDU1NzFMNS40NzM3NCAwLjgwODYyNUw2LjEzMDc3IDAuNTkyOTkyTDYuODQ2NzEgMC40MTMyOTdMNy42MjE1NSAwLjI2NTA0OUw4LjQ3Nzk2IDAuMTQ4MjQ4TDkuNDUyMTggMC4wNjczODU1TDEwLjYxNjcgMC4wMTc5Njk0TDQyLjQ0NDIgMEw3My4zODMzIDAuMDE3OTY5NEw3NC41NDc5IDAuMDY3Mzg1NUw3NS41MjIxIDAuMTQ4MjQ4TDc2LjM3ODUgMC4yNjUwNDlMNzcuMTUzMyAwLjQxMzI5N0w3Ny44NjkyIDAuNTkyOTkyTDc4LjUyNjMgMC44MDg2MjVMNzkuMTM4IDEuMDU1NzFMNzkuNzA4OSAxLjMzNDIzTDgwLjIzOTEgMS42NDg3TDgwLjcyODQgMS45OTQ2MUw4MS4xODYxIDIuMzc2NDZMODEuNjAzIDIuNzg5NzZMODEuOTg4MSAzLjI0MzQ5TDgyLjMzNyAzLjcyODY2TDgyLjY1NDIgNC4yNTQyN0w4Mi45MzUyIDQuODIwMzFMODMuMTg0NCA1LjQyNjc4TDgzLjQwMTkgNi4wNzgxN0w4My41ODMxIDYuNzg3OTZMODMuNzMyNiA3LjU1NjE1TDgzLjg1MDUgOC40MDUyMUw4My45MzIgOS4zNzEwN0w4My45ODE5IDEwLjUyNTZMODQgMTIuNDk3OFoiIGZpbGw9IiMyRDJEMzkiLz4KPC9zdmc+Cg==") no-repeat center/contain;
+
+                @include rfs(6px 15px 5px, padding);
+                @include rfs(80px, bottom);
+
+            }
+        }
+
+        &--active {;
+            z-index: 10;
+            filter: brightness(0.3);
+        }
+    }
+}
+
+
+.townhouse-pin {
+    min-width: 100px;
+    padding: 8px 22px 4px;
+    font-family: Grafita, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #2D2D39;
+    text-align: center;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    &--active {
+        background-color: #F2CFBE;
+    }
+
+
+    &__heading {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 12px;
+    }
+
+    &__subheading {
+        display: block;
+        font-size: 18px;
+    }
+}
+
+@media (width <= 992px) {
+    .townhouse-picker {
+        &__townhouse {
+            &[data-townhouse-type="1"] {
+
+                @include rfs(104px, width);
+                @include rfs(182px, height);
+            }
+
+            &[data-townhouse-type="2"] {
+
+
+                @include rfs(85px, width);
+                @include rfs(175px, height);
+            }
+
+            &[data-townhouse-type="3"] {
+
+
+                @include rfs(85px, width);
+                @include rfs(182px, height);
+            }
+
+            &[data-townhouse-type="4"] {
+
+
+                @include rfs(104px, width);
+                @include rfs(182px, height);
+            }
+        }
+    }
+}
+@media (width <= 575px) {
+    .townhouse-picker {
+        &__townhouse {
+            &[data-townhouse-type="1"] {
+
+                @include rfs(62px, width);
+                @include rfs(108px, height);
+            }
+
+            &[data-townhouse-type="2"] {
+
+
+                @include rfs(50px, width);
+                @include rfs(104px, height);
+            }
+
+            &[data-townhouse-type="3"] {
+
+
+                @include rfs(50px, width);
+                @include rfs(108px, height);
+            }
+
+            &[data-townhouse-type="4"] {
+
+
+                @include rfs(62px, width);
+                @include rfs(108px, height);
+            }
+        }
+    }
+}

@@ -82,6 +82,12 @@ body {
     margin: 0 auto;
 }
 
+.wrapper-full-width {
+    width: calc(100vw - 20px);
+    margin-left: -20px;
+    overflow: hidden;
+}
+
 .text-center {
     text-align: center;
 }

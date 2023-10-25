@@ -370,6 +370,7 @@ function initHeader () {
     }
 
     function l () {
+        console.log('i am here')
         r.classList.contains(o.burger) || (window.scrollY > 20 && !r.classList.contains(o.scroll) && (r.classList.add(o.navLeave), r.addEventListener('transitionend', s(e().mark(function t () {
             let i
             return e().wrap(function (t) {
@@ -401,6 +402,7 @@ function initHeader () {
     }
 
     function p () {
+
         return f.apply(this, arguments)
     }
 
@@ -451,7 +453,16 @@ function initHeader () {
     }
     document.querySelector('.site-navigation').addEventListener('click', function (t) {
         t.target.closest('.main-header--burger') && p()
-    }), l(), window.addEventListener('scroll', l), a.onclick = p
+    })
+        if (!r.dataset.stickyOnly) {
+        l(),
+        	window.addEventListener('scroll', l)
+        } else {
+            // TODO: временное решение
+            console.log(r.offsetHeight)
+            document.querySelector('.wrapper-main').style.paddingTop = r.offsetHeight + 'px'
+        }
+	a.onclick = p
 }
 
 initHeader()
