@@ -2,7 +2,8 @@ const windowPreview = document.querySelector('.townhouse-picker__item-window')
 
 const townhouses = document.querySelectorAll('.townhouse-picker__townhouse')
 const townhousesContainer = document.querySelector('.townhouse-picker__list')
-const towwnhousesPins = document.querySelectorAll('.townhouse-pin')
+const townhousesPinsList = document.querySelector('.townhouse-picker__pin-list')
+const towwnhousesPins = townhousesPinsList.querySelectorAll('.townhouse-pin')
 
 let townHousesCoords = []
 
@@ -165,6 +166,24 @@ function getVisibleItems () {
 function pinHandler (e) {
     const target = e.target.closest('.townhouse-pin')
     console.log(target)
+    const targetTownhouseCord = townHousesCoords[target.dataset.townhouseNumber - 1]
+    const windowPreviewRect = windowPreview.getBoundingClientRect()
+    const windowPreviewLeft = windowPreviewRect.left - townhousesContainer.offsetLeft
+    const windowPreviewRight = windowPreviewRect.right - townhousesContainer.offsetLeft
+
+    console.log('координаты дома', targetTownhouseCord)
+    console.log('координаты окна (лево, право)', windowPreviewLeft, windowPreviewRight)
+
+    // if ((targetTownhouseCord.start > windowPreviewRight || targetTownhouseCord.start < windowPreviewLeft) ||
+    //     (targetTownhouseCord.end > windowPreviewRight || targetTownhouseCord.end < windowPreviewLeft)
+    // ) {
+    if ((targetTownhouseCord.start <= windowPreviewRight && targetTownhouseCord.start >= windowPreviewLeft) &&
+        (targetTownhouseCord.end <= windowPreviewRight && targetTownhouseCord.end >= windowPreviewLeft)
+    ) {
+        console.log('в окне')
+    } else {
+        console.log('ne в окне')
+    }
     towwnhousesPins.forEach(pin => {
         pin.classList.remove('townhouse-pin--active')
     })
@@ -208,13 +227,26 @@ function throttle (func, ms) {
     return wrapper
 }
 
-updateTownhousesCoords()
-initWidthForWindowPreview(getVisibleItems())
+function checkScrollAreaOfPinList () {
+    const scrollWidth = townhousesPinsList.scrollWidth
+    const offsetWidth = townhousesPinsList.offsetWidth
+
+    if (scrollWidth > offsetWidth) {
+        windowPreview.classList.add('townhouse-picker__item-window--visible')
+    } else {
+        windowPreview.classList.remove('townhouse-picker__item-window--visible')
+    }
+
+    console.log(scrollWidth, offsetWidth)
+}
 
 function update () {
     updateTownhousesCoords()
     initWidthForWindowPreview(getVisibleItems())
+    checkScrollAreaOfPinList()
 }
+
+update()
 
 const throttleUpdate = throttle(update, 600)
 window.addEventListener('resize', () => {
