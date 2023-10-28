@@ -1,8 +1,8 @@
 .townhouse-picker {
     &__pin-list {
         display: flex;
-        padding-bottom: 20px;
         justify-content: center;
+        padding-bottom: 20px;
         overflow-x: scroll;
         scroll-behavior: smooth;
 
@@ -23,37 +23,19 @@
     }
 
     &__item-window {
-        display: none;
         position: absolute;
         top: -10px;
         bottom: -10px;
         left: 20px;
         //height: 240px;
         z-index: 1000;
+        display: none;
         width: auto;
         border: 2px solid #F2CFBE;
         border-radius: 10px;
 
-        &::before {
-            position: absolute;
-            top: 30px;
-            left: - 1px;
+        &--visible {
             display: block;
-            width: 2px;
-            height: 2px;
-            content: '';
-            background: red;
-        }
-
-        &::after {
-            position: absolute;
-            top: 30px;
-            right: + 1px;
-            display: block;
-            width: 2px;
-            height: 2px;
-            content: '';
-            background: red;
         }
     }
 
@@ -62,39 +44,32 @@
         transition: 0.3s ease-out;
 
         &[data-townhouse-type="1"] {
-            width: 124px;
-            height: 216px;
-            background: url('../assets/img/components/townhouse-picker/townhouse-big.svg') no-repeat center/contain;
+            background: url('../assets/img/components/townhouse-picker/townhouse-big.svg') no-repeat bottom/contain;
 
             @include rfs(124px, width);
-            @include rfs(216px, height);
+            @include rfs(218px, height);
         }
 
         &[data-townhouse-type="2"] {
-            width: 101px;
-            height: 208px;
-            background: url('../assets/img/components/townhouse-picker/townhouse-simple.svg') no-repeat center/contain;
+            background: url('../assets/img/components/townhouse-picker/townhouse-simple.svg') no-repeat bottom/contain;
 
             @include rfs(101px, width);
-            @include rfs(208px, height);
+            @include rfs(218px, height);
         }
 
         &[data-townhouse-type="3"] {
-            width: 101px;
-            height: 216px;
-            background: url('../assets/img/components/townhouse-picker/townhouse-roof.svg') no-repeat center/contain;
+            aspect-ratio: 101/218;
+            background: url('../assets/img/components/townhouse-picker/townhouse-roof.svg') no-repeat bottom/contain;
 
             @include rfs(101px, width);
-            @include rfs(216px, height);
+            @include rfs(218px, height);
         }
 
         &[data-townhouse-type="4"] {
-            width: 124px;
-            height: 216px;
-            background: url('../assets/img/components/townhouse-picker/townhouse-big-reverse.svg') no-repeat center/contain;
+            background: url('../assets/img/components/townhouse-picker/townhouse-big-reverse.svg') no-repeat bottom/contain;
 
             @include rfs(124px, width);
-            @include rfs(216px, height);
+            @include rfs(218px, height);
         }
 
         &--sale {
@@ -118,7 +93,7 @@
                 position: absolute;
                 display: flex;
                 padding: 6px 15px 5px;
-                font-family: Grafita;
+                font-family: Grafita, sans-serif;
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 400;
@@ -130,7 +105,6 @@
 
                 @include rfs(6px 15px 5px, padding);
                 @include rfs(80px, bottom);
-
             }
         }
 
@@ -141,7 +115,6 @@
     }
 }
 
-
 .townhouse-pin {
     min-width: 100px;
     padding: 8px 22px 4px;
@@ -151,14 +124,14 @@
     line-height: normal;
     color: #2D2D39;
     text-align: center;
+    cursor: pointer;
     background: transparent;
     border-radius: 10px;
-    cursor: pointer;
     transition: 0.3s ease-out;
 
     &:disabled {
-        opacity: 0.5;
         cursor: default;
+        opacity: 0.5;
     }
 
     &--active {
@@ -180,32 +153,35 @@
 
 @media (width <= 992px) {
     .townhouse-picker {
+        &__pin-list {
+            justify-content: start;
+            padding: 0 20px 20px;
+            margin: 0 -20px;
+        }
+
         &__townhouse {
-            &[data-townhouse-type="1"] {
+            $multiplayer: 0.8;
 
-                @include rfs(104px, width);
-                @include rfs(182px, height);
-            }
-
-            &[data-townhouse-type="2"] {
-
-
-                @include rfs(85px, width);
-                @include rfs(175px, height);
-            }
-
-            &[data-townhouse-type="3"] {
-
-
-                @include rfs(85px, width);
-                @include rfs(182px, height);
-            }
-
+            &[data-townhouse-type="1"],
             &[data-townhouse-type="4"] {
 
 
-                @include rfs(104px, width);
-                @include rfs(182px, height);
+                @include rfs(124px * $multiplayer, width);
+                @include rfs(218px * $multiplayer, height);
+            }
+
+            &[data-townhouse-type="2"],
+            &[data-townhouse-type="3"] {
+
+                @include rfs(101px * $multiplayer, width);
+                @include rfs(218px * $multiplayer, height);
+            }
+
+            &--sale {
+                &::after {
+                    display: none;
+
+                }
             }
         }
     }
@@ -213,31 +189,68 @@
 @media (width <= 575px) {
     .townhouse-picker {
         &__townhouse {
-            &[data-townhouse-type="1"] {
-
-                @include rfs(62px, width);
-                @include rfs(108px, height);
-            }
-
-            &[data-townhouse-type="2"] {
+            $multiplayerX: 0.74;
+            $multiplayerY: 0.8;
 
 
-                @include rfs(50px, width);
-                @include rfs(104px, height);
-            }
-
-            &[data-townhouse-type="3"] {
-
-
-                @include rfs(50px, width);
-                @include rfs(108px, height);
-            }
-
+            &[data-townhouse-type="1"],
             &[data-townhouse-type="4"] {
 
+                @include rfs(124px * $multiplayerX, width);
+                @include rfs(218px * $multiplayerY, height);
+            }
 
-                @include rfs(62px, width);
-                @include rfs(108px, height);
+            &[data-townhouse-type="2"],
+            &[data-townhouse-type="3"] {
+
+                @include rfs(101px * $multiplayerX, width);
+                @include rfs(218px * $multiplayerY, height);
+            }
+        }
+    }
+}
+@media (width <= 475px) {
+    .townhouse-picker {
+        &__townhouse {
+            $multiplayerX: 0.52;
+            $multiplayerY: 0.6;
+
+
+            &[data-townhouse-type="1"],
+            &[data-townhouse-type="4"] {
+
+                @include rfs(124px * $multiplayerX, width);
+                @include rfs(218px * $multiplayerY, height);
+            }
+
+            &[data-townhouse-type="2"],
+            &[data-townhouse-type="3"] {
+
+                @include rfs(101px * $multiplayerX, width);
+                @include rfs(218px * $multiplayerY, height);
+            }
+        }
+    }
+}
+@media (width <= 375px) {
+    .townhouse-picker {
+        &__townhouse {
+            $multiplayerX: 0.4;
+            $multiplayerY: 0.5;
+
+
+            &[data-townhouse-type="1"],
+            &[data-townhouse-type="4"] {
+
+                @include rfs(124px * $multiplayerX, width);
+                @include rfs(218px * $multiplayerY, height);
+            }
+
+            &[data-townhouse-type="2"],
+            &[data-townhouse-type="3"] {
+
+                @include rfs(101px * $multiplayerX, width);
+                @include rfs(218px * $multiplayerY, height);
             }
         }
     }

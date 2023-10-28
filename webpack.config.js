@@ -26,7 +26,7 @@ function generateHtmlPlugins (templateDir) {
             result = new HtmlWebpackPlugin({
                 filename: `${name}.html`,
                 template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-                chunks: [name]
+                chunks: ['common', name ]
             })
         }
         return result
@@ -44,18 +44,20 @@ const processNestedHtml = (content, loaderContext, dir = null) =>
         : content.replace(INCLUDE_PATTERN, (m, src) => {
             const filePath = path.resolve(dir || loaderContext.context, src)
             loaderContext.dependency(filePath)
-            return processNestedHtml(loaderContext.fs.readFileSync(filePath, 'utf8'), loaderContext, path.dirname(filePath))
+            return `<!-- START ${src.split('/').at(-1)} --> \n` +
+                processNestedHtml(loaderContext.fs.readFileSync(filePath, 'utf8'), loaderContext, path.dirname(filePath)) +
+                    `\n <!-- END ${src.split('/').at(-1)} -->`
         })
 
 const pluginsDev = [
-    ...htmlPlugins,
     new CleanWebpackPlugin(),
-    new StylelintPlugin({
-        fix: true,
-        failOnError: false
-    }),
+    ...htmlPlugins,
+    // new StylelintPlugin({
+    //     fix: false,
+    //     failOnError: false
+    // }),
     new MiniCssExtractPlugin({
-        filename: 'css/[name].[hash].css'
+        filename: 'css/[name].css'
     }),
     new ESLintPlugin({
         fix: true
@@ -98,7 +100,7 @@ const pluginsProd = [
     // })
 ]
 
-const plugins = mode === 'dev' ? pluginsDev : pluginsProd
+const plugins = mode === 'development' ? pluginsDev : pluginsProd
 const rules = {
     production: [
         {
@@ -187,14 +189,11 @@ const rules = {
         // Images
         {
             test: /\.(png|jpe?g|webp|svg|gif)$/,
-            type: 'asset/resource',
-            generator: {
-                filename: 'assets/img/[name][ext]'
-            }
+            type: 'asset/resource'
         },
         // Fonts
         {
-            test: /\.(ttf|woff|woff2|eot|)$/,
+            test: /\.(ttf|woff|woff2|eot|otf|)$/,
             type: 'asset/resource',
             generator: {
                 filename: 'assets/fonts/[name][ext]'
@@ -204,9 +203,11 @@ const rules = {
 }
 const config = {
     entry: {
+        common: path.resolve(__dirname, './src/common.js'),
         index: path.resolve(__dirname, './src/entry.js'),
         'choosing-house': path.resolve(__dirname, './src/choosing-house.js'),
-        'choosing-townhouse': path.resolve(__dirname, './src/choosing-townhouse.js')
+        'choosing-townhouse': path.resolve(__dirname, './src/choosing-townhouse.js'),
+        'terms-of-purchase': path.resolve(__dirname, './src/terms-of-purchase.js')
     },
     resolve: {
         alias: {
@@ -215,7 +216,14 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].[hash].[id].js'
+        filename: 'js/[name].js',
+        assetModuleFilename: (path) => {
+            if (typeof path.filename !== 'undefined' && path.filename.match(/(img)/)) {
+                path.filename = path.filename.replace('src/', '')
+                return `${path.filename}/[name].[ext]`
+            }
+            return '[name].[ext]'
+        }
     },
     plugins: [...plugins],
     module: {

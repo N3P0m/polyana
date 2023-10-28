@@ -1,21 +1,19 @@
 @font-face {
-    font-family: "Steppe";
-    src: url('../assets/fonts/Steppe.woff') format("woff"), url('../assets/fonts/Steppe.ttf') format("truetype");
+    font-family: Steppe;
     font-style: normal;
     font-weight: normal;
-    text-rendering: optimizeLegibility;
+    src: url('../assets/fonts/Steppe.woff') format("woff"), url('../assets/fonts/Steppe.ttf') format("truetype");
+    text-rendering: optimizelegibility;
 }
-
 @font-face {
-    font-family: "Grafita";
-    src: url(../assets/fonts/GrafitaNormal.otf)
+    font-family: Grafita;
+    src: url("../assets/fonts/GrafitaNormal.otf")
 }
 
 * {
-    margin: 0;
+    box-sizing: border-box;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    margin: 0
 }
 
 html {
@@ -23,24 +21,24 @@ html {
 }
 
 body {
-    background: #fff;
-    color: #2e3f4f;
-    font-family: "Steppe", sans-serif;
+    font-family: Steppe, sans-serif;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 140%
+    line-height: 140%;
+    color: #2e3f4f;
+    background: #fff
 }
 
 .visually-hidden {
     position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
-    border: 0;
-    height: 1px;
-    width: 1px;
-    overflow: hidden
+    border: 0
 }
 
 .container-xl {
@@ -48,10 +46,10 @@ body {
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
     display: block;
-    padding: 0 100px
+    max-width: 1440px;
+    padding: 0 100px;
+    margin: 0 auto
 }
 
 .container-s {
@@ -61,7 +59,7 @@ body {
     margin: 0 auto
 }
 
-/*TODO: ВЫНЕСТИ*/
+/* TODO: ВЫНЕСТИ */
 
 .wrapper-main {
     width: 100%;
@@ -95,14 +93,14 @@ body {
 
 .main-logo, .container-main-header {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
+    align-items: center;
+    justify-content: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
+    -ms-flex-align: center
 }
 
 .link {
@@ -117,14 +115,13 @@ body {
     color: #2e3f4f
 }
 
-@media (max-width: 1199px) {
+@media (width <= 1199px) {
     .container {
-        padding-left: 50px;
-        padding-right: 50px
+        padding-right: 50px;
+        padding-left: 50px
     }
 }
-
-@media (max-width: 575px) {
+@media (width <= 575px) {
     .container {
         padding: 1rem
     }
@@ -132,9 +129,9 @@ body {
 }
 
 .main-logo {
+    width: 15.625rem;
     padding: 35px 0 9px;
-    margin: auto;
-    width: 15.625rem
+    margin: auto
 }
 
 .main-logo a {

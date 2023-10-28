@@ -198,6 +198,21 @@ input, textarea {
 }
 
 
+.swiper[data-swiper="application-form"] {
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &[data-swiper-place="popup"] {
+        .swiper-slide {
+            flex-direction: column;
+        }
+    }
+}
+
+
 
 @media (width <= 767px) {
     .success-message {

@@ -1,17 +1,18 @@
 .choosing-house {
 
-	@include rfs(44px, padding-top);
-	@include rfs(88px, margin-bottom);
+    @include rfs(44px, padding-top);
+    @include rfs(88px, margin-bottom);
 
-	&__heading {
-		position: relative;
+    &__heading {
+        position: relative;
 
-		@include rfs(40px, margin-bottom);
+        @include rfs(40px, margin-bottom);
 
-	}
-	&__btn-back {
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
+    }
+
+    &__btn-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }

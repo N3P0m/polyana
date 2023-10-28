@@ -8,5 +8,13 @@ new Swiper(galleryContainer, {
     slidesPerView: 'auto',
     centeredSlides: true,
     loop: true,
-    spaceBetween: 69
+    spaceBetween: 20,
+    breakpoints: {
+        767: {
+            spaceBetween: 70
+        },
+        1920: {
+            spaceBetween: 100
+        }
+    }
 })

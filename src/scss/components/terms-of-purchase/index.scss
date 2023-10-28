@@ -44,12 +44,14 @@
 
         &:hover {
             background-color: #272732;
+
             .btn--primary-outline {
                 g {
                     fill: #f2cfbe;
                 }
+
                 .content {
-                    stroke: rgba(45, 45, 57, 1);
+                    stroke: rgb(45 45 57 / 100%);
                 }
             }
         }

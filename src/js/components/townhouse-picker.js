@@ -90,6 +90,11 @@ function checkThreshold () {
     const thresholdForStartElement = 1 - ((coordsStart - coordsForStartElement.start) / (coordsForStartElement.end - coordsForStartElement.start))
     const thresholdForEndElement = ((coordsEnd - coordsForEndElement.start) / (coordsForEndElement.end - coordsForEndElement.start))
 
+    console.log('thresholds', thresholdForStartElement, thresholdForEndElement)
+    console.log('start end', coordsStart, coordsEnd)
+    console.log('elementFromStart', elementFromStart, coordsForStartElement)
+    console.log('elementFromEnd', elementFromEnd, coordsForEndElement)
+
     let indexOfStartElement = [...townhouses].findIndex(element => element === elementFromStart)
     indexOfStartElement = indexOfStartElement !== -1 ? indexOfStartElement : 0
     const indexOfEndElement = [...townhouses].findIndex(element => element === elementFromEnd)
@@ -163,9 +168,14 @@ function getVisibleItems () {
     return visibleItems
 }
 
-function pinHandler (e) {
+function delay (time) {
+    return new Promise(resolve => setTimeout(resolve, time))
+}
+
+async function pinHandler (e) {
     const target = e.target.closest('.townhouse-pin')
     console.log(target)
+    windowPreview.style.transition = '0.2s'
     const targetTownhouseCord = townHousesCoords[target.dataset.townhouseNumber - 1]
     const windowPreviewRect = windowPreview.getBoundingClientRect()
     const windowPreviewLeft = windowPreviewRect.left - townhousesContainer.offsetLeft
@@ -174,15 +184,29 @@ function pinHandler (e) {
     console.log('координаты дома', targetTownhouseCord)
     console.log('координаты окна (лево, право)', windowPreviewLeft, windowPreviewRight)
 
-    // if ((targetTownhouseCord.start > windowPreviewRight || targetTownhouseCord.start < windowPreviewLeft) ||
-    //     (targetTownhouseCord.end > windowPreviewRight || targetTownhouseCord.end < windowPreviewLeft)
-    // ) {
     if ((targetTownhouseCord.start <= windowPreviewRight && targetTownhouseCord.start >= windowPreviewLeft) &&
         (targetTownhouseCord.end <= windowPreviewRight && targetTownhouseCord.end >= windowPreviewLeft)
     ) {
         console.log('в окне')
     } else {
-        console.log('ne в окне')
+        if (targetTownhouseCord.end >= windowPreviewRight) {
+            const deltaWidth = targetTownhouseCord.end > windowPreviewRight
+                ? targetTownhouseCord.end - windowPreviewRight
+                : windowPreviewRight - targetTownhouseCord.end
+
+            const newWindowPreviewLeft = windowPreviewLeft + deltaWidth - 4
+            windowPreview.style.left = newWindowPreviewLeft + 'px'
+            await delay(201)
+            setTimeout(checkThreshold, 100)
+        }
+        if (targetTownhouseCord.start < windowPreviewLeft) {
+            windowPreview.style.left = targetTownhouseCord.start + 4 + 'px'
+            await delay(200)
+            setTimeout(checkThreshold, 100)
+            windowPreview.addEventListener('transitionend', () => {
+                windowPreview.style.transition = 'none'
+            })
+        }
     }
     towwnhousesPins.forEach(pin => {
         pin.classList.remove('townhouse-pin--active')
@@ -248,7 +272,7 @@ function update () {
 
 update()
 
-const throttleUpdate = throttle(update, 600)
+const throttleUpdate = throttle(update, 800)
 window.addEventListener('resize', () => {
     throttleUpdate()
 })

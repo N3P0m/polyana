@@ -1,11 +1,14 @@
-/* Webfont: Steppe-Regular */@font-face {
-    font-family: 'Steppe';
+/* Webfont: Steppe-Regular */
+
+@font-face {
+    font-family: Steppe;
+    font-style: normal;
+    font-weight: normal;
     src: url('Steppe.eot'); /* IE9 Compat Modes */
     src: url('Steppe.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('Steppe.woff') format('woff'), /* Modern Browsers */
-         url('Steppe.ttf') format('truetype'); /* Safari, Android, iOS */
-             font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+        url('Steppe.woff') format('woff'), /* Modern Browsers */
+        url('Steppe.ttf') format('truetype'); /* Safari, Android, iOS */
+
+    text-rendering: optimizelegibility;
 }
 

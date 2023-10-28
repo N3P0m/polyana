@@ -1,8 +1,8 @@
 .main-header {
     position: fixed;
-    left: 0;
     right: 0;
-    z-index: 20
+    left: 0;
+    z-index: 1000;
 }
 
 .main-header .btn--burger {
@@ -165,10 +165,6 @@
     margin: 0;
 }
 
-.main-header--burger .main-header-phone-wrapper .btn {
-    display: inline-block
-}
-
 .main-header--burger .btn--burger {
     grid-area: 1/3/1/-1;
     place-self: center end;
@@ -270,8 +266,8 @@
 
 @media (width <= 1199px) {
     .main-header-nav-wrapper {
-        margin: 0;
-        padding: 0 20px
+        padding: 0 20px;
+        margin: 0
     }
 
     .container-main-header {
@@ -338,6 +334,12 @@
 
     .main-header--burger .btn--burger {
         display: block
+    }
+
+    .main-header--sticky {
+        .container {
+            padding-right: 0 !important;
+        }
     }
 }
 @media (width <= 767px) {

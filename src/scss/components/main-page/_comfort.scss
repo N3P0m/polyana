@@ -4,7 +4,7 @@
 }
 
 .comfort {
-    background-image: url("../assets/img/comfort_bg.webp");
+    background-image: url("../assets/img/sections/comfort/comfort_bg.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
@@ -36,7 +36,7 @@
     height: 380px;
     margin: 0 auto;
     overflow: hidden;
-    background: url("../assets/img/comfort_item_bg.svg") center/contain no-repeat;
+    background: url("../assets/img/sections/comfort/comfort_item_bg.svg") center/contain no-repeat;
 }
 
 .comfort-item-img {
@@ -105,11 +105,38 @@
         border-radius: 34%
     }
 
+    .comfort-item-title {
+
+        @include padding(12px 0 10px);
+    }
+
     .comfort-item-img {
-        margin-top: 30px
+        margin-top: 30px;
+
+        @include margin-top(30px);
     }
 
     .comfort-item-text {
         padding: 0 30px
     }
+}
+@media (width <= 375px) {
+    .comfort-item-img {
+
+        @include margin-top(14px);
+    }
+
+    .comfort-item {
+
+        @include rfs(750px, width);
+        @include rfs(790px, height);
+    }
+
+    .comfort-item-text {
+        text-align: justify;
+
+        @include padding(0 20px);
+    }
+
+
 }

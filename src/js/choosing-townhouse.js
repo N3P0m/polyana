@@ -1,8 +1,7 @@
-import './html-components'
 import './components/townhouse-picker'
 import './components/tabs'
 import './components/gallery'
-// import './index(old)'
+import './components/form'
 
 // const test = document.querySelector('.townhouse-pin')
 // const testContainer = document.querySelector('.townhouse-picker__pin-list')

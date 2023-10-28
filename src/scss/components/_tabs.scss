@@ -14,7 +14,8 @@
         }
     }
 
-    .tab.disabled {
+    .tab.disabled,
+    .tab.disabled-force {
         pointer-events: none;
     }
 }
@@ -78,6 +79,7 @@
     .tab-contents {
         display: none;
         padding: 10px;
+
         &.active {
             display: block;
             animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;

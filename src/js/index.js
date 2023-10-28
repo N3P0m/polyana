@@ -1,3 +1,3 @@
-import './index(old)'
-import './html-components'
-// import './components'
+import './components/form'
+import './components/advantages-swiper'
+import './components'

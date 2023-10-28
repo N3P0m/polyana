@@ -97,11 +97,22 @@
 
 .choosing-townhouse-equipment {
     &__heading {
+        margin-bottom: 60px;
+    }
+
+    &__tabs-container {
         margin-bottom: 40px;
     }
+
     &__tabs {
         display: flex;
+        overflow-x: scroll;
+        overflow-y:  hidden;
         box-shadow: 0 2px 0 -1px #F2CFBE;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         .tab > a {
             padding: 20px;
@@ -111,6 +122,46 @@
             font-size: 16px;
         }
     }
+
+    &__info {
+        display: flex;
+
+        @include rfs(100px, gap);
+    }
+
+    &__info-heading {
+        margin-bottom: 16px;
+    }
+
+    &__info-unit {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__info-container {
+        display: flex;
+
+        @include rfs(100px, gap);
+    }
+
+    &__info-list {
+        padding-left: 6px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__info-item {
+        padding-left: 10px;
+        font-weight: 400;
+
+        &::marker {
+            content: "•";
+        }
+    }
 }
 
 .big-map {
@@ -118,6 +169,15 @@
     @include rfs(112px, margin-bottom);
 }
 
+@media (width <= 992px) {
+    .choosing-townhouse-equipment {
+        &__info {
+            gap: 20px;
+            justify-content: space-between
+        }
+    }
+    
+}
 @media (width <= 767px) {
     .choosing-townhouse-info {
         grid-template-columns: 1fr;
@@ -152,17 +212,28 @@
 
     }
 
+    .choosing-townhouse-equipment {
+        &__info {
+            justify-content: space-around;
+        }
+
+        &__info-container {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
     .big-map {
         display: none;
     }
 
 }
-
 @media (width <= 575px) {
     .townhouse-specs {
         &__table {
             width: 100%;
         }
+
         &__btn-group {
             flex-wrap: wrap;
 
@@ -171,4 +242,20 @@
             }
         }
     }
+
+    .choosing-townhouse-equipment {
+        &__tabs {
+            margin: 0 -20px;
+        }
+
+        &__info {
+            flex-wrap: wrap;
+        }
+
+        &__info-list,
+        &__info-unit {
+            font-size: 14px;
+        }
+    }
+    
 }

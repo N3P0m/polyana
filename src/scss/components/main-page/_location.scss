@@ -45,16 +45,6 @@
     margin-bottom: 31px
 }
 
-.location-walker::before {
-    display: inline-block;
-    width: 22px;
-    height: 33px;
-    margin-right: 5px;
-    color: rgb(0 0 0 / 0%);
-    content: " ";
-    background: url("../assets/img/walker_ico.png") 0 13px #fff no-repeat
-}
-
 
 .walker-list {
     padding: 0;
@@ -69,15 +59,6 @@
     margin-bottom: 10px
 }
 
-.location-car::before {
-    display: inline-block;
-    width: 22px;
-    height: 25px;
-    margin-right: 5px;
-    color: rgb(0 0 0 / 0%);
-    content: " ";
-    background: url("../assets/img/car_ico.png") 0 8px #fff no-repeat
-}
 
 .car-list {
     padding: 0;
@@ -106,16 +87,17 @@
     border-width: 1px;
     border-radius: 13px
 }
-@media (max-width: 1199px) {
+
+@media (width <= 1199px) {
 
 }
-
 @media (width <= 767px) {
     .container-location {
         .centering-wrap {
             text-align: center;
         }
     }
+
     .location-map img {
         width: 500px;
         height: auto

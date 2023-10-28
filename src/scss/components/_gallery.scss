@@ -1,25 +1,85 @@
 .gallery {
 
-	@include rfs(90px, margin-bottom);
+    @include rfs(90px, margin-bottom);
 
     &__img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 800px;
         height: 500px;
+        overflow: hidden;
+        cursor: pointer;
+        user-select: none;
         background: aquamarine;
-		border-radius: 80px;
+        border-radius: 80px;
+        transition: filter 0.3s ease-out;
+
+        @include rfs(800px, width);
+        @include rfs(500px, height);
+        @include rfs(80px, border-radius);
+
+        &::before {
+            position: absolute;
+            z-index: -1;
+            display: block;
+            content: '';
+            background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDkiIHZpZXdCb3g9IjAgMCA0OCA0OSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMTkiIHk9IjEwLjUzMzkiIHdpZHRoPSIyIiBoZWlnaHQ9IjIwIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIzMCIgeT0iMTkuNTMzOSIgd2lkdGg9IjIiIGhlaWdodD0iMjAiIHRyYW5zZm9ybT0icm90YXRlKDkwIDMwIDE5LjUzMzkpIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSI0Ny41NTYyIiB5PSI0Ni42NzYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIwIiB0cmFuc2Zvcm09InJvdGF0ZSgxMzUgNDcuNTU2MiA0Ni42NzYpIiBmaWxsPSJ3aGl0ZSIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjIwLjUzMzkiIHI9IjE5IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==") no-repeat center/cover;
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+
+            @include rfs(48px, width);
+            @include rfs(48px, height);
+
+        }
+
+        &:hover {
+            filter: brightness(0.8);
+
+            &::before {
+                z-index: 1;
+                opacity: 1;
+            }
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
 
 .swiper-wrapper {
-	justify-items: start;
-	width: 800px;
+    justify-items: start;
+
+    @include rfs(800px, width);
 }
+
 .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+    background: #fff;
+}
+
+@media (width <= 575px) {
+    .gallery {
+        &__img {
+
+            @include rfs(750px, width);
+            @include rfs(468px, height);
+        }
+    }
+
+    .swiper-wrapper {
+
+        @include rfs(750px, width);
+    }
+
 }

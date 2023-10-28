@@ -88,8 +88,7 @@
         gap: 30px;
         align-items: flex-start;
         justify-content: center;
-        width: 310px;
-        min-width: 310px;
+        max-width: 310px;
         padding-bottom: 68px !important;
         margin: 0 auto;
     }
@@ -134,6 +133,7 @@
     .advantages-item {
         align-items: center;
     }
+
     .advantages-item-column1,
     .advantages-item-column1 img {
 
