@@ -1,9 +1,13 @@
 @use "sass:color";
 
 @import "./utils";
+@import "./utils/_reset";
 @import "./restore/resore";
 @import "./layout";
 @import "./ui-components";
 
 @import "components/header";
+
 @import "components/footer";
+@import "components/application-form";
+@import "components/popup";

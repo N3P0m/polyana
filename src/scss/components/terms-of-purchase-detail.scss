@@ -151,6 +151,15 @@
 
 @media (width <= 768px) {
     .terms-of-purchase-detail {
+        &__heading {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        .btn {
+            align-self: start;
+            position: static;
+        }
+        }
         &__content {
             flex-direction: column;
 
@@ -198,7 +207,21 @@
 @media (width <= 575px) {
     .terms-of-purchase {
         .btn {
-            display: none;
+            //display: none;
+        }
+
+        &__list {
+            flex-direction: column;
+        }
+
+        &__item {
+            width: 100%;
+
+            @include rfs(320px * 1.5, height);
+        }
+
+        &__img {
+            object-fit: cover;
         }
     }
 }

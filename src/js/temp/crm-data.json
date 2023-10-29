@@ -1,0 +1,712 @@
+[
+  {
+    "id": 5131485,
+    "korpus": "1",
+    "number": "1",
+    "floors": null,
+    "cost": 16041200,
+    "cost_str": "16 041 200",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257480,
+            "file_name": "Планировка К-188-72_1_1-188.72",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257480/x1e52gWtzmksd3wxNjk2NTkyOTc5fDliZDBi/planirovka_k-188-72_1_1-188.72.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257463,
+            "file_name": "Планировка c мебелью К-188-72_1_1-188.72",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257463/x1e52gWtzmcvd3wxNjk2NTkyMjg3fDg1NGUz/planirovka_c_mebelyu_k-188-72_1_1-188.72.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 188.72,
+    "state": 2
+  },
+  {
+    "id": 5131486,
+    "korpus": "1",
+    "number": "2",
+    "floors": null,
+    "cost": 11586400,
+    "cost_str": "11 586 400",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257489,
+            "file_name": "Планировка К-144-83_1_2-144.83",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257489/x1e52gWtzmkld3wxNjk2NTkzNDA2fGViNGE4/planirovka_k-144-83_1_2-144.83.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257491,
+            "file_name": "Планировка c мебелью К-144-83_1_2-144.83",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257491/x1e52gWtzmgtd3wxNjk2NTkzNDE0fDRjNjE1/planirovka_c_mebelyu_k-144-83_1_2-144.83.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 144.83,
+    "state": 2
+  },
+  {
+    "id": 5131487,
+    "korpus": "1",
+    "number": "3",
+    "floors": null,
+    "cost": 12199200,
+    "cost_str": "12 199 200",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257507,
+            "file_name": "Планировка К-152-49_1_3-152.49",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257507/x1e52gWtz2Erd3wxNjk2NTkzNjAzfDFlOGM5/planirovka_k-152-49_1_3-152.49.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257508,
+            "file_name": "Планировка c мебелью К-152-49_1_3-152.49",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257508/x1e52gWtz2Ekd3wxNjk2NTkzNjE2fDExMmY4/planirovka_c_mebelyu_k-152-49_1_3-152.49.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 152.49,
+    "state": 2
+  },
+  {
+    "id": 5131488,
+    "korpus": "1",
+    "number": "4",
+    "floors": null,
+    "cost": 11587200,
+    "cost_str": "11 587 200",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257500,
+            "file_name": "Планировка К-144-84_1_4-144.84",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257500/x1e52gWtz2Esd3wxNjk2NTkzNTc0fGVkNTkz/planirovka_k-144-84_1_4-144.84.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257501,
+            "file_name": "Планировка c мебелью К-144-84_1_4-144.84",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257501/x1e52gWtz2Etd3wxNjk2NTkzNTgwfGIwMTFl/planirovka_c_mebelyu_k-144-84_1_4-144.84.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 144.84,
+    "state": 2
+  },
+  {
+    "id": 5131489,
+    "korpus": "1",
+    "number": "5",
+    "floors": null,
+    "cost": 12348800,
+    "cost_str": "12 348 800",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4263435,
+            "file_name": "Планировка К-154-36_1_5-154.36",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4263435/x1e52gapzmIpd3wxNjk2OTMxNTU0fGExMzhh/planirovka_k-154-36_1_5-154.36.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257515,
+            "file_name": "Планировка c мебелью К-154-36_1_5-154.36",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257515/x1e52gWtz2Apd3wxNjk2NTkzNjYxfDg4ZDVi/planirovka_c_mebelyu_k-154-36_1_5-154.36.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 154.36,
+    "state": 2
+  },
+  {
+    "id": 5131490,
+    "korpus": "1",
+    "number": "6",
+    "floors": null,
+    "cost": 12217600,
+    "cost_str": "12 217 600",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4263433,
+            "file_name": "Планировка К-152-72_1_6-152.72",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4263433/x1e52gapzmIvd3wxNjk2OTMxNTQzfGMyODdj/planirovka_k-152-72_1_6-152.72.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257513,
+            "file_name": "Планировка c мебелью К-152-72_1_6-152.72",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257513/x1e52gWtz2Avd3wxNjk2NTkzNjQ0fGEyOTBj/planirovka_c_mebelyu_k-152-72_1_6-152.72.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 152.72,
+    "state": 2
+  },
+  {
+    "id": 5131491,
+    "korpus": "1",
+    "number": "7",
+    "floors": null,
+    "cost": 11587200,
+    "cost_str": "11 587 200",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257503,
+            "file_name": "Планировка К-144-84_1_7-144.84",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257503/x1e52gWtz2Evd3wxNjk2NTkzNTg3fGMyY2Fh/planirovka_k-144-84_1_7-144.84.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257505,
+            "file_name": "Планировка c мебелью К-144-84_1_7-144.84",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257505/x1e52gWtz2Epd3wxNjk2NTkzNTk0fDU0Y2Rh/planirovka_c_mebelyu_k-144-84_1_7-144.84.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 144.84,
+    "state": 2
+  },
+  {
+    "id": 5131492,
+    "korpus": "1",
+    "number": "8",
+    "floors": null,
+    "cost": 12199200,
+    "cost_str": "12 199 200",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4263432,
+            "file_name": "Планировка К-152-49_1_8-152.49",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4263432/x1e52gapzmIud3wxNjk2OTMxNTMyfGY4YTdi/planirovka_k-152-49_1_8-152.49.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257510,
+            "file_name": "Планировка c мебелью К-152-49_1_8-152.49",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257510/x1e52gWtz2Asd3wxNjk2NTkzNjMwfGFmMmI1/planirovka_c_mebelyu_k-152-49_1_8-152.49.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 152.49,
+    "state": 2
+  },
+  {
+    "id": 5131493,
+    "korpus": "1",
+    "number": "9",
+    "floors": null,
+    "cost": 11586400,
+    "cost_str": "11 586 400",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257495,
+            "file_name": "Планировка К-144-83_1_9-144.83",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257495/x1e52gWtzmgpd3wxNjk2NTkzNDI4fDgyMDFk/planirovka_k-144-83_1_9-144.83.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257497,
+            "file_name": "Планировка c мебелью К-144-83_1_9-144.83",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257497/x1e52gWtzmgrd3wxNjk2NTkzNDM5fGNlY2E2/planirovka_c_mebelyu_k-144-83_1_9-144.83.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 144.83,
+    "state": 2
+  },
+  {
+    "id": 5131494,
+    "korpus": "1",
+    "number": "10",
+    "floors": null,
+    "cost": 16041200,
+    "cost_str": "16 041 200",
+    "images": [
+      {
+        "id": 1,
+        "name": "Планировки",
+        "images": [
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257916,
+            "file_name": "Планировка К-188-72_1_10-188.72",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257916/x1e52gWtw2Aqd3wxNjk2NjAzOTc4fDVjYjdi/planirovka_k-188-72_1_10-188.72.jpg",
+            "is_title": 0,
+            "img_type": "Главное изображение"
+          },
+          {
+            "dir_id": 1,
+            "dir_name": "Планировки",
+            "file_id": 4257917,
+            "file_name": "Планировка c мебелью К-188-72_1_10-188.72",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/4257917/x1e52gWtw2Ard3wxNjk2NjAzOTgzfDVkYjM5/planirovka_c_mebelyu_k-188-72_1_10-188.72.jpg",
+            "is_title": 0,
+            "img_type": "Дополнительная планировка"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Галерея",
+        "images": [
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927740,
+            "file_name": "Road_Road",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927740/x1e-0QKtzWUsd3wxNjg1MzUxNjM1fDcwYzdm/road_road.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927741,
+            "file_name": "TH_Back",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927741/x1e-0QKtzWUtd3wxNjg1MzUxNjQ3fGU3N2Mz/th_back.jpg",
+            "is_title": 0
+          },
+          {
+            "dir_id": 2,
+            "dir_name": "Галерея",
+            "file_id": 3927745,
+            "file_name": "Cam_2",
+            "file_ext": "jpg",
+            "file_url": "https://macroserver.ru/estate/files/get/5092282/3927745/x1e-0QKtzWUpd3wxNjg1MzUxNjg3fDJkNDc0/cam_2.jpg",
+            "is_title": 0
+          }
+        ]
+      }
+    ],
+    "sq": 188.72,
+    "state": 2
+  }
+]

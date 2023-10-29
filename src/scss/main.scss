@@ -1,33 +1,13 @@
 @use "sass:color";
 
-//@import "utils/vars";
-//@import "utils/colors";
-//@import "utils/_reset";
-//@import "utils/_normalize";
-//@import "components/btns";
-//@import "layout";
-//@import "components/headings";
-//@import "blocks/header";
-//@import "blocks/mpage-styles";
-//@import "blocks/builder-styles";
-//@import "blocks/framework-styles";
-//@import "blocks/figma-styles";
-//@import "blocks/pricing-styles";
-//@import "blocks/footer";
-
 // версия с прода
 @import "./utils";
-@import "./restore/resore";
-@import "./layout";
-@import "./ui-components";
 // /версия с прода
 
 @import "./components/tabs";
 @import "./components/main-page";
 @import "./components/slider";
 @import "./components/concept-selection";
-@import "./components/application-form";
-@import "./components/popup";
 @import "./components/callback-widget";
 
 

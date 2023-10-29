@@ -1,14 +1,22 @@
 .townhouse-picker {
-    &__pin-list {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 20px;
+    text-align: center;
+
+    &__pins-scroll {
         overflow-x: scroll;
         scroll-behavior: smooth;
 
         &::-webkit-scrollbar {
             display: none;
         }
+    }
+
+    &__pin-list {
+        display: inline-flex;
+        justify-content: center;
+        padding-bottom: 20px;
+
+
+
     }
 
     &__list {
@@ -153,10 +161,14 @@
 
 @media (width <= 992px) {
     .townhouse-picker {
-        &__pin-list {
-            justify-content: start;
+        &__pins-scroll {
             padding: 0 20px 20px;
             margin: 0 -20px;
+        }
+
+        &__pin-list {
+            justify-content: start;
+
         }
 
         &__townhouse {

@@ -1,9 +1,6 @@
 @use "sass:color";
 
 @import "./utils";
-@import "./restore/resore";
-@import "./layout";
-@import "./ui-components";
 
 
 // Components
@@ -15,4 +12,3 @@
 @import "components/townhouse-picker";
 @import "components/terms-of-purchase";
 @import "components/main-page/details";
-@import "components/application-form";

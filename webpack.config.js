@@ -207,7 +207,7 @@ const config = {
         index: path.resolve(__dirname, './src/entry.js'),
         'choosing-house': path.resolve(__dirname, './src/choosing-house.js'),
         'choosing-townhouse': path.resolve(__dirname, './src/choosing-townhouse.js'),
-        'terms-of-purchase': path.resolve(__dirname, './src/terms-of-purchase.js')
+        'terms-of-purchase-detail': path.resolve(__dirname, './src/terms-of-purchase-detail.js')
     },
     resolve: {
         alias: {
@@ -220,7 +220,7 @@ const config = {
         assetModuleFilename: (path) => {
             if (typeof path.filename !== 'undefined' && path.filename.match(/(img)/)) {
                 path.filename = path.filename.replace('src/', '')
-                return `${path.filename}/[name].[ext]`
+                return `${path.filename}`
             }
             return '[name].[ext]'
         }

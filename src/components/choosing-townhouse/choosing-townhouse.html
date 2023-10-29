@@ -7,6 +7,7 @@
         <span class="choosing-townhouse__house-status p4">Свободно 10 домов</span>
     </div>
     <div class="choosing-townhouse__townhouse-picker townhouse-picker">
+        <div class="townhouse-picker__pins-scroll">
         <ul class="townhouse-picker__pin-list">
             <li class="townhouse-picker__pin-item">
                 <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="1">
@@ -62,14 +63,9 @@
                     <span class="townhouse-pin__subheading">9</span>
                 </button>
             </li>
-            <li class="townhouse-picker__pin-item">
-                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="10">
-                    <span class="townhouse-pin__heading">Таунхаус</span>
-                    <span class="townhouse-pin__subheading">10</span>
-                </button>
-            </li>
 
         </ul>
+        </div>
         <ul class="townhouse-picker__list">
             <li class="townhouse-picker__item-window"></li>
             <li class="townhouse-picker__item">
@@ -104,9 +100,6 @@
             <li class="townhouse-picker__item">
                 <div class="townhouse-picker__townhouse" data-townhouse-type="2" data-townhouse-number="9"></div>
             </li>
-            <li class="townhouse-picker__item">
-                <div class="townhouse-picker__townhouse" data-townhouse-type="4" data-townhouse-number="10"></div>
-            </li>
         </ul>
     </div>
     <div class="choosing-townhouse__info choosing-townhouse-info">
@@ -114,23 +107,23 @@
             <img src="./assets/img/components/choosing-townhouse/minimap.svg" width="282" alt="">
         </div>
         <div class="choosing-townhouse-info__specs townhouse-specs">
-            <h3 class="townhouse-specs__heading h4">Таунхаус 3</h3>
+            <h3 class="townhouse-specs__heading h4">Таунхаус <span id="townhouseNumber">3</span></h3>
             <div class="townhouse-specs__table">
                 <div class="townhouse-specs__table-row">
                     <div class="townhouse-specs__table-cell">Площадь</div>
-                    <div class="townhouse-specs__table-cell" role="value">188,72 м2</div>
+                    <div class="townhouse-specs__table-cell" role="value" ><span id="sq">188,72</span> м2</div>
                 </div>
                 <div class="townhouse-specs__table-row">
                     <div class="townhouse-specs__table-cell">Этажей</div>
-                    <div class="townhouse-specs__table-cell" role="value">3</div>
+                    <div class="townhouse-specs__table-cell" role="value"  id="floors" >3</div>
                 </div>
                 <div class="townhouse-specs__table-row">
                     <div class="townhouse-specs__table-cell">Цена</div>
-                    <div class="townhouse-specs__table-cell" role="value">11 586 400 руб</div>
+                    <div class="townhouse-specs__table-cell" role="value" ><span id="cost">11 586 400</span> руб</div>
                 </div>
             </div>
             <div class="townhouse-specs__btn-group">
-                <button class="btn btn--primary">Забронировать</button>
+                <button class="btn btn--primary" data-micromodal-trigger="popup-form">Забронировать</button>
                 <button class="btn btn--primary">Скачать презентацию</button>
             </div>
         </div>
@@ -151,12 +144,12 @@
                             <span>Базовая</span>
                         </div>
                     </a></li>
-                    <li class="tab"><a href="#tab2">
+                    <li class="tab disabled-force"><a href="#tab2">
                         <div class="pin pin--with-icon pin--soon">
                             <span>Стандарт</span>
                         </div>
                     </a></li>
-                    <li class="tab"><a href="#tab3">
+                    <li class="tab disabled-force"><a href="#tab3">
                         <div class="pin pin--with-icon pin--soon">
                             <span>Престиж</span>
                         </div>
@@ -198,7 +191,7 @@
 
         </div>
         <div class="text-center">
-            <button class="btn btn--primary">
+            <button class="btn btn--primary" data-micromodal-trigger="popup-form">
                 Забронировать
             </button>
         </div>
