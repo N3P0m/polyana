@@ -10,7 +10,7 @@ const advantagesSwiper = new Swiper(advantagesSwiperContainer, {
     modules: [EffectFade],
     speed: 300,
     effect: 'fade',
-    allowTouchMove: true,
+    allowTouchMove: false,
     fadeEffect: {
         crossFade: true
     }

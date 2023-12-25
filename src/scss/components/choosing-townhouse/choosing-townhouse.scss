@@ -199,6 +199,15 @@
 
 }
 
+.popup {
+    .choosing-townhouse-info__house-preview {
+        img {
+            max-width: 1000px;
+            aspect-ratio: auto;
+        }
+    }
+}
+
 .townhouse-specs {
     &__heading {
 

@@ -370,7 +370,6 @@ function initHeader () {
     }
 
     function l () {
-        console.log('i am here')
         r.classList.contains(o.burger) || (window.scrollY > 20 && !r.classList.contains(o.scroll) && (r.classList.add(o.navLeave), r.addEventListener('transitionend', s(e().mark(function t () {
             let i
             return e().wrap(function (t) {
@@ -459,10 +458,60 @@ function initHeader () {
         	window.addEventListener('scroll', l)
         } else {
             // TODO: временное решение
-            console.log(r.offsetHeight)
-            document.querySelector('.wrapper-main').style.paddingTop = r.offsetHeight + 'px'
+            stickyHeader()
+            window.addEventListener('scroll', stickyHeader)
+            document.querySelector('.wrapper-main').style.paddingTop = 92 + 'px'
+            document.querySelectorAll('[data-btn="back"]').forEach(btn => btn.addEventListener('click', () => history.back()));
         }
 	a.onclick = p
+
+    // function stickyHeader() {
+    //         console.log(r, 'header sticky')
+    //     window.addEventListener('scroll', () => {
+    //         if (window.scrollY > r.getBoundingClientRect().height) {
+    //             r.classList.add(o.scrollLeaveTo)
+    //             r.addEventListener('transitionend', () => {
+    //             r.style.position="fixed"
+    //             r.classList.remove(o.scrollLeaveTo)
+    //             r.classList.add(o.scrollEnterFrom)
+    //             r.classList.add(o.scrollEnterTo)
+    //             }, { once: true})
+    //
+    //             console.log('yep')
+    //         }
+    //     })
+    // }
+
+    function stickyHeader () {
+        r.classList.contains(o.burger) || (window.scrollY > 150 && !r.classList.contains(o.scroll) && (r.classList.add(o.navLeave), r.addEventListener('transitionend', s(e().mark(function t () {
+            let i
+            return e().wrap(function (t) {
+                for (; ;) {
+                    switch (t.prev = t.next) {
+                        case 0:
+                            return r.classList.remove(o.navLeave), (i = r.classList).add.apply(i, [o.scroll, o.scrollEnterFrom]), t.next = 4, h(1)
+                        case 4:
+                            r.classList.add(o.scrollEnterTo), r.addEventListener('transitionend', function () {
+                                let t;
+                                (t = r.classList).remove.apply(t, [o.scrollEnterFrom, o.scrollEnterTo])
+                            }, { once: !0 })
+                        case 6:
+                        case 'end':
+                            return t.stop()
+                    }
+                }
+            }, t)
+        })), { once: !0 })), window.scrollY < 20 && r.classList.contains(o.scroll) && (r.classList.add(o.scrollLeaveTo), r.addEventListener('transitionend', function () {
+            let t, e;
+            (t = r.classList).remove.apply(t, [o.scroll, o.scrollLeaveTo]), (e = r.classList).add.apply(e, [o.navEnterFrom]), setTimeout(function () {
+                let t;
+                (t = r.classList).add.apply(t, [o.navEnterTo]), r.addEventListener('transitionend', function () {
+                    let t;
+                    (t = r.classList).remove.apply(t, [o.navEnterFrom, o.navEnterTo])
+                }, { once: !0 })
+            })
+        }, { once: !0 })))
+    }
 }
 
 initHeader()

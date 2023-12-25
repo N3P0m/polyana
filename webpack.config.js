@@ -26,7 +26,7 @@ function generateHtmlPlugins (templateDir) {
             result = new HtmlWebpackPlugin({
                 filename: `${name}.html`,
                 template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-                chunks: ['common', name ]
+                chunks: ['common', name]
             })
         }
         return result
@@ -61,6 +61,13 @@ const pluginsDev = [
     }),
     new ESLintPlugin({
         fix: true
+    }),
+    new TerserPlugin({
+        terserOptions: {
+            compress: {
+                drop_console: true
+            }
+        }
     })
 ]
 const pluginsProd = [
@@ -172,6 +179,12 @@ const rules = {
                 }
             }
         },
+        // JS
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: ['babel-loader']
+        },
         // CSS, PostCSS, Sass
         {
             test: /\.(scss|css)$/,
@@ -183,6 +196,7 @@ const rules = {
                         sourceMap: false
                     }
                 },
+                'postcss-loader',
                 'sass-loader'
             ]
         },
@@ -224,6 +238,10 @@ const config = {
             }
             return '[name].[ext]'
         }
+    },
+    externalsType: 'script',
+    externals: {
+        ymaps3: ['https://api-maps.yandex.ru/v3/?apikey=ac18a8b7-30bc-4792-9e43-609a2f979eee&lang=ru_RU', 'ymaps3']
     },
     plugins: [...plugins],
     module: {

@@ -1,7 +1,7 @@
-import crmData from '../temp/crm-data.json'
+// import crmData from '../temp/crm-data.json'
 import MicroModal from 'micromodal'
 
-console.log('crmData', crmData)
+const crmData = window.crmData
 
 const windowPreview = document.querySelector('.townhouse-picker__item-window')
 
@@ -9,6 +9,7 @@ const townhouses = document.querySelectorAll('.townhouse-picker__townhouse')
 const townhousesContainer = document.querySelector('.townhouse-picker__list')
 const townhousesPinsList = document.querySelector('.townhouse-picker__pins-scroll')
 const towwnhousesPins = townhousesPinsList.querySelectorAll('.townhouse-pin')
+const townhousesPinsFromContainer = townhousesContainer.querySelectorAll('.townhouse-pin')
 
 let townHousesCoords = []
 
@@ -25,19 +26,15 @@ function updateTownhousesCoords () {
 }
 
 function onDragStart (e) {
-    console.log('test')
     windowPreview.style.transition = 'none'
     const pageX = e.type !== 'touchstart' ? e.pageX : e.touches[0].pageX
     const coords = getCoords(windowPreview)
     const shiftX = pageX - coords.left
     const shiftXRight = pageX - coords.right
 
-    const windowPreviewRect = windowPreview.getBoundingClientRect()
-
     onDragMove(e)
 
     function onDragMove (e) {
-        console.log(e.type)
         const pageX = e.type !== 'touchmove' ? e.pageX : e.touches[0].pageX
         const mouseX = pageX - shiftX
         const mouseXWithShiftX = pageX - shiftXRight
@@ -46,10 +43,7 @@ function onDragStart (e) {
         windowPreview.style.left = mouseX + 'px'
     }
 
-    console.log(windowPreviewRect.left)
-
     function onDragEnd () {
-        console.log(windowPreviewRect.left)
         windowPreview.style.transition = '0.2s'
         windowPreview.addEventListener('transitionend', () => {
             windowPreview.style.transition = 'none'
@@ -97,24 +91,19 @@ function checkThreshold () {
     const thresholdForStartElement = 1 - ((coordsStart - coordsForStartElement.start) / (coordsForStartElement.end - coordsForStartElement.start))
     const thresholdForEndElement = ((coordsEnd - coordsForEndElement.start) / (coordsForEndElement.end - coordsForEndElement.start))
 
-    console.log('thresholds', thresholdForStartElement, thresholdForEndElement)
-    console.log('start end', coordsStart, coordsEnd)
-    console.log('elementFromStart', elementFromStart, coordsForStartElement)
-    console.log('elementFromEnd', elementFromEnd, coordsForEndElement)
-
     let indexOfStartElement = [...townhouses].findIndex(element => element === elementFromStart)
     indexOfStartElement = indexOfStartElement !== -1 ? indexOfStartElement : 0
     const indexOfEndElement = [...townhouses].findIndex(element => element === elementFromEnd)
-    if (indexOfEndElement - indexOfStartElement !== getVisibleItems() && !townHousesCoords[indexOfStartElement + getVisibleItems() - 1]) {
-        const newWidth = townHousesCoords.at(-1).end - townHousesCoords[townHousesCoords.length - getVisibleItems()].start
-        const leftSide = townHousesCoords[townHousesCoords.length - getVisibleItems()].start
+    if (indexOfEndElement - indexOfStartElement !== getVisibleItems().visibleItems && !townHousesCoords[indexOfStartElement + getVisibleItems().visibleItems - 1]) {
+        const newWidth = townHousesCoords.at(-1).end - townHousesCoords[townHousesCoords.length - getVisibleItems().visibleItems].start
+        const leftSide = townHousesCoords[townHousesCoords.length - getVisibleItems().visibleItems].start
         windowPreview.style.width = newWidth + 'px'
         windowPreview.style.left = leftSide + 'px'
-        scrollToTheRightElement(townHousesCoords.length - getVisibleItems())
+        scrollToTheRightElement(townHousesCoords.length - getVisibleItems().visibleItems)
     }
-    if (indexOfEndElement - indexOfStartElement !== getVisibleItems() && townHousesCoords[indexOfStartElement + getVisibleItems() - 1]) {
+    if (indexOfEndElement - indexOfStartElement !== getVisibleItems().visibleItems && townHousesCoords[indexOfStartElement + getVisibleItems().visibleItems - 1]) {
         if (thresholdForStartElement > thresholdForEndElement) {
-            const newWidth = townHousesCoords[indexOfStartElement + getVisibleItems() - 1].end - townHousesCoords[indexOfStartElement].start
+            const newWidth = townHousesCoords[indexOfStartElement + getVisibleItems().visibleItems - 1].end - townHousesCoords[indexOfStartElement].start
             const leftSide = townHousesCoords[indexOfStartElement].start
             windowPreview.style.width = newWidth + 'px'
             windowPreview.style.left = leftSide + 'px'
@@ -122,15 +111,15 @@ function checkThreshold () {
         }
 
         if (thresholdForStartElement < thresholdForEndElement) {
-            if (!townHousesCoords[indexOfStartElement + 1 + getVisibleItems() - 1]) {
-                const newWidth = townHousesCoords.at(-1).end - townHousesCoords[townHousesCoords.length - getVisibleItems()].start
-                const leftSide = townHousesCoords[townHousesCoords.length - getVisibleItems()].start
+            if (!townHousesCoords[indexOfStartElement + 1 + getVisibleItems().visibleItems - 1]) {
+                const newWidth = townHousesCoords.at(-1).end - townHousesCoords[townHousesCoords.length - getVisibleItems().visibleItems].start
+                const leftSide = townHousesCoords[townHousesCoords.length - getVisibleItems().visibleItems].start
                 windowPreview.style.width = newWidth + 'px'
                 windowPreview.style.left = leftSide + 'px'
 
-                scrollToTheRightElement(townHousesCoords.length - getVisibleItems())
+                scrollToTheRightElement(townHousesCoords.length - getVisibleItems().visibleItems)
             } else {
-                const newWidth = townHousesCoords[indexOfStartElement + 1 + getVisibleItems() - 1].end - townHousesCoords[indexOfStartElement + 1].start
+                const newWidth = townHousesCoords[indexOfStartElement + 1 + getVisibleItems().visibleItems - 1].end - townHousesCoords[indexOfStartElement + 1].start
                 const leftSide = townHousesCoords[indexOfStartElement + 1].start
                 windowPreview.style.width = newWidth + 'px'
                 windowPreview.style.left = leftSide + 'px'
@@ -139,15 +128,15 @@ function checkThreshold () {
             }
         }
     }
-    if (indexOfEndElement - indexOfStartElement === getVisibleItems()) {
+    if (indexOfEndElement - indexOfStartElement === getVisibleItems().visibleItems) {
         if (thresholdForStartElement > thresholdForEndElement) {
             windowPreview.style.left = townHousesCoords[indexOfStartElement].start + 'px'
-            windowPreview.style.width = (townHousesCoords[indexOfStartElement + getVisibleItems() - 1].end - townHousesCoords[indexOfStartElement].start) + 'px'
+            windowPreview.style.width = (townHousesCoords[indexOfStartElement + getVisibleItems().visibleItems - 1].end - townHousesCoords[indexOfStartElement].start) + 'px'
             scrollToTheRightElement(indexOfStartElement)
         }
         if (thresholdForStartElement < thresholdForEndElement) {
             windowPreview.style.left = townHousesCoords[indexOfStartElement + 1].start + 'px'
-            windowPreview.style.width = (townHousesCoords[indexOfStartElement + 1 + getVisibleItems() - 1].end - townHousesCoords[indexOfStartElement + 1].start) + 'px'
+            windowPreview.style.width = (townHousesCoords[indexOfStartElement + 1 + getVisibleItems().visibleItems - 1].end - townHousesCoords[indexOfStartElement + 1].start) + 'px'
             scrollToTheRightElement(indexOfStartElement + 1)
         }
     }
@@ -156,9 +145,6 @@ function checkThreshold () {
 function initWidthForWindowPreview (elementPerView) {
     const leftSide = townHousesCoords[0].start
     const width = townHousesCoords[elementPerView - 1].end - townHousesCoords[0].start
-
-    console.log('leftSide', leftSide)
-    console.log('width', width)
     windowPreview.style.left = leftSide + 'px'
     windowPreview.style.width = width + 'px'
 }
@@ -174,12 +160,11 @@ function getVisibleItems () {
     const elementsContainer = document.querySelector('.townhouse-picker__pins-scroll')
     const elementsContainerList = elementsContainer.querySelector('.townhouse-picker__pin-list')
 
-    console.log('widths', elementsContainer.offsetWidth, elementsContainerList.offsetWidth)
     const elements = elementsContainer.querySelectorAll('.townhouse-pin')
     const elementsContainerWidth = elementsContainer.offsetWidth > elementsContainerList.offsetWidth ? elementsContainerList.offsetWidth : elementsContainer.offsetWidth
     const visibleItems = Math.floor(elementsContainerWidth / elements[0].offsetWidth)
-    console.log('visibleItems', visibleItems)
-    return visibleItems
+    const maxItems = elements.length
+    return { visibleItems, maxItems }
 }
 
 function delay (time) {
@@ -187,7 +172,7 @@ function delay (time) {
 }
 
 async function pinHandler (e) {
-    const target = e.target.closest('.townhouse-pin')
+    const target = e.target.closest('[data-townhouse-number]')
 
     if (windowPreview.classList.contains('townhouse-picker__item-window--visible')) {
         windowPreview.style.transition = '0.2s'
@@ -196,11 +181,8 @@ async function pinHandler (e) {
         const windowPreviewLeft = windowPreviewRect.left - townhousesContainer.offsetLeft
         const windowPreviewRight = windowPreviewRect.right - townhousesContainer.offsetLeft
 
-        if ((targetTownhouseCord.start <= windowPreviewRight && targetTownhouseCord.start >= windowPreviewLeft) &&
-(targetTownhouseCord.end <= windowPreviewRight && targetTownhouseCord.end >= windowPreviewLeft)
-        ) {
-            console.log('в окне')
-        } else {
+        if ((targetTownhouseCord.start > windowPreviewRight || targetTownhouseCord.start < windowPreviewLeft) ||
+            (targetTownhouseCord.end > windowPreviewRight || targetTownhouseCord.end < windowPreviewLeft)) {
             if (targetTownhouseCord.end >= windowPreviewRight) {
                 const deltaWidth = targetTownhouseCord.end > windowPreviewRight
                     ? targetTownhouseCord.end - windowPreviewRight
@@ -223,6 +205,15 @@ async function pinHandler (e) {
     }
     towwnhousesPins.forEach(pin => {
         pin.classList.remove('townhouse-pin--active')
+        if (target.dataset.townhouseNumber === pin.dataset.townhouseNumber) {
+            pin.classList.add('townhouse-pin--active')
+        }
+    })
+    townhousesPinsFromContainer.forEach(pin => {
+        pin.classList.remove('townhouse-pin--active')
+        if (target.dataset.townhouseNumber === pin.dataset.townhouseNumber) {
+            pin.classList.add('townhouse-pin--active')
+        }
     })
     target.classList.add('townhouse-pin--active')
     townhouses.forEach(townhouse => {
@@ -239,11 +230,12 @@ const townhouseInfoContainerPopup = document.querySelector('.choosing-townhouse-
 const townhouseInfoElements = {
     parent: townhouseInfoContainer,
     minimapImg: townhouseInfoContainer.querySelector('.choosing-townhouse-info__minimap > img'),
-    planImg: townhouseInfoContainer.querySelector('.choosing-townhouse-info__house-preview > img'),
+    planImg: document.querySelectorAll('[data-img="planImg"]'),
     sq: townhouseInfoContainer.querySelector('#sq'),
     floor: townhouseInfoContainer.querySelector('#floors'),
     cost: townhouseInfoContainer.querySelector('#cost'),
-    number: townhouseInfoContainer.querySelector('#townhouseNumber')
+    number: townhouseInfoContainer.querySelector('#townhouseNumber'),
+    pdf: townhouseInfoContainer.querySelector('#pdf')
 }
 
 const townhouseInfoElementsPopup = {
@@ -257,7 +249,6 @@ const townhouseInfoElementsPopup = {
 async function updateTownhouseInfo (id) {
     const townhouseTarget = crmData.find(townhouses => townhouses.number === id)
 
-    console.log(townhouseTarget, townhouseInfoElements)
     // eslint-disable-next-line no-unused-vars
     const townhouseInfo = {
         ...townhouseTarget,
@@ -278,26 +269,37 @@ async function updateTownhouseInfo (id) {
             townhouseInfoElements.minimapImg.closest('.choosing-townhouse-info__minimap').classList.remove('choosing-townhouse-info__minimap--loading')
             townhouseInfoElements.minimapImg.closest('.choosing-townhouse-info__minimap').classList.add('choosing-townhouse-info__minimap--load-error')
         })
-    townhouseInfoElements.planImg.closest('.choosing-townhouse-info__house-preview').classList.remove('choosing-townhouse-info__house-preview--loading', 'choosing-townhouse-info__house-preview--load', 'choosing-townhouse-info__house-preview--load-error')
-    townhouseInfoElements.planImg.closest('.choosing-townhouse-info__house-preview').classList.add('choosing-townhouse-info__house-preview--loading')
+    townhouseInfoElements.planImg.forEach(planImg => {
+        planImg.closest('.choosing-townhouse-info__house-preview').classList.remove('choosing-townhouse-info__house-preview--loading', 'choosing-townhouse-info__house-preview--load', 'choosing-townhouse-info__house-preview--load-error')
+        planImg.closest('.choosing-townhouse-info__house-preview').classList.add('choosing-townhouse-info__house-preview--loading')
+    })
     loadImage(townhouseInfo.planImg)
         .then((response) => {
-            townhouseInfoElements.planImg.src = townhouseInfo.planImg
-            townhouseInfoElements.planImg.closest('.choosing-townhouse-info__house-preview').classList.remove('choosing-townhouse-info__house-preview--loading')
-            townhouseInfoElements.planImg.closest('.choosing-townhouse-info__house-preview').classList.add('choosing-townhouse-info__house-preview--load')
+            townhouseInfoElements.planImg.forEach(planImg => {
+                planImg.src = townhouseInfo.planImg
+                planImg.closest('.choosing-townhouse-info__house-preview').classList.remove('choosing-townhouse-info__house-preview--loading')
+                planImg.closest('.choosing-townhouse-info__house-preview').classList.add('choosing-townhouse-info__house-preview--load')
+            })
         })
         .catch(() => {
-            townhouseInfoElements.planImg.closest('.choosing-townhouse-info__house-preview').classList.remove('choosing-townhouse-info__house-preview--loading')
-            townhouseInfoElements.planImg.closest('.choosing-townhouse-info__house-preview').classList.add('choosing-townhouse-info__house-preview--load-error')
+            townhouseInfoElements.planImg.forEach(planImg => {
+                planImg.closest('.choosing-townhouse-info__house-preview').classList.remove('choosing-townhouse-info__house-preview--loading')
+                planImg.closest('.choosing-townhouse-info__house-preview').classList.add('choosing-townhouse-info__house-preview--load-error')
+            })
         })
 
     townhouseInfoElements.number.innerText = townhouseInfo.number
     townhouseInfoElements.cost.innerText = townhouseInfo.cost_str
     townhouseInfoElements.sq.innerText = townhouseInfo.sq
+    townhouseInfoElements.pdf.href = '/pdf?id=' + townhouseInfo.id
 
     townhouseInfoElementsPopup.number.innerText = townhouseInfo.number
     townhouseInfoElementsPopup.cost.innerText = townhouseInfo.cost_str
     townhouseInfoElementsPopup.sq.innerText = townhouseInfo.sq
+
+    const messageInput = document.getElementById('message')
+    const message = `Дом ${townhouseInfo.korpus}, таунхаус ${townhouseInfo.number}, площадь ${townhouseInfo.sq}, цена ${townhouseInfo.cost_str}`
+    messageInput.value = message
 }
 
 function loadImage (src) {
@@ -344,22 +346,25 @@ function checkScrollAreaOfPinList () {
     const scrollWidth = townhousesPinsList.scrollWidth
     const offsetWidhtOfPinList = townhousesPinsList.querySelector('.townhouse-picker__pin-list').offsetWidth
     const offsetWidth = townhousesPinsList.offsetWidth < offsetWidhtOfPinList ? offsetWidhtOfPinList : townhousesPinsList.offsetWidth
+    const { visibleItems, maxItems } = getVisibleItems()
 
-    console.log(scrollWidth, offsetWidth)
-
-    if (scrollWidth > offsetWidth) {
+    if (scrollWidth > offsetWidth && maxItems > visibleItems) {
+        townhousesPinsList.classList.add('townhouse-picker__pins-scroll--visible')
+        townhousesPinsFromContainer.forEach(pin => pin.classList.add('townhouse-pin--hidden'))
         windowPreview.classList.add('townhouse-picker__item-window--visible')
+        // checkScrollAreaOfPinList()
     } else {
+        townhousesPinsList.classList.remove('townhouse-picker__pins-scroll--visible')
+        townhousesPinsFromContainer.forEach(pin => pin.classList.remove('townhouse-pin--hidden'))
         windowPreview.classList.remove('townhouse-picker__item-window--visible')
+        // checkScrollAreaOfPinList
     }
-
-    console.log(scrollWidth, offsetWidth)
 }
 
 function update () {
-    updateTownhousesCoords()
-    initWidthForWindowPreview(getVisibleItems())
     checkScrollAreaOfPinList()
+    updateTownhousesCoords()
+    initWidthForWindowPreview(getVisibleItems().visibleItems)
 }
 
 update()
@@ -370,7 +375,24 @@ window.addEventListener('resize', () => {
 })
 
 // Listeners
-towwnhousesPins.forEach(pin => pin.addEventListener('click', pinHandler))
+towwnhousesPins.forEach(pin => {
+    if (!pin.disabled) {
+        pin.addEventListener('click', pinHandler)
+    }
+})
+townhousesPinsFromContainer.forEach(pin => {
+    if (!pin.disabled) {
+        pin.addEventListener('click', pinHandler)
+    }
+})
+townhouses.forEach(townhouse => {
+    if (!townhouse.classList.contains('townhouse-picker__townhouse--sale')) {
+        townhouse.addEventListener('click', pinHandler)
+    }
+}
+)
+const activePinAtTheFirstInit = [...towwnhousesPins].find(pin => !pin.disabled)
+activePinAtTheFirstInit && activePinAtTheFirstInit.click()
 windowPreview.addEventListener('mousedown', onDragStart)
 windowPreview.addEventListener('touchstart', onDragStart)
 

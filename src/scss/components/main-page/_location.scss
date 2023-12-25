@@ -1,95 +1,77 @@
 .location {
 
-    @include rfs(150px, margin-bottom);
+    @include rfs(100px, margin-bottom);
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__title {
+        //padding-bottom: 32px;
+        margin: 0
+    }
+
+
+    &__subtitle {
+        max-width: 520px
+    }
+
+    &__info {
+        display: flex;
+        //flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 10px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 450px;
+        font-size: 14px;
+
+        @include rfs(30px, gap);
+
+        p {
+            line-height: 140%;
+        }
+    }
+
+    &__link {
+        align-items: center;
+        color: #2D2D39;
+        cursor: pointer;
+
+        @include margin-bottom(23px)
+
+    }
 }
 
-.location-wrapper {
-    display: flex;
-    justify-content: center
-}
-
-.location-top {
-    text-align: center
-}
-
-.location-title {
-    padding-bottom: 32px;
-    margin: 0
-}
-
-.location-subtitle {
-    max-width: 520px
-}
-
-.location-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.location-text {
-    width: 568px;
-    padding-top: 100px;
-    padding-left: 20px;
-    font-size: 14px;
-    line-height: 120%
-}
-
-.location-text p {
-    font-size: 14px;
-    line-height: 120%
-}
-
-.location-shosse p {
-    margin-bottom: 31px
-}
-
-
-.walker-list {
-    padding: 0;
-    padding-bottom: 32px;
-    padding-left: 30px;
-    margin: 0;
-    font-size: 14px;
-    line-height: 140%
-}
-
-.location-car {
-    margin-bottom: 10px
-}
-
-
-.car-list {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 48px;
-    list-style: none
-}
-
-.car-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px
-}
-
-.car-item-min {
+.polyana-marker {
+    position: relative;
     box-sizing: border-box;
-    display: inline-block;
-    min-width: 85px;
-    padding: 7px 12px;
-    margin-right: 14px;
-    margin-left: 10px;
-    font-size: 14px;
-    line-height: 140%;
-    border-color: #f2cfbe;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 13px
+    transform: translate(-18px, -100%);
+    cursor: pointer;
+    width: 100px;
+    max-width: none;
 }
 
-@media (width <= 1199px) {
+@media (width <= 992px) {
+    .location {
+        &__info {
+            flex-direction: column-reverse;
+            gap: 16px;
+        }
 
+        .btn {
+            align-self: center;
+        }
+    }
 }
 @media (width <= 767px) {
     .container-location {

@@ -5,7 +5,17 @@
     @include rfs(86px 10px 72px, padding);
 
     .centering-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
         text-align: center;
+
+        .btn {
+            @include rfs(280px, min-width);
+        }
+
     }
 }
 
@@ -127,6 +137,16 @@
 @media (width <= 767px) {
     .container-advantages {
         //padding-top: 350px
+    }
+}
+@media (width <= 575px) {
+    .container-advantages {
+        .centering-wrap {
+            .btn {
+                min-width: 280px;
+            }
+
+        }
     }
 }
 @media (width <= 375px) {

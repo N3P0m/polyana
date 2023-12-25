@@ -1,0 +1,6 @@
+.about {
+	//padding: 70px 20px 124px;
+	max-width: 640px;
+
+	@include padding(70px 20px 124px)
+}

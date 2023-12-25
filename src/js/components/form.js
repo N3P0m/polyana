@@ -1,4 +1,4 @@
-import { loadAnimation } from 'lottie-web'
+import { loadAnimation } from 'lottie-web/'
 import { toggleBtnLoader } from '../helpers/toggle-btn-loader'
 import '../helpers/phone-mask'
 import animationData from '../lottie/ok.json'
@@ -23,7 +23,7 @@ applicationFormSwiperContainer.forEach((container, index) => {
         modules: [EffectFade],
         speed: 300,
         effect: 'fade',
-        allowTouchMove: true,
+        allowTouchMove: false,
         fadeEffect: {
             crossFade: true
         }
@@ -55,7 +55,6 @@ applicationFormSwiperContainer.forEach((container, index) => {
             },
             {
                 validator: (value, fields) => {
-                    console.log(value)
                     let validationPhoneValue = value.match(/\d+(\.\d+)?/g)
                     validationPhoneValue = validationPhoneValue ? validationPhoneValue.join('') : validationPhoneValue
                     if (!validationPhoneValue) return false
@@ -75,33 +74,36 @@ applicationFormSwiperContainer.forEach((container, index) => {
         const sunmbitBtn = e.srcElement.querySelector('button')
         toggleBtnLoader(sunmbitBtn)
         const formData = new FormData()
-        inputs.forEach(input => input.name && formData.append(input.name, input.value))
+        const values = {}
+        inputs.forEach(input => input.name && (values[input.name] = input.value))
+        Object.entries(values).forEach(([key, value]) => formData.append(key, value))
 
-        fetch('/crmtest.php', {
+        fetch('/crm.php', {
             method: 'POST',
             body: formData
         })
-            .then(async (response) => {
-                swipers[`swiper-${index + 1}`].slideNext()
-                await defay(300)
-                toggleBtnLoader(sunmbitBtn)
-                startAnimation()
+            .then((response) => {
                 if (!response.ok) {
                     throw new Error(response.status)
                 }
                 return response
             })
-            .then(() => {
-                // sliderForm.nextSlide()
+            .then(async () => {
+                window.ym && window.ym(93696980, 'reachGoal', 'form_submit_agm')
+                window.Comagic && window.Comagic.addOfflineRequest(values)
+                swipers[`swiper-${index + 1}`].slideNext()
+                await defay(300)
+                startAnimation()
                 startAnimation()
             })
             .catch(() => {
-                // alert('Что-то пошло не так, перезагрузите страницу и попробуйте снова')
+                alert('Что-то пошло не так, перезагрузите страницу и попробуйте снова')
+            })
+            .finally(() => {
+                toggleBtnLoader(sunmbitBtn)
             })
     }
 })
-
-console.log(swipers, forms, validators)
 
 const defay = (time) => new Promise(resolve => setTimeout(resolve, time))
 // eslint-disable-next-line no-unused-vars

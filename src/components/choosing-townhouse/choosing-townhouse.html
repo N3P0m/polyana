@@ -69,35 +69,71 @@
         <ul class="townhouse-picker__list">
             <li class="townhouse-picker__item-window"></li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="1">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">1</span>
+                </button>
                 <div class="townhouse-picker__townhouse" data-townhouse-type="1"
                      data-townhouse-number="1"></div>
             </li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="2">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">2</span>
+                </button>
                 <div class="townhouse-picker__townhouse" data-townhouse-type="2" data-townhouse-number="2"></div>
             </li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="3">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">3</span>
+                </button>
                 <div class="townhouse-picker__townhouse townhouse-picker__townhouse--active" data-townhouse-type="3"
                      data-townhouse-number="3"></div>
             </li>
-            <li class="townhouse-picker__item">
+            <li class="townhouse-picker__item" disabled>
+                <button class="townhouse-picker__pin townhouse-pin" disabled data-townhouse-number="4">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">4</span>
+                </button>
                 <div class="townhouse-picker__townhouse townhouse-picker__townhouse--sale" data-townhouse-type="2"
                      data-townhouse-number="4"></div>
             </li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="5">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">5</span>
+                </button>
                 <div class="townhouse-picker__townhouse " data-townhouse-type="3" data-townhouse-number="5"></div>
             </li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="6">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">6</span>
+                </button>
                 <div class="townhouse-picker__townhouse townhouse-picker__townhouse--sale" data-townhouse-type="3"
                      data-townhouse-number="6"></div>
             </li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="7">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">7</span>
+                </button>
                 <div class="townhouse-picker__townhouse townhouse-picker__townhouse--sale" data-townhouse-type="2"
                      data-townhouse-number="7"></div>
             </li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="8">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">8</span>
+                </button>
                 <div class="townhouse-picker__townhouse" data-townhouse-type="3" data-townhouse-number="8"></div>
             </li>
             <li class="townhouse-picker__item">
+                <button class="townhouse-picker__pin townhouse-pin" data-townhouse-number="9">
+                    <span class="townhouse-pin__heading">Таунхаус</span>
+                    <span class="townhouse-pin__subheading">9</span>
+                </button>
                 <div class="townhouse-picker__townhouse" data-townhouse-type="2" data-townhouse-number="9"></div>
             </li>
         </ul>
@@ -124,11 +160,11 @@
             </div>
             <div class="townhouse-specs__btn-group">
                 <button class="btn btn--primary" data-micromodal-trigger="popup-form">Забронировать</button>
-                <button class="btn btn--primary">Скачать презентацию</button>
+                <a href="/" class="btn btn--primary" id="pdf">Скачать презентацию</a>
             </div>
         </div>
-        <div class="choosing-townhouse-info__house-preview">
-            <img src="./assets/img/components/choosing-townhouse/townhouse-preview.jpg" width="640" alt="">
+        <div class="choosing-townhouse-info__house-preview" data-micromodal-trigger="popup-with-preview">
+            <img src="./assets/img/components/choosing-townhouse/townhouse-preview.jpg" data-img="planImg" width="640" alt="">
         </div>
     </div>
     <div class="choosing-townhouse__equipment choosing-townhouse-equipment">

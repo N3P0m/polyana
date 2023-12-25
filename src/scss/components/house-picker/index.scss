@@ -146,6 +146,15 @@
 
             }
         }
+
+        &[disabled] {
+            pointer-events: none;
+
+            .house-picker__info-title {
+                background-color: #E6E6E6;
+            }
+
+        }
     }
 
     &__house {
