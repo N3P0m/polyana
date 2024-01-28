@@ -63,7 +63,7 @@
     display: flex;
     z-index: 10;
     justify-content: space-between;
-    width: 100%;
+    width: 60%;
     //position: relative;
     height: 100%;
     background: transparent;
@@ -119,9 +119,17 @@
 }
 @media (width <= 1650px) {
     .gallery-navigation {
+        //display: none;
+        width: 80%;
+    }
+}
+
+@media (width <= 992px) {
+    .gallery-navigation {
         display: none;
     }
 }
+
 
 @media (width <= 575px) {
     .gallery {
