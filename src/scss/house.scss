@@ -1,0 +1,13 @@
+@use "sass:color";
+
+@import "./utils";
+@import "./ui-components/icons.scss";
+
+
+// Components
+
+@import "./components/house";
+@import "components/tabs";
+@import "components/gallery";
+@import "components/terms-of-purchase";
+@import "components/main-page/details";

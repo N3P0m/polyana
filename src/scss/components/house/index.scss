@@ -1,0 +1,333 @@
+.common-heading {
+	padding-bottom: 10px;
+}
+
+.house-specs {
+
+	@include margin-bottom(120px);
+	// .house-specs__container
+	&__container {
+		display: flex;
+		align-items: flex-start;
+
+		@include padding(80px 0 60px);
+	}
+
+	// .house-specs__column
+	&__column {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+
+		@include rfs(30px, gap);
+		@include padding-right(32px);
+		// .house-specs__column--border
+		&--border {
+			position: sticky;
+			top: 20%;
+			border: 1px solid #F2CFBE;
+
+			@include padding(30px 32px);
+			@include rfs(30px, border-radius);
+		}
+	}
+
+	// .house-specs__block
+	&__block {
+	}
+}
+
+.specs-block {
+	// .specs-block__heading
+	&__heading {
+		line-height: 100%;
+
+		@include rfs(22px, font-size);
+		@include margin-bottom(10px);
+	}
+
+	// .specs-block__text
+	&__text {
+		line-height: 120%;
+
+		@include rfs(16px, font-size);
+	}
+
+	// .specs-block__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		padding-left: 6px;
+
+		@include rfs(10px, gap);
+
+		// .specs-block__list--without-padding
+		&--without-padding {
+		}
+
+		// .specs-block__list--gutter-xl
+		&--gutter-xl {
+
+			@include rfs(20px, gap);
+			@include padding-top(20px);
+		}
+	}
+
+	// .specs-block__item
+	&__item {
+		padding-left: 12px;
+
+		&::marker {
+			content: '•';
+		}
+	}
+}
+
+
+.house-info {
+
+	@include margin-bottom(80px);
+	// .house-info__title
+	&__title {
+
+		@include margin-bottom(48px);
+	}
+
+	// .house-info__container
+	&__container {
+		display: flex;
+	}
+
+	// .house-info__column
+	&__column {
+		width: 50%;
+
+		&--with-padding {
+			padding-right: 20px;
+		}
+	}
+
+	// .house-info__props
+	&__props {
+		font-family: Grafita, sans-serif;
+	}
+
+	// .house-info__props-list
+	&__props-list {
+		display: grid;
+		grid-template-columns: min-content 1fr;
+		align-items: center;
+
+		@include rfs(53px, column-gap);
+		@include rfs(20px, row-gap);
+	}
+
+	// .house-info__prop
+	&__prop {
+		line-height: 100%;
+
+		@include rfs(16px, font-size);
+		// .house-info__prop--name
+		&--name {
+		}
+
+		// .house-info__prop--value
+		&--value {
+
+			@include rfs(24px, font-size);
+		}
+	}
+
+	&__selection {
+		display: flex;
+
+		@include rfs(50px, gap);
+	}
+
+	// .house-info__tags
+	&__tags {
+		display: flex;
+		padding: 25px 0;
+
+		@include rfs(40px, gap);
+
+
+		.btn-pin {
+			padding: 0;
+			pointer-events: none;
+		}
+	}
+
+	// .house-info__btn-group
+	&__btn-group {
+		display: flex;
+		gap: 10px;
+	}
+}
+
+.house-plan {
+	margin-bottom: 20px;
+
+	&__heading {
+		margin-bottom: 10px;
+	}
+
+	// .house-plan__container
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		//flex-wrap: wrap;
+
+		@include rfs(40px, gap);
+	}
+
+	&__img {
+
+		@include rfs(600px, width);
+
+		aspect-ratio: 1/1;
+	}
+}
+
+@media (width <= 1440px) {
+	.house-plan {
+		&__container {
+
+			@include rfs(20px, gap);
+		}
+
+		&__img {
+
+			@include rfs(580px, width);
+		}
+	}
+}
+
+@media (width <= 1200px) {
+	.house-plan {
+		&__img {
+
+			@include rfs(500px, width);
+		}
+	}
+}
+
+@media (width <= 1074px) {
+	.house-info {
+		&__btn-group {
+			display: inline-flex;
+			flex-wrap: wrap;
+			width: 70%;
+
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (width <= 992px) {
+	.house-info__selection {
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.house-info__prop--align-up {
+		align-self: start;
+
+	}
+
+	.house-info__tags {
+		flex-wrap: wrap;
+	}
+
+
+}
+
+
+@media (width <= 767px) {
+	.house-info__container {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.house-info__column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.house-info__btn-group {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		justify-content: center;
+
+		.btn {
+			width: 50%;
+		}
+	}
+
+	.house-info__column {
+		width: 100%;
+		padding-right: 0;
+	}
+
+	.house-specs {
+		// .house-specs__column
+		&__column {
+
+			@include rfs(20px, gap);
+		}
+	}
+
+	.specs-block {
+
+		// .specs-block__text
+		&__text {
+
+			@include rfs(14px, font-size);
+		}
+
+	}
+
+	.house-plan {
+
+		// .house-plan__container
+		&__container {
+
+			flex-wrap: wrap;
+
+			@include rfs(20px, gap);
+		}
+
+		&__img {
+
+			@include rfs(700px, width);
+
+			aspect-ratio: 1/1;
+		}
+	}
+}
+
+@media (width <= 575px) {
+	.house-specs {
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+
+			@include rfs(20px, gap);
+		}
+
+		// .house-specs__column
+		&__column {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			@include rfs(20px, gap);
+		}
+	}
+}

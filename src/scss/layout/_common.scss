@@ -1,0 +1,17 @@
+.common-heading {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    @include padding(45px 0 48px);
+
+    &__right {
+        position: absolute;
+    }
+
+    &__middle {
+        width: 100%;
+        text-align: center;
+    }
+}

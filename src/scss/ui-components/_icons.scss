@@ -1,0 +1,16 @@
+.icon-selection {
+    display: inline-block;
+    width: 40px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+	background-position: center;
+
+	&--bedroom { background-image: url("~@/assets/img/icons/bedroom.svg")  }
+	&--terrace { background-image: url("~@/assets/img/icons/terrace.svg")  }
+	&--light { background-image: url("~@/assets/img/icons/light.svg")  }
+	&--fireplace { background-image: url("~@/assets/img/icons/fireplace.svg")  }
+	&--garage { background-image: url("~@/assets/img/icons/garage.svg")  }
+	&--parking { background-image: url("~@/assets/img/icons/parking.svg")  }
+}
+

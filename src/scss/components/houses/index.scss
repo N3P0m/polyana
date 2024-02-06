@@ -1,0 +1,491 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+}
+
+/* Firefox */
+input[type="number"] {
+    appearance: textfield;
+}
+
+
+.slider-cont {
+    width: 300px;
+}
+
+.custom-slider {
+    --trackHeight: 2px;
+    --thumbDiameter: 14px;
+    --color-primary: #F2CFBE;
+    --color-accent: #2E3F4F;
+}
+
+/* style the input element with type "range" */
+.custom-slider input[type="range"] {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    appearance: none;
+    pointer-events: none;
+    background: none;
+    border-radius: 999px;
+}
+
+/* ::before element to replace the slider track */
+.custom-slider input[type="range"]::before {
+    position: absolute;
+    display: block;
+    width: var(--ProgressPercent, 100%);
+    height: 100%;
+    content: "";
+    background: var(--color-accent);
+    border-radius: 999px;
+}
+
+/* `::-webkit-slider-runnable-track` targets the track (background) of a range slider in chrome and safari browsers. */
+.custom-slider input[type="range"]::-webkit-slider-runnable-track {
+    height: var(--trackHeight);
+    appearance: none;
+    background: var(--color-accent);
+    border-radius: 999px;
+}
+
+.custom-slider input[type="range"]::-webkit-slider-thumb {
+    position: relative;
+    z-index: 1;
+    width: var(--thumbDiameter);
+    height: var(--thumbDiameter);
+    margin-top: calc((var(--trackHeight) - var(--thumbDiameter)) / 2);
+    appearance: none;
+    pointer-events: all;
+    cursor: grab;
+    background: var(--color-accent);
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease-out;
+
+    &:active {
+        cursor: grabbing;
+        transform: scale(1.5);
+    }
+}
+
+
+/* `::-moz-range-track` targets the track (background) of a range slider in Mozilla Firefox. */
+.custom-slider.default input[type="range"]::-moz-range-track {
+    height: var(--trackHeight);
+    appearance: none;
+    background: var(--color-accent);
+    border-radius: 999px;
+}
+
+.custom-slider input[type="range"]::-moz-range-thumb {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: var(--thumbDiameter);
+    height: var(--thumbDiameter);
+    margin-top: calc((var(--trackHeight) - var(--thumbDiameter)) / 2);
+    appearance: none;
+    pointer-events: all;
+    cursor: grab;
+    background: var(--color-accent);
+    border-radius: 5px;
+
+    &:active {
+        cursor: grabbing;
+    }
+}
+
+.custom-slider.minmax {
+    position: relative;
+    height: var(--trackHeight);
+    margin: 0.5rem 0;
+    background: var(--color-primary);
+    border-radius: 999px;
+
+    --progressLeft: 0%;
+    --progressRight: 0%;
+}
+
+.custom-slider .minmax-indicator {
+    position: absolute;
+    right: var(--thumbDiameter);
+    left: var(--thumbDiameter);
+    height: 100%;
+    pointer-events: none;
+}
+
+.custom-slider .minmax-indicator::before {
+    position: absolute;
+    right: var(--progressRight);
+    left: var(--progressLeft);
+    height: 100%;
+    content: "";
+    background: var(--color-accent);
+}
+
+.custom-slider.minmax input[type="range"] {
+    position: absolute;
+    width: calc(100% - var(--thumbDiameter));
+}
+
+.custom-slider.minmax input[type="range"][name="max"] {
+    left: var(--thumbDiameter);
+}
+
+.custom-slider.minmax input[type="range"]::-webkit-slider-runnable-track {
+    background: none;
+}
+
+.custom-slider.minmax input[type="range"]::before {
+    display: none;
+}
+
+.minmax-inputs {
+    display: flex;
+    justify-content: space-between;
+
+    @include margin-bottom(16px);
+}
+
+.minmax-inputs input {
+    max-width: 50px;
+    padding: 5px 10px 4px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    color: #2E3F4F;
+    text-align: center;
+    border: 1px solid #F2CFBE;
+    border-radius: 10px;
+}
+
+
+.active-pins {
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    gap: 14px;
+}
+
+
+
+.dt-house-picker {
+    padding: 20px 0;
+    font-family: Steppe, sans-serif;
+
+    &__filters-btn {
+        width: 100%;
+    }
+	
+    &__result {
+		
+        @include padding(49px 40px 100px);
+    }
+
+    &__info {
+        display: block;
+        margin-bottom: 34px;
+        font-size: 18px;
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 15.625rem);
+        justify-content: space-between;
+
+		@include rfs(100px, row-gap);
+		@include rfs(20px, column-gap);
+
+    }
+}
+
+.dt-house-picker-filters {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+
+    @include rfs(50px, gap);
+
+    &__slider {
+        width: 200px;
+        min-width: 200px;
+    }
+
+    &__subheading {
+        line-height: 100%;
+
+        @include margin-bottom(10px);
+    }
+
+    &__active-pins-numbers {
+        min-width: max-content;
+    }
+
+    &__active-pins {
+        align-self: end;
+        margin-left: auto;
+    }
+
+}
+
+.dt-house-item {
+    display: inline-block;
+    font-family: Grafita, sans-serif;
+    font-size: 14px;
+    text-align: center;
+
+
+    &__img {
+        aspect-ratio: 1/1;
+        margin-bottom: 15px;
+		width: 100%;
+    }
+
+    &__header {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__heading {
+        margin-bottom: 6px;
+
+        @include rfs(32px, font-size);
+    }
+
+    &__subheading {
+        display: block;
+        line-height: 114%;
+
+    }
+
+    &__main {
+        margin-bottom: 20px;
+    }
+
+    &__props {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    &__prop {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__value {
+        display: block;
+
+        @include rfs(24px, font-size);
+    }
+
+    &__caption {
+        display: block;
+        width: min-content;
+        line-height: 114%;
+    }
+
+    &__btn {
+        min-width: 100%;
+    }
+}
+
+.popup-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    height: 100dvh;
+    padding: 20px;
+    background: white;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    &__heading {
+        width: 100%;
+        margin-right: -80px;
+        text-align: center;
+    }
+
+    &__main {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-close .line {
+        stroke: #2c2b38;
+    }
+
+    &__footer {
+        //position: absolute;
+        //left: 0;
+        //bottom: 0;
+        width: 100%;
+        padding-bottom: 22px;
+        text-align: center;
+    }
+}
+
+.text-with-icon {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: transform 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateX(100%);
+}
+
+.btn--fixed {
+    display: none;
+}
+
+.transition-delay {
+    transition-delay: 0.3s;
+}
+
+
+@media (width <= 1440px) {
+    .dt-house-picker-filters {
+        //grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+
+        &__active-pins {
+            margin-left: 0;
+        }
+    }
+
+    .active-pins {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+    }
+}
+
+
+@media (width <= 1200px) {
+	.dt-house-picker {
+		&__list {
+			grid-template-columns: repeat(3, 270px);
+
+			@include rfs(20px, column-gap);
+
+		}
+	}
+}
+
+
+
+@media (width <= 992px) {
+	.dt-house-picker {
+		&__list {
+			grid-template-columns: repeat(3, 200px);
+
+			@include rfs(80px, row-gap);
+
+		}
+	}
+    .dt-house-picker-filters {
+        grid-template-columns: repeat(2, min-content);
+
+        &__active-pins {
+            grid-column: span 2;
+        }
+
+    }
+}
+
+@media (width <= 767px) {
+	.dt-house-picker {
+		&__list {
+			grid-template-columns: repeat(2, 220px);
+		}
+	}
+}
+@media (width <= 575px) {
+	.dt-house-picker {
+		&__list {
+			grid-template-columns: 90%;
+            justify-content: center;
+		}
+	}
+    .dt-house-picker-filters {
+        grid-template-columns: 1fr;
+
+        &__subheading {
+            width: min-content;
+            font-size: 14px;
+        }
+
+        &__slider {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            width: 100%;
+
+            .range-slider {
+                width: 100%;
+            }
+        }
+
+        &__active-pins-numbers {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+
+
+        }
+
+        &__active-pins {
+            grid-column: span 1;
+
+            .active-pins {
+                grid-template-columns:  repeat(2, max-content);;
+                justify-content: center;
+            }
+        }
+
+    }
+
+    .btn--fixed {
+        display: flex;
+        position: fixed;
+        top: 20%;
+        right: 0;
+        min-width: auto;
+        border-radius: 10px 0 0 10px;
+        padding:  1rem 1.5rem ;
+    }
+
+}
+
+
+

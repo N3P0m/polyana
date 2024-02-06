@@ -312,7 +312,7 @@
     transform: translateY(-100%);
 }
 
-@media (width <= 1199px) {
+@media (width <= 1200px) {
     .main-header-nav-wrapper {
         padding: 0 20px;
         margin: 0
@@ -332,7 +332,8 @@
 
     .site-navigation {
         grid-gap: 30px;
-        gap: 30px
+
+        @include rfs(26px, gap);
     }
 
 
@@ -390,7 +391,7 @@
         }
     }
 }
-@media (width <= 767px) {
+@media (width <= 1074px) {
     .main-header:not(.main-header--sticky, .main-header--burger) .site-navigation {
         display: none
     }

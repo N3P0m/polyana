@@ -19,6 +19,12 @@
     @include rfs(30px, font-size);
 }
 
+.h5 {
+
+    @include rfs(24px, font-size);
+}
+
+
 .p1 {
 
     @include rfs(20px, font-size);

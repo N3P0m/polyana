@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader');
 // const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 // const json = require('json-loader!./file.json');
@@ -36,6 +37,7 @@ function generateHtmlPlugins (templateDir) {
 
 // // ===/HELPERS FUNCTIONS===
 const htmlPlugins = generateHtmlPlugins('./src')
+console.log(JSON.stringify(htmlPlugins, null, 2))
 
 const INCLUDE_PATTERN = /<include src="(.+)"\s*\/?>(?:<\/include>)?/gi
 const processNestedHtml = (content, loaderContext, dir = null) =>
@@ -68,7 +70,8 @@ const pluginsDev = [
                 drop_console: true
             }
         }
-    })
+    }),
+    new VueLoaderPlugin()
 ]
 const pluginsProd = [
     ...htmlPlugins,
@@ -78,7 +81,7 @@ const pluginsProd = [
     }),
     new MiniCssExtractPlugin({
         filename: 'css/[name].[hash].css'
-    })
+    }),
     // new ImageMinimizerPlugin({
     //   minimizerOptions: {
     //     plugins: [
@@ -105,6 +108,7 @@ const pluginsProd = [
     //     ]
     //   }
     // })
+    new VueLoaderPlugin()
 ]
 
 const plugins = mode === 'development' ? pluginsDev : pluginsProd
@@ -126,6 +130,11 @@ const rules = {
             exclude: /node_modules/,
             use: ['babel-loader']
         },
+
+        // {
+        //     test: /\.vue$/,
+        //     loader: 'vue-loader'
+        // },
         // {
         //   test: /\.json$/,
         //   exclude: /node_modules/,
@@ -170,6 +179,10 @@ const rules = {
     ],
     development: [
         {
+            test: /\.vue$/,
+            loader: 'vue-loader'
+        },
+        {
             test: /\.html$/,
             use: {
                 loader: 'html-loader',
@@ -185,6 +198,7 @@ const rules = {
             exclude: /node_modules/,
             use: ['babel-loader']
         },
+
         // CSS, PostCSS, Sass
         {
             test: /\.(scss|css)$/,
@@ -221,7 +235,9 @@ const config = {
         index: path.resolve(__dirname, './src/entry.js'),
         'choosing-house': path.resolve(__dirname, './src/choosing-house.js'),
         'choosing-townhouse': path.resolve(__dirname, './src/choosing-townhouse.js'),
-        'terms-of-purchase-detail': path.resolve(__dirname, './src/terms-of-purchase-detail.js')
+        'terms-of-purchase-detail': path.resolve(__dirname, './src/terms-of-purchase-detail.js'),
+        'houses': path.resolve(__dirname, './src/houses.js'),
+        'house': path.resolve(__dirname, './src/house.js')
     },
     resolve: {
         alias: {
