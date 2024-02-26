@@ -1,17 +1,72 @@
 .common-heading {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: visible;
-    @include padding(45px 0 48px);
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: visible;
+	@include padding(45px 0 48px);
 
-    &__right {
-        position: absolute;
-    }
+	&__right {
+		position: absolute;
+	}
 
-    &__middle {
-        width: 100%;
-        text-align: center;
-    }
+	&__middle {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.preview-element {
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: filter 0.3s ease-out;
+
+	&::after {
+		position: absolute;
+		z-index: 10;
+		display: block;
+		content: '';
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzNCAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI1IDI1TDMzIDMzIiBzdHJva2U9IiMyRDJEMzkiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNOSAxNUwyMSAxNSIgc3Ryb2tlPSIjMkQyRDM5IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTTE1IDlMMTUgMjEiIHN0cm9rZT0iIzJEMkQzOSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxjaXJjbGUgY3g9IjE1IiBjeT0iMTUiIHI9IjE0IiBzdHJva2U9IiMyRDJEMzkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K");
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0;
+		transition: opacity 0.3s ease-out;
+		pointer-events: none;
+
+
+		@include rfs(33px, width);
+		@include rfs(33px, height);
+
+	}
+
+	&::before {
+		position: absolute;
+		z-index: 10;
+		display: block;
+		content: '';
+		background-color: #F2CFBE;
+		opacity: 0;
+		transition: opacity 0.3s ease-out;
+		pointer-events: none;
+		border-radius: 50px;
+
+		@include rfs(100px, width);
+		@include rfs(100px, height);
+	}
+
+
+	&:hover {
+		//filter: brightness(0.8);
+
+		&::before,
+		&::after {
+			z-index: 10;
+			opacity: 1;
+		}
+	}
 }

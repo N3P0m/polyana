@@ -23,9 +23,9 @@
                     <div class="house-info__prop house-info__prop--value">2</div>
                     <div class="house-info__prop house-info__prop--name house-info__prop--align-up">Цвет</div>
                     <div class="house-info__prop house-info__prop--value">
-                        <div class="house-info__selection">
+                        <div class="house-info__selection" id="house-colors">
                             <label class="check option">
-                                <input class="check__input" type="radio" name="houseColor" value="light">
+                                <input class="check__input" type="radio" name="houseColor" value="light" checked>
                                 <span class="check__box"></span>
                                 <span class="p2">Светлый</span>
                             </label>
@@ -52,21 +52,21 @@
                         <i class="icon-selection icon-selection--terrace"></i>
                         <span>Террасса</span>
                     </button>
-<!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
-<!--                        <i class="icon-selection icon-selection&#45;&#45;fireplace"></i>-->
-<!--                        <span>Террасса <br> c камином</span>-->
-<!--                    </button>-->
-<!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
-<!--                        <i class="icon-selection icon-selection&#45;&#45;parking"></i>-->
-<!--                        <span>Машино-<br>место<br> с навесом</span>-->
-<!--                    </button>-->
-<!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
-<!--                        <i class="icon-selection icon-selection&#45;&#45;garage"></i>-->
-<!--                        <span>Гараж</span>-->
-<!--                    </button>-->
+                    <!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
+                    <!--                        <i class="icon-selection icon-selection&#45;&#45;fireplace"></i>-->
+                    <!--                        <span>Террасса <br> c камином</span>-->
+                    <!--                    </button>-->
+                    <!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
+                    <!--                        <i class="icon-selection icon-selection&#45;&#45;parking"></i>-->
+                    <!--                        <span>Машино-<br>место<br> с навесом</span>-->
+                    <!--                    </button>-->
+                    <!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
+                    <!--                        <i class="icon-selection icon-selection&#45;&#45;garage"></i>-->
+                    <!--                        <span>Гараж</span>-->
+                    <!--                    </button>-->
                 </div>
                 <div class="house-info__btn-group">
-                    <button class="btn btn--primary">Забронировать</button>
+                    <button class="btn btn--primary" data-micromodal-trigger="popup-form">Забронировать</button>
                     <button class="btn btn--primary" disabled>Скачать презентацию</button>
                 </div>
             </div>
@@ -77,10 +77,16 @@
 <section class="wrapper-inner-xl house-plan">
     <h2 class="h2 text-center house-plan__heading">Планировка</h2>
     <div class="house-plan__container">
-        <img class="house-plan__img" src="https://macroserver.ru/estate/files/get/5092182/4536761/oUV4DW4gRK8OLnwxNzA3MTc3NjAwfDU4MTg1/planirovka_k4-257_6-1-257.6.jpg"
-             width="600" height="600" alt="">
-        <img class="house-plan__img" src="https://macroserver.ru/estate/files/get/5092182/4536761/oUV4DW4gRK8OLnwxNzA3MTc3NjAwfDU4MTg1/planirovka_k4-257_6-1-257.6.jpg"
-             width="600" height="600" alt="">
+        <div data-micromodal-trigger="popup-with-preview" class="preview-element skeleton skeleton-img">
+            <img class="house-plan__img"
+                 src="https://macroserver.ru/estate/files/get/5092182/4536761/oUV4DW4gRK8OLnwxNzA3MTc3NjAwfDU4MTg1/planirovka_k4-257_6-1-257.6.jpg"
+                 width="600" height="600" alt="Планировка" data-img="planImg">
+        </div>
+        <div data-micromodal-trigger="popup-with-preview" class="preview-element">
+            <img class="house-plan__img"
+                 src="https://macroserver.ru/estate/files/get/5092182/4536761/oUV4DW4gRK8OLnwxNzA3MTc3NjAwfDU4MTg1/planirovka_k4-257_6-1-257.6.jpg"
+                 width="600" height="600" alt="Планировка" data-img="planImg">
+        </div>
     </div>
 </section>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="dt-house-picker">
-    <DtHousePickerFilter v-if="width > 575" v-model:max-sq="filterMaxSq"
+    <ApartmentsPickerFilter v-if="width > 575" v-model:max-sq="filterMaxSq"
                          :limit-sq-max="minMaxHousesValues.maxSq"
                          :limit-sq-min="minMaxHousesValues.minSq"
                          v-model:min-sq="filterMinSq"
@@ -49,7 +49,7 @@
         <span>Фильтры</span>
       </div>
     </template>
-    <DtHousePickerFilter v-model:max-sq="filterMaxSq"
+    <ApartmentsPickerFilter v-model:max-sq="filterMaxSq"
                          :limit-sq-max="minMaxHousesValues.maxSq"
                          :limit-sq-min="minMaxHousesValues.minSq"
                          v-model:min-sq="filterMinSq"
@@ -79,12 +79,12 @@ import {computed, ref, watch} from "vue";
 
 import {useSwipe, useWindowSize, useElementVisibility} from '@vueuse/core'
 import PopupFull from "@/vue/components/PopupFull.vue";
-import DtHousePickerFilter from "@/vue/components/DtHousePickerFilter.vue";
 import DtHouseItem from "@/vue/components/DtHouseItem.vue";
 
-// import {crmData} from "@/vue/test-data/houses-data";
+import {crmData} from "@/vue/test-data/houses-data";
+import ApartmentsPickerFilter from "@/vue/components/apartments/ApartmentsPickerFilter.vue";
 
-// window.crmData = crmData
+window.crmData = crmData
 
 const el = ref(null);
 const filtersFullBtn = ref(null)

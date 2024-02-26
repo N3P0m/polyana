@@ -23,7 +23,7 @@
       </div>
     </ul>
     <div class="dt-house-item__footer">
-      <a href="#" class="btn btn--primary dt-house-item__btn">
+      <a :href="'/house?district=' + house.number" class="btn btn--primary dt-house-item__btn">
         Подробнее
       </a>
     </div>
@@ -109,13 +109,12 @@ const houseProps = {
 const houseValue = computed(() => {
   const numberHouse = +props.house.number
   for (const [key, value] of Object.entries(houseNames)) {
-    console.log(key, value, key.includes(numberHouse), numberHouse)
     if (value.includes(numberHouse)) {
       return key;
     }
   }
 })
 
-const houseProp = houseProps[houseValue.value]
+const houseProp = computed(() => houseProps[houseValue.value])
 
 </script>

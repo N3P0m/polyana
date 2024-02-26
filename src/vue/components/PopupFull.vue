@@ -19,7 +19,7 @@
     <slot></slot>
     </div>
     <div class="popup-full__footer">
-      <slot name="footer">
+      <slot name="footer" :methods="closePopup">
       </slot>
     </div>
   </div>
@@ -38,7 +38,6 @@ const props = defineProps({
 })
 
 watch(() => props.modelValue, newValue => {
-  console.log('popup', newValue)
   useLockScroll(newValue)
 })
 

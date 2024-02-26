@@ -1,0 +1,59 @@
+<div class="swiper swiper-townhouse-popup" data-swiper="application-form" data-swiper-place="popup">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+            <div class="townhouse-picker-popup">
+                <div class="townhouse-picker-popup__card">
+                    <i class="townhouse-picker-popup__icon icon icon-house"></i>
+                    <div class="choosing-townhouse-popup__specs townhouse-specs">
+                        <h2 class="townhouse-specs__bellow-title">Участок №6</h2>
+                        <h3 class="townhouse-specs__heading h4">Дом Модерн</h3>
+                        <div class="townhouse-specs__table">
+                            <div class="townhouse-specs__table-row">
+                                <div class="townhouse-specs__table-cell">Площадь дома</div>
+                                <div class="townhouse-specs__table-cell" role="value" ><span>188,72</span> м2</div>
+                            </div>
+                            <div class="townhouse-specs__table-row">
+                                <div class="townhouse-specs__table-cell">Этажей</div>
+                                <div class="townhouse-specs__table-cell" role="value"  id="floors" >2</div>
+                            </div>
+                            <div class="townhouse-specs__table-row">
+                                <div class="townhouse-specs__table-cell">Цена</div>
+                                <div class="townhouse-specs__table-cell" role="value" ><span id="cost">11 586 400</span> руб</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="townhouse-picker-popup__form">
+                    <h2 class="popup__title h2">Забронировать <br> дом с участком</h2>
+                    <div class="popup__caption p1">Оставьте заявку и наш менеджер свяжется с вами</div>
+                    <form action="#" class="application-form form form--dark">
+                        <div class="input-box"><input placeholder="ФИО" type="text" class="rounded-input"
+                                                      name="name"/></div>
+                        <div class="input-box"><input placeholder="Email" name="email"
+                                                      class="rounded-input"/></div>
+                        <div class="input-box"><input data-tel-input type="tel"
+                                                      placeholder="Контактный номер телефона"
+                                                      name="phone" class="rounded-input"/></div>
+                        <input type="text" class="visually-hidden" name="message" id="message">
+                        <input type="text" class="visually-hidden" name="house-color" id="house-color">
+                        <div class="button-input">
+                            <button type="submit"
+                                    class="form__btn btn btn--secondary">Узнать подробности
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </li>
+        <li class="swiper-slide">
+            <!--            <div class="popup__content">-->
+            <h2 class="popup__title h2">Заявка успешно отправлена</h2>
+            <div class="popup__caption p1">Скоро наш менеджер свяжется вами</div>
+            <button class="btn btn--secondary btn-promo link promo-link" data-micromodal-close style="width: 280px">
+                Закрыть
+            </button>
+            <!--            </div>-->
+        </li>
+    </ul>
+</div>

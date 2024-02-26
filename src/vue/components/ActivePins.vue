@@ -11,45 +11,54 @@
 </template>
 
 <script setup>
-import {reactive, ref} from "vue";
+import {onMounted, reactive, ref} from "vue";
 import '@/scss/ui-components/_icons.scss'
+
+const emit = defineEmits(['update:modelValue'])
+
+const {modelValue} = defineProps({
+  modelValue: {
+    type: Array,
+    default: () => []
+  }
+})
 
 const pins = reactive([
   {
     label: 'Второй <br> свет',
     iconClass: 'icon-selection--light',
     isActive: false,
-    value: ''
+    value: 'Второй свет'
   },
   {
     label: 'Мастер-<br>спальня',
     iconClass: 'icon-selection--bedroom',
     isActive: false,
-    value: ''
+    value: 'Мастер-спальня'
   },
   {
     label: 'Машино-<br> место <br> с навесом',
     iconClass: 'icon-selection--parking',
     isActive: false,
-    value: ''
+    value: 'Машиноместо с навесом'
   },
   {
     label: 'Терраса <br> с камином',
     iconClass: 'icon-selection--fireplace',
     isActive: false,
-    value: ''
+    value: 'Терраса с камином'
   },
   {
     label: 'Терраса',
     iconClass: 'icon-selection--terrace',
     isActive: false,
-    value: ''
+    value: 'Терраса'
   },
   {
     label: 'Гараж',
     iconClass: 'icon-selection--garage',
     isActive: false,
-    value: ''
+    value: 'Гараж'
   }
 ])
 
@@ -57,6 +66,23 @@ const activePin = ref(1)
 
 function setActiveBtn(pin) {
   pin.isActive = !pin.isActive
+  console.log('arrr', getFilteredTagsByActive())
+  emit('update:modelValue', getFilteredTagsByActive())
 }
+
+function getFilteredTagsByActive() {
+  return JSON.parse(JSON.stringify(pins.filter(pin => pin.isActive)))
+}
+
+onMounted(() => {
+  if (modelValue.length > 0) {
+    pins.forEach(pin => {
+      const mdEl = modelValue.find(md => md.value === pin.value)
+      if (!mdEl) return
+      pin.isActive = mdEl.isActive
+    })
+  }
+})
+
 
 </script>

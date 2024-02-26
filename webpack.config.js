@@ -237,7 +237,8 @@ const config = {
         'choosing-townhouse': path.resolve(__dirname, './src/choosing-townhouse.js'),
         'terms-of-purchase-detail': path.resolve(__dirname, './src/terms-of-purchase-detail.js'),
         'houses': path.resolve(__dirname, './src/houses.js'),
-        'house': path.resolve(__dirname, './src/house.js')
+        'house': path.resolve(__dirname, './src/house.js'),
+        'apartments': path.resolve(__dirname, './src/apartments.js')
     },
     resolve: {
         alias: {

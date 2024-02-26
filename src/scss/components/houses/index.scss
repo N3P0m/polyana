@@ -184,6 +184,7 @@ input[type="number"] {
     &__result {
 		
         @include padding(49px 40px 100px);
+        @include rfs(730px, min-height);
     }
 
     &__info {
@@ -199,8 +200,8 @@ input[type="number"] {
         grid-template-columns: repeat(4, 15.625rem);
         justify-content: space-between;
 
-		@include rfs(100px, row-gap);
-		@include rfs(20px, column-gap);
+        @include rfs(100px, row-gap);
+        @include rfs(20px, column-gap);
 
     }
 }
@@ -241,9 +242,9 @@ input[type="number"] {
 
 
     &__img {
+        width: 100%;
         aspect-ratio: 1/1;
         margin-bottom: 15px;
-		width: 100%;
     }
 
     &__header {
@@ -352,7 +353,15 @@ input[type="number"] {
     align-items: center;
     justify-content: center;
 }
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
 
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
 
 
 .slide-enter-active,
@@ -373,6 +382,10 @@ input[type="number"] {
     transition-delay: 0.3s;
 }
 
+.view-more {
+
+    @include padding-top(100px);
+}
 
 @media (width <= 1440px) {
     .dt-house-picker-filters {
@@ -389,30 +402,26 @@ input[type="number"] {
         grid-template-columns: repeat(3, max-content);
     }
 }
-
-
 @media (width <= 1200px) {
-	.dt-house-picker {
-		&__list {
-			grid-template-columns: repeat(3, 270px);
+    .dt-house-picker {
+        &__list {
+            grid-template-columns: repeat(3, 270px);
 
-			@include rfs(20px, column-gap);
+            @include rfs(20px, column-gap);
 
-		}
-	}
+        }
+    }
 }
-
-
-
 @media (width <= 992px) {
-	.dt-house-picker {
-		&__list {
-			grid-template-columns: repeat(3, 200px);
+    .dt-house-picker {
+        &__list {
+            grid-template-columns: repeat(3, 200px);
 
-			@include rfs(80px, row-gap);
+            @include rfs(80px, row-gap);
 
-		}
-	}
+        }
+    }
+
     .dt-house-picker-filters {
         grid-template-columns: repeat(2, min-content);
 
@@ -422,21 +431,21 @@ input[type="number"] {
 
     }
 }
-
 @media (width <= 767px) {
-	.dt-house-picker {
-		&__list {
-			grid-template-columns: repeat(2, 220px);
-		}
-	}
+    .dt-house-picker {
+        &__list {
+            grid-template-columns: repeat(2, 220px);
+        }
+    }
 }
 @media (width <= 575px) {
-	.dt-house-picker {
-		&__list {
-			grid-template-columns: 90%;
+    .dt-house-picker {
+        &__list {
+            grid-template-columns: 90%;
             justify-content: center;
-		}
-	}
+        }
+    }
+
     .dt-house-picker-filters {
         grid-template-columns: 1fr;
 
@@ -476,13 +485,15 @@ input[type="number"] {
     }
 
     .btn--fixed {
-        display: flex;
         position: fixed;
-        top: 20%;
         right: 0;
+        display: flex;
         min-width: auto;
-        border-radius: 10px 0 0 10px;
         padding:  1rem 1.5rem ;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 2px 15px -10px;
+
+        @include rfs(400px, top);
     }
 
 }
