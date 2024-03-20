@@ -169,6 +169,10 @@ input[type="number"] {
     display: grid;
     grid-template-columns: repeat(6, max-content);
     gap: 14px;
+
+    &--flex {
+        display: flex !important;
+    }
 }
 
 
@@ -180,16 +184,27 @@ input[type="number"] {
     &__filters-btn {
         width: 100%;
     }
-	
+
     &__result {
-		
+
         @include padding(49px 40px 100px);
         @include rfs(730px, min-height);
     }
 
+    &__result-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 34px;
+        flex-wrap: wrap;
+
+        @include rfs(47px, gap);
+
+    }
+
     &__info {
         display: block;
-        margin-bottom: 34px;
+
         font-size: 18px;
         line-height: 100%;
         text-align: center;
@@ -202,6 +217,12 @@ input[type="number"] {
 
         @include rfs(100px, row-gap);
         @include rfs(20px, column-gap);
+
+        &--apartments {
+
+            @include rfs(60px, row-gap);
+            @include rfs(60px, column-gap);
+        }
 
     }
 }
@@ -230,6 +251,20 @@ input[type="number"] {
     &__active-pins {
         align-self: end;
         margin-left: auto;
+    }
+
+    &--apartments {
+        grid-template-columns: repeat(5, min-content);
+        @include rfs(30px, gap);
+
+        .dt-house-picker-filters__active-pins {
+            grid-column: span 3;
+        }
+
+        .dt-house-picker-filters__building-filter {
+            grid-area: 2/1/2/2;
+            align-self: end;
+        }
     }
 
 }
@@ -312,6 +347,7 @@ input[type="number"] {
     height: 100dvh;
     padding: 20px;
     background: white;
+    overflow-y: auto;
 
     &__header {
         display: flex;
@@ -395,12 +431,31 @@ input[type="number"] {
         &__active-pins {
             margin-left: 0;
         }
+
+        &--apartments {
+            grid-template-columns: repeat(3, min-content);
+            @include rfs(30px, gap);
+
+            .active-pins {
+                grid-template-columns: repeat(5, max-content);
+                grid-column: span 2;
+            }
+        }
     }
 
     .active-pins {
         display: grid;
         grid-template-columns: repeat(3, max-content);
     }
+
+    .dt-house-picker {
+        &__list {
+            &--apartments {
+                grid-template-columns: repeat(3, 20rem) !important;
+            }
+        }
+    }
+
 }
 @media (width <= 1200px) {
     .dt-house-picker {
@@ -409,6 +464,9 @@ input[type="number"] {
 
             @include rfs(20px, column-gap);
 
+            &--apartments {
+                grid-template-columns: repeat(3, 17rem) !important;
+            }
         }
     }
 }
@@ -419,6 +477,10 @@ input[type="number"] {
 
             @include rfs(80px, row-gap);
 
+            &--apartments {
+                grid-template-columns: repeat(2, 45%) !important;
+            }
+
         }
     }
 
@@ -426,7 +488,36 @@ input[type="number"] {
         grid-template-columns: repeat(2, min-content);
 
         &__active-pins {
-            grid-column: span 2;
+            grid-column: span 2 !important;
+        }
+
+        &--apartments {
+            grid-template-columns: repeat(2, 1fr);
+
+            @include rfs(20px, row-gap);
+            @include rfs(30px, column-gap);
+
+            .active-pins {
+                grid-template-columns: repeat(4, max-content);
+                grid-column: span 2;
+            }
+
+            .dt-house-picker-filters__building-filter {
+                //grid-column: span 2;
+
+                .building-filter {
+                    width: 100%;
+                }
+
+                .btn {
+                    width: 100%;
+                }
+            }
+
+            .dt-house-picker-filters__slider {
+                width: auto;
+            }
+
         }
 
     }
@@ -443,6 +534,15 @@ input[type="number"] {
         &__list {
             grid-template-columns: 90%;
             justify-content: center;
+
+            &--apartments {
+                grid-template-columns:  95% !important;
+            }
+        }
+
+        &__result {
+
+            @include padding(29px 10px 50px);
         }
     }
 
@@ -451,6 +551,7 @@ input[type="number"] {
 
         &__subheading {
             width: min-content;
+            min-width: 75px;
             font-size: 14px;
         }
 
@@ -474,11 +575,27 @@ input[type="number"] {
         }
 
         &__active-pins {
-            grid-column: span 1;
+            grid-column: span 1 !important;
 
             .active-pins {
                 grid-template-columns:  repeat(2, max-content);;
                 justify-content: center;
+            }
+        }
+
+        &--apartments {
+            grid-auto-columns: 1fr;
+
+
+            .dt-house-picker-filters__active-pins {
+                grid-column: span 1 !important;
+            }
+
+            .dt-house-picker-filters__select {
+                grid-area: 6/1/7/2;
+            }
+            .dt-house-picker-filters__building-filter {
+                grid-area: 7/1/8/2;
             }
         }
 

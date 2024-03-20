@@ -1,11 +1,20 @@
 <template>
-  <div class="dt-house-picker">
-    <ApartmentsPickerFilter v-if="width > 575" v-model:max-sq="filterMaxSq"
-                         :limit-sq-max="minMaxHousesValues.maxSq"
-                         :limit-sq-min="minMaxHousesValues.minSq"
-                         v-model:min-sq="filterMinSq"
-                         v-model:current-floor-value="filterFloor"
-                         v-model:tags="filterTags"
+  <div class="dt-house-picker" >
+    <ApartmentsPickerFilter :key="instance" v-if="width > 575"
+                            :limit-sq-max="minMaxHousesValues.maxSq"
+                            :limit-sq-min="minMaxHousesValues.minSq"
+                            :limit-cost-max="minMaxHousesValues.maxCost"
+                            :limit-cost-min="minMaxHousesValues.minCost"
+                            :limit-floor="minMaxHousesValues.maxFloor"
+                            :limit-rooms="minMaxHousesValues.maxRooms"
+                            v-model:max-sq="filterMaxSq"
+                            v-model:min-sq="filterMinSq"
+                            v-model:max-cost="filterMaxCost"
+                            v-model:min-cost="filterMinCost"
+                            v-model:floors-value="filterFloor"
+                            v-model:rooms-value="filterRooms"
+                            v-model:tags="filterTags"
+                            v-model:apartmentInfo="apartmentInfo"
     />
     <div>
       <button v-if="width <= 575" class="btn btn--primary dt-house-picker__filters-btn"
@@ -25,16 +34,32 @@
     </div>
   </div>
   <div class="dt-house-picker__result">
-    <span class="dt-house-picker__info">Найдено: {{pluralizeHouse(filteredHouseDataBySq.length)}}</span>
-    <ul class="dt-house-picker__list" v-auto-animate>
-      <template v-for="(house, index) in viewedData" :key="index">
-        <DtHouseItem tag="li" :house="house"/>
+    <div class="dt-house-picker__result-header">
+        <span class="dt-house-picker__info">Найдено: {{ pluralizeHouse(filteredHouseDataBySq.length) }}</span>
+        <button class="btn btn--tertiary" @click="resetFilters">
+          <span>Сбросить фильтр</span>
+          <div style="margin-left: 1rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <mask id="mask0_1480_116" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="10" height="10">
+              <rect width="10" height="10" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_1480_116)">
+              <path d="M0.00012207 0L10 10" stroke="black"/>
+              <path d="M10 0L8.12008e-05 10" stroke="black"/>
+            </g>
+          </svg>
+          </div>
+        </button>
+    </div>
+    <ul class="dt-house-picker__list dt-house-picker__list--apartments" v-auto-animate>
+      <template v-for="house in viewedData" :key="house.id">
+        <ApartmentItem tag="li" :house="house"/>
       </template>
     </ul>
     <transition name="fade">
-    <div class="text-center view-more" @click="viewMore" v-if="filteredHouseDataBySq.length > elementsPerView">
-      <button class="btn btn--primary">Загрузить еще</button>
-    </div>
+      <div class="text-center view-more" @click="viewMore" v-if="filteredHouseDataBySq.length > elementsPerView">
+        <button class="btn btn--primary">Загрузить еще</button>
+      </div>
     </transition>
   </div>
   <PopupFull v-if="width <= 575" v-model="isFiltersPopupShow">
@@ -49,21 +74,31 @@
         <span>Фильтры</span>
       </div>
     </template>
-    <ApartmentsPickerFilter v-model:max-sq="filterMaxSq"
-                         :limit-sq-max="minMaxHousesValues.maxSq"
-                         :limit-sq-min="minMaxHousesValues.minSq"
-                         v-model:min-sq="filterMinSq"
-                         v-model:current-floor-value="filterFloor"
-                         v-model:tags="filterTags"
+    <ApartmentsPickerFilter :key="instance"
+                            :limit-sq-max="minMaxHousesValues.maxSq"
+                            :limit-sq-min="minMaxHousesValues.minSq"
+                            :limit-cost-max="minMaxHousesValues.maxCost"
+                            :limit-cost-min="minMaxHousesValues.minCost"
+                            :limit-floor="minMaxHousesValues.maxFloor"
+                            :limit-rooms="minMaxHousesValues.maxRooms"
+                            v-model:max-sq="filterMaxSq"
+                            v-model:min-sq="filterMinSq"
+                            v-model:max-cost="filterMaxCost"
+                            v-model:min-cost="filterMinCost"
+                            v-model:floors-value="filterFloor"
+                            v-model:rooms-value="filterRooms"
+                            v-model:tags="filterTags"
+                            v-model:apartmentInfo="apartmentInfo"
     />
     <template #footer="{ methods }">
-      <button class="btn btn--primary"  @click="methods">
+      <button class="btn btn--primary" @click="methods">
         Применить
       </button>
     </template>
   </PopupFull>
   <transition name="slide" appear>
-    <button class="btn btn--primary btn--fixed" @click="openFiltersPopup" ref="el" v-if="!filtersFullBtnIsVisible && !isFiltersPopupShow">
+    <button class="btn btn--primary btn--fixed" @click="openFiltersPopup" ref="el"
+            v-if="!filtersFullBtnIsVisible && !isFiltersPopupShow">
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15" fill="none">
         <path d="M7 4H17" stroke="#2E3F4F"/>
         <path d="M11 11L1 11" stroke="#2E3F4F"/>
@@ -75,14 +110,14 @@
 </template>
 
 <script setup>
-import {computed, ref, watch} from "vue";
+import {computed, ref, watch, getCurrentInstance} from "vue";
 
 import {useSwipe, useWindowSize, useElementVisibility} from '@vueuse/core'
 import PopupFull from "@/vue/components/PopupFull.vue";
-import DtHouseItem from "@/vue/components/DtHouseItem.vue";
 
-import {crmData} from "@/vue/test-data/houses-data";
+import {crmData} from "@/vue/test-data/apartments-data";
 import ApartmentsPickerFilter from "@/vue/components/apartments/ApartmentsPickerFilter.vue";
+import ApartmentItem from "@/vue/components/apartments/ApartmentItem.vue";
 
 window.crmData = crmData
 
@@ -120,6 +155,9 @@ const minMaxHousesValues = computed(() => {
     houseResult.maxSq = Math.max(houseResult.maxSq, houseSource.sq);
     houseResult.minCost = Math.min(houseResult.minCost, houseSource.cost);
     houseResult.maxCost = Math.max(houseResult.maxCost, houseSource.cost);
+    houseResult.maxFloor = Math.max(houseResult.maxFloor, houseSource.floor)
+    houseResult.maxRooms = Math.max(houseResult.maxRooms, houseSource.rooms)
+
 
 
     return houseResult
@@ -129,7 +167,9 @@ const minMaxHousesValues = computed(() => {
     minSq: housesData.value[0].sq,
     maxSq: housesData.value[0].sq,
     minCost: housesData.value[0].cost,
-    maxCost: housesData.value[0].cost
+    maxCost: housesData.value[0].cost,
+    maxFloor: housesData.value[0].floor,
+    maxRooms: housesData.value[0].rooms
   })
 
   result.minCost = Math.floor(result.minCost / 1000000)
@@ -140,12 +180,19 @@ const minMaxHousesValues = computed(() => {
   return result
 })
 
-
+const instance = ref(1);
 const filterMaxSq = ref(minMaxHousesValues.value.maxSq)
 const filterMinSq = ref((minMaxHousesValues.value.minSq))
-const filterFloor = ref(null)
+const filterMaxCost = ref(minMaxHousesValues.value.maxCost)
+const filterMinCost = ref((minMaxHousesValues.value.minCost))
+const filterFloor = ref([])
+const filterRooms = ref([])
 const filterTags = ref([])
 const elementsPerView = ref(8);
+const apartmentInfo = ref({
+  activeHouse: null,
+  activeHousePart: null
+})
 
 function viewMore() {
   elementsPerView.value += 8
@@ -155,19 +202,38 @@ function viewMore() {
 function pluralizeHouse(num) {
   const lastNum = num % 10
   if (lastNum === 1) {
-    return num + ' дом';
+    return num + ' квартира';
   } else if (lastNum > 1 && lastNum < 5) {
-    return num + ' дома';
+    return num + ' квартиры';
   } else {
-    return num + ' домов';
+    return num + ' квартир';
   }
+}
+
+function resetFilters() {
+  filterMaxSq.value = minMaxHousesValues.value.maxSq
+  filterMinSq.value = minMaxHousesValues.value.minSq
+  filterMaxCost.value = minMaxHousesValues.value.maxCost
+  filterMinCost.value = minMaxHousesValues.value.minCost
+  filterFloor.value = []
+  filterRooms.value = []
+  filterTags.value = []
+  apartmentInfo.value = {
+    activeHouse: null,
+    activeHousePart: null
+  }
+  instance.value++
 }
 
 
 const filteredHouseDataBySq = computed(() => {
   return housesData.value.filter(house => {
     return (house.sq <= filterMaxSq.value && house.sq >= filterMinSq.value)
-        && (filterFloor.value === null || house.floors === filterFloor.value)
+        && (house.cost / 1000000 <= filterMaxCost.value && house.cost / 1000000 >= filterMinCost.value)
+        && (filterFloor.value.length === 0 || filterFloor.value.includes(house.floor))
+        && (filterRooms.value.length === 0 || filterRooms.value.includes(house.rooms))
+        && (!apartmentInfo.value.activeHouse || (house.home_number === apartmentInfo.value.activeHouse))
+        && (!apartmentInfo.value.activeHousePart || (house.section === apartmentInfo.value.activeHousePart))
         && (filterTags.value.length === 0 || filterTags.value.every(filterTag => {
           return house.tags.includes(filterTag.value);
         }));
@@ -175,7 +241,7 @@ const filteredHouseDataBySq = computed(() => {
 })
 watch(() => filteredHouseDataBySq.value.length, (newData) => {
   elementsPerView.value = 8
-}, { deep: true})
+}, {deep: true})
 
 const viewedData = computed(() => {
   return filteredHouseDataBySq.value.slice(0, elementsPerView.value)

@@ -1,6 +1,6 @@
 <template>
   <div class="dt-house-picker">
-    <DtHousePickerFilter v-if="width > 575" v-model:max-sq="filterMaxSq"
+    <DtHousePickerFilter  :key="instance" v-if="width > 575" v-model:max-sq="filterMaxSq"
                          :limit-sq-max="minMaxHousesValues.maxSq"
                          :limit-sq-min="minMaxHousesValues.minSq"
                          v-model:min-sq="filterMinSq"
@@ -25,9 +25,25 @@
     </div>
   </div>
   <div class="dt-house-picker__result">
+    <div class="dt-house-picker__result-header">
     <span class="dt-house-picker__info">Найдено: {{pluralizeHouse(filteredHouseDataBySq.length)}}</span>
+      <button class="btn btn--tertiary" @click="resetFilters">
+        <span>Сбросить фильтр</span>
+        <div style="margin-left: 1rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <mask id="mask0_1480_116" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="10" height="10">
+              <rect width="10" height="10" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_1480_116)">
+              <path d="M0.00012207 0L10 10" stroke="black"/>
+              <path d="M10 0L8.12008e-05 10" stroke="black"/>
+            </g>
+          </svg>
+        </div>
+      </button>
+    </div>
     <ul class="dt-house-picker__list" v-auto-animate>
-      <template v-for="(house, index) in viewedData" :key="index">
+      <template v-for="house in viewedData" :key="house.id">
         <DtHouseItem tag="li" :house="house"/>
       </template>
     </ul>
@@ -49,7 +65,7 @@
         <span>Фильтры</span>
       </div>
     </template>
-    <DtHousePickerFilter v-model:max-sq="filterMaxSq"
+    <DtHousePickerFilter :key="instance" v-model:max-sq="filterMaxSq"
                          :limit-sq-max="minMaxHousesValues.maxSq"
                          :limit-sq-min="minMaxHousesValues.minSq"
                          v-model:min-sq="filterMinSq"
@@ -83,6 +99,7 @@ import DtHousePickerFilter from "@/vue/components/DtHousePickerFilter.vue";
 import DtHouseItem from "@/vue/components/DtHouseItem.vue";
 
 // import {crmData} from "@/vue/test-data/houses-data";
+// import ApartmentsPickerFilter from "@/vue/components/apartments/ApartmentsPickerFilter.vue";
 
 // window.crmData = crmData
 
@@ -146,6 +163,7 @@ const filterMinSq = ref((minMaxHousesValues.value.minSq))
 const filterFloor = ref(null)
 const filterTags = ref([])
 const elementsPerView = ref(8);
+const instance = ref(1)
 
 function viewMore() {
   elementsPerView.value += 8
@@ -161,6 +179,14 @@ function pluralizeHouse(num) {
   } else {
     return num + ' домов';
   }
+}
+
+function resetFilters() {
+  filterMaxSq.value = minMaxHousesValues.value.maxSq
+  filterMinSq.value = minMaxHousesValues.value.minSq
+  filterFloor.value = null
+  filterTags.value = []
+  instance.value++
 }
 
 

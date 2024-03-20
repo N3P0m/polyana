@@ -208,6 +208,36 @@
     }
 }
 
+@media (height <= 1100px) {
+    .popup {
+        .choosing-townhouse-info__house-preview {
+            img {
+                max-width: 800px;
+            }
+        }
+    }
+}
+
+@media (height <= 800px) {
+    .popup {
+        .choosing-townhouse-info__house-preview {
+            img {
+                max-width: 625px;
+            }
+        }
+    }
+}
+
+@media (height <= 600px) {
+    .popup {
+        .choosing-townhouse-info__house-preview {
+            img {
+                max-width: 425px;
+            }
+        }
+    }
+}
+
 .townhouse-specs {
     &__heading {
 

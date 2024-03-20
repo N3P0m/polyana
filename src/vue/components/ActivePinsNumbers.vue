@@ -1,5 +1,5 @@
 <template>
-  <div class="active-pins">
+  <div class="active-pins active-pins--flex">
     <template v-for="(count, index) in maxCount" :key="index">
       <button class="btn-pin" @click="setActiveBtn(count)" :class="{ 'btn-pin--active': activePin === count || (Array.isArray(activePin) && activePin.includes(count)) }">
         {{count}}
@@ -40,11 +40,10 @@ function getActiveClass (count) {
 }
 
 function setActiveBtn(count) {
-  if (typeof modelValue === "number") {
-    activePin.value = activePin.value === count ? null : count
-  }
   if (Array.isArray(modelValue)) {
-    activePin.value.includes(count) ? activePin.value.filter(count) : activePin.value.push(count)
+    activePin.value.includes(count) ? activePin.value = activePin.value.filter((pin) => pin !== count) : activePin.value.push(count)
+  } else {
+    activePin.value = activePin.value === count ? null : count
   }
     emit('update:modelValue', activePin.value)
 }

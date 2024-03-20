@@ -57,6 +57,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.58,
         sq_land: 0,
         home_number: 1,
@@ -120,6 +121,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 2,
         sq: 61.73,
         sq_land: 0,
         home_number: 1,
@@ -183,6 +185,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 42.97,
         sq_land: 0,
         home_number: 1,
@@ -248,6 +251,7 @@ const crmData = [
             '2 сан.узла',
             'Большая кухня-гостинная'
         ],
+        rooms: 2,
         sq: 68.73,
         sq_land: 0,
         home_number: 1,
@@ -311,7 +315,74 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 43.57,
+        sq_land: 0,
+        home_number: 1,
+        state: 1
+    },
+    {
+        id: 6522459,
+        number: '6',
+        floor: 2,
+        section: 1,
+        cost: 7949950,
+        cost_str: '7 949 950',
+        images: [
+            {
+                id: 1,
+                name: 'Планировки',
+                images: [
+                    {
+                        dir_id: 1,
+                        dir_name: 'Планировки',
+                        file_id: 4536191,
+                        file_name: 'Планировка К2-69.13-А-69.13',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536191/hwDKk-PJAlz6sXwxNzA1OTk1OTMzfDJjOTYz/planirovka_k2-69_13-a-69.13.jpg',
+                        is_title: 0,
+                        img_type: 'Главное изображение'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'План этажа',
+                images: [
+                    {
+                        dir_id: 2,
+                        dir_name: 'План этажа',
+                        file_id: 4536166,
+                        file_name: 'Подъезд 1. Этаж 2',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536166/hwDKk-PJAlP9sXwxNzA1OTk1NTczfGRhNzE4/podezd_1._yetazh_2.jpg',
+                        is_title: 0
+                    }
+                ]
+            },
+            {
+                id: 3,
+                name: 'Галерея',
+                images: [
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548522,
+                        file_name: 'Entrance',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4548522/hwDKk-THBlf5sXwxNzA2NjAzMDM5fDAxNzk0/entrance.jpg',
+                        is_title: 0
+                    }
+                ]
+            }
+        ],
+        tags: [
+            'Мастер-спальня',
+            '2 сан.узла',
+            'Большая кухня-гостинная'
+        ],
+        rooms: 2,
+        sq: 69.13,
         sq_land: 0,
         home_number: 1,
         state: 1
@@ -374,6 +445,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 47.56,
         sq_land: 0,
         home_number: 1,
@@ -437,6 +509,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 42.97,
         sq_land: 0,
         home_number: 1,
@@ -502,6 +575,7 @@ const crmData = [
             '2 сан.узла',
             'Большая кухня-гостинная'
         ],
+        rooms: 2,
         sq: 68.73,
         sq_land: 0,
         home_number: 1,
@@ -565,6 +639,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 43.57,
         sq_land: 0,
         home_number: 1,
@@ -630,6 +705,7 @@ const crmData = [
             '2 сан.узла',
             'Большая кухня-гостинная'
         ],
+        rooms: 2,
         sq: 69.13,
         sq_land: 0,
         home_number: 1,
@@ -693,6 +769,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 47.56,
         sq_land: 0,
         home_number: 1,
@@ -756,7 +833,138 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.58,
+        sq_land: 0,
+        home_number: 1,
+        state: 1
+    },
+    {
+        id: 6522469,
+        number: '16',
+        floor: 4,
+        section: 1,
+        cost: 8024900,
+        cost_str: '8 024 900',
+        images: [
+            {
+                id: 1,
+                name: 'Планировки',
+                images: [
+                    {
+                        dir_id: 1,
+                        dir_name: 'Планировки',
+                        file_id: 4536189,
+                        file_name: 'Планировка К2-61.73-А-61.73',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536189/hwDKk-PJAl3ysXwxNzA1OTk1OTE2fGZiODJh/planirovka_k2-61_73-a-61.73.jpg',
+                        is_title: 0,
+                        img_type: 'Главное изображение'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'План этажа',
+                images: [
+                    {
+                        dir_id: 2,
+                        dir_name: 'План этажа',
+                        file_id: 4536170,
+                        file_name: 'Подъезд 1. Этаж 4',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536170/hwDKk-PJAlL7sXwxNzA1OTk1NjA4fDU1Zjlk/podezd_1._yetazh_4.jpg',
+                        is_title: 0
+                    }
+                ]
+            },
+            {
+                id: 3,
+                name: 'Галерея',
+                images: [
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548522,
+                        file_name: 'Entrance',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4548522/hwDKk-THBlf5sXwxNzA2NjAzMDM5fDAxNzk0/entrance.jpg',
+                        is_title: 0
+                    }
+                ]
+            }
+        ],
+        tags: [
+            ''
+        ],
+        rooms: 2,
+        sq: 61.73,
+        sq_land: 0,
+        home_number: 1,
+        state: 1
+    },
+    {
+        id: 6522470,
+        number: '17',
+        floor: 4,
+        section: 1,
+        cost: 7718700,
+        cost_str: '7 718 700',
+        images: [
+            {
+                id: 1,
+                name: 'Планировки',
+                images: [
+                    {
+                        dir_id: 1,
+                        dir_name: 'Планировки',
+                        file_id: 4536193,
+                        file_name: 'Планировка К2-70.17-А-70.17',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536193/hwDKk-PJAlz4sXwxNzA1OTk1OTU1fDQzNjVh/planirovka_k2-70_17-a-70.17.jpg',
+                        is_title: 0,
+                        img_type: 'Главное изображение'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'План этажа',
+                images: [
+                    {
+                        dir_id: 2,
+                        dir_name: 'План этажа',
+                        file_id: 4536170,
+                        file_name: 'Подъезд 1. Этаж 4',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536170/hwDKk-PJAlL7sXwxNzA1OTk1NjA4fDU1Zjlk/podezd_1._yetazh_4.jpg',
+                        is_title: 0
+                    }
+                ]
+            },
+            {
+                id: 3,
+                name: 'Галерея',
+                images: [
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548522,
+                        file_name: 'Entrance',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4548522/hwDKk-THBlf5sXwxNzA2NjAzMDM5fDAxNzk0/entrance.jpg',
+                        is_title: 0
+                    }
+                ]
+            }
+        ],
+        tags: [
+            '2-х уровневая',
+            '2 сан.узла',
+            'Второй свет'
+        ],
+        rooms: 2,
+        sq: 70.17,
         sq_land: 0,
         home_number: 1,
         state: 1
@@ -821,6 +1029,7 @@ const crmData = [
             '2 сан.узла',
             'Большая кухня-гостинная'
         ],
+        rooms: 2,
         sq: 68.73,
         sq_land: 0,
         home_number: 1,
@@ -886,6 +1095,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 72.07,
         sq_land: 0,
         home_number: 1,
@@ -951,6 +1161,7 @@ const crmData = [
             '2 сан.узла',
             'Большая кухня-гостинная'
         ],
+        rooms: 2,
         sq: 69.13,
         sq_land: 0,
         home_number: 1,
@@ -1016,6 +1227,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 70.62,
         sq_land: 0,
         home_number: 1,
@@ -1079,6 +1291,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 2,
         sq: 58.37,
         sq_land: 0,
         home_number: 1,
@@ -1142,6 +1355,7 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.97,
         sq_land: 0,
         home_number: 1,
@@ -1205,6 +1419,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.39,
         sq_land: 0,
         home_number: 1,
@@ -1268,6 +1483,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.99,
         sq_land: 0,
         home_number: 1,
@@ -1331,6 +1547,7 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 55.89,
         sq_land: 0,
         home_number: 1,
@@ -1395,6 +1612,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 81.1,
         sq_land: 0,
         home_number: 1,
@@ -1458,7 +1676,72 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 2,
         sq: 58.37,
+        sq_land: 0,
+        home_number: 1,
+        state: 1
+    },
+    {
+        id: 6522482,
+        number: '29',
+        floor: 3,
+        section: 2,
+        cost: 7931550,
+        cost_str: '7 931 550',
+        images: [
+            {
+                id: 1,
+                name: 'Планировки',
+                images: [
+                    {
+                        dir_id: 1,
+                        dir_name: 'Планировки',
+                        file_id: 4536202,
+                        file_name: 'Планировка К2-68.97-Б-68.97',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536202/hwDKk-PJAVX5sXwxNzA1OTk2MzU0fDFiZTdm/planirovka_k2-68_97-b-68.97.jpg',
+                        is_title: 0,
+                        img_type: 'Главное изображение'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'План этажа',
+                images: [
+                    {
+                        dir_id: 2,
+                        dir_name: 'План этажа',
+                        file_id: 4536172,
+                        file_name: 'Подъезд 2. Этаж 3',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536172/hwDKk-PJAlL5sXwxNzA1OTk1NjMzfDQwNGY3/podezd_2._yetazh_3.jpg',
+                        is_title: 0
+                    }
+                ]
+            },
+            {
+                id: 3,
+                name: 'Галерея',
+                images: [
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548522,
+                        file_name: 'Entrance',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4548522/hwDKk-THBlf5sXwxNzA2NjAzMDM5fDAxNzk0/entrance.jpg',
+                        is_title: 0
+                    }
+                ]
+            }
+        ],
+        tags: [
+            '2 сан.узла'
+        ],
+        rooms: 2,
+        sq: 68.97,
         sq_land: 0,
         home_number: 1,
         state: 1
@@ -1521,70 +1804,8 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.39,
-        sq_land: 0,
-        home_number: 1,
-        state: 1
-    },
-    {
-        id: 6522484,
-        number: '31',
-        floor: 3,
-        section: 2,
-        cost: 4398900,
-        cost_str: '4 398 900',
-        images: [
-            {
-                id: 1,
-                name: 'Планировки',
-                images: [
-                    {
-                        dir_id: 1,
-                        dir_name: 'Планировки',
-                        file_id: 4536183,
-                        file_name: 'Планировка К1-39.99-Б-39.99',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536183/hwDKk-PJAl34sXwxNzA1OTk1ODM4fGI1MDBm/planirovka_k1-39_99-b-39.99.jpg',
-                        is_title: 0,
-                        img_type: 'Главное изображение'
-                    }
-                ]
-            },
-            {
-                id: 2,
-                name: 'План этажа',
-                images: [
-                    {
-                        dir_id: 2,
-                        dir_name: 'План этажа',
-                        file_id: 4536172,
-                        file_name: 'Подъезд 2. Этаж 3',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4536172/hwDKk-PJAlL5sXwxNzA1OTk1NjMzfDQwNGY3/podezd_2._yetazh_3.jpg',
-                        is_title: 0
-                    }
-                ]
-            },
-            {
-                id: 3,
-                name: 'Галерея',
-                images: [
-                    {
-                        dir_id: 3,
-                        dir_name: 'Галерея',
-                        file_id: 4548522,
-                        file_name: 'Entrance',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/6522193/4548522/hwDKk-THBlf5sXwxNzA2NjAzMDM5fDAxNzk0/entrance.jpg',
-                        is_title: 0
-                    }
-                ]
-            }
-        ],
-        tags: [
-            ''
-        ],
-        sq: 39.99,
         sq_land: 0,
         home_number: 1,
         state: 1
@@ -1647,6 +1868,7 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 55.89,
         sq_land: 0,
         home_number: 1,
@@ -1711,6 +1933,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 81.1,
         sq_land: 0,
         home_number: 1,
@@ -1778,6 +2001,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 90.7,
         sq_land: 0,
         home_number: 1,
@@ -1841,6 +2065,7 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.97,
         sq_land: 0,
         home_number: 1,
@@ -1907,6 +2132,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 61.97,
         sq_land: 0,
         home_number: 1,
@@ -1974,6 +2200,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 94.74,
         sq_land: 0,
         home_number: 1,
@@ -2041,6 +2268,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 115.71,
         sq_land: 0,
         home_number: 1,
@@ -2104,6 +2332,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 47.56,
         sq_land: 0,
         home_number: 1,
@@ -2169,6 +2398,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 69.13,
         sq_land: 0,
         home_number: 1,
@@ -2232,6 +2462,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 43.57,
         sq_land: 0,
         home_number: 1,
@@ -2297,6 +2528,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.73,
         sq_land: 0,
         home_number: 1,
@@ -2360,6 +2592,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 42.97,
         sq_land: 0,
         home_number: 1,
@@ -2423,6 +2656,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 2,
         sq: 61.73,
         sq_land: 0,
         home_number: 1,
@@ -2486,6 +2720,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.58,
         sq_land: 0,
         home_number: 1,
@@ -2549,6 +2784,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 47.56,
         sq_land: 0,
         home_number: 1,
@@ -2614,6 +2850,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 69.13,
         sq_land: 0,
         home_number: 1,
@@ -2677,6 +2914,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинная'
         ],
+        rooms: 1,
         sq: 43.57,
         sq_land: 0,
         home_number: 1,
@@ -2742,6 +2980,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.73,
         sq_land: 0,
         home_number: 1,
@@ -2805,6 +3044,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 42.97,
         sq_land: 0,
         home_number: 1,
@@ -2868,6 +3108,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 2,
         sq: 61.73,
         sq_land: 0,
         home_number: 1,
@@ -2934,6 +3175,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 73.11,
         sq_land: 0,
         home_number: 1,
@@ -2999,6 +3241,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 69.13,
         sq_land: 0,
         home_number: 1,
@@ -3065,6 +3308,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 72.07,
         sq_land: 0,
         home_number: 1,
@@ -3130,6 +3374,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.73,
         sq_land: 0,
         home_number: 1,
@@ -3196,6 +3441,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 70.17,
         sq_land: 0,
         home_number: 1,
@@ -3259,6 +3505,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 2,
         sq: 61.73,
         sq_land: 0,
         home_number: 1,
@@ -3322,6 +3569,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.58,
         sq_land: 0,
         home_number: 1,
@@ -3396,6 +3644,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 85.33,
         sq_land: 0,
         home_number: 2,
@@ -3470,6 +3719,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.47,
         sq_land: 0,
         home_number: 2,
@@ -3542,6 +3792,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 47.29,
         sq_land: 0,
         home_number: 2,
@@ -3614,6 +3865,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 47.29,
         sq_land: 0,
         home_number: 2,
@@ -3688,6 +3940,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 70.47,
         sq_land: 0,
         home_number: 2,
@@ -3760,7 +4013,81 @@ const crmData = [
         tags: [
             'Большая кухня-гостинна'
         ],
+        rooms: 2,
         sq: 67.97,
+        sq_land: 0,
+        home_number: 2,
+        state: 1
+    },
+    {
+        id: 6522849,
+        number: '8',
+        floor: 3,
+        section: 1,
+        cost: 3962900,
+        cost_str: '3 962 900',
+        images: [
+            {
+                id: 1,
+                name: 'Планировки',
+                images: [
+                    {
+                        dir_id: 1,
+                        dir_name: 'Планировки',
+                        file_id: 4536279,
+                        file_name: 'Планировка К1-34.46-А-34.46',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4536279/_3vpgjtVkp32bnwxNzA1OTk3OTE4fDZjMjFm/planirovka_k1-34_46-a-34.46.jpg',
+                        is_title: 0,
+                        img_type: 'Главное изображение'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'План этажа',
+                images: [
+                    {
+                        dir_id: 2,
+                        dir_name: 'План этажа',
+                        file_id: 4536254,
+                        file_name: 'Подъезд 1. Этаж 3',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4536254/_3vpgjtVkp_7bnwxNzA1OTk3NzUyfDRlODcz/podezd_1._yetazh_3.jpg',
+                        is_title: 0
+                    }
+                ]
+            },
+            {
+                id: 3,
+                name: 'Галерея',
+                images: [
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548524,
+                        file_name: 'Entrance',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4548524/_3vpgjxblZj7bnwxNzA2NjAzMDg4fDJhMzRh/entrance.jpg',
+                        is_title: 0
+                    },
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548525,
+                        file_name: 'Cam_11',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4548525/_3vpgjxblZj6bnwxNzA2NjAzMDg5fDA0MGMw/cam_11.jpg',
+                        is_title: 0
+                    }
+                ]
+            }
+        ],
+        tags: [
+            ''
+        ],
+        rooms: 1,
+        sq: 34.46,
         sq_land: 0,
         home_number: 2,
         state: 1
@@ -3832,6 +4159,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 47.29,
         sq_land: 0,
         home_number: 2,
@@ -3906,6 +4234,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 70.47,
         sq_land: 0,
         home_number: 2,
@@ -3978,7 +4307,81 @@ const crmData = [
         tags: [
             'Большая кухня-гостинна'
         ],
+        rooms: 2,
         sq: 67.97,
+        sq_land: 0,
+        home_number: 2,
+        state: 1
+    },
+    {
+        id: 6522856,
+        number: '15',
+        floor: 4,
+        section: 1,
+        cost: 3962900,
+        cost_str: '3 962 900',
+        images: [
+            {
+                id: 1,
+                name: 'Планировки',
+                images: [
+                    {
+                        dir_id: 1,
+                        dir_name: 'Планировки',
+                        file_id: 4536279,
+                        file_name: 'Планировка К1-34.46-А-34.46',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4536279/_3vpgjtVkp32bnwxNzA1OTk3OTE4fDZjMjFm/planirovka_k1-34_46-a-34.46.jpg',
+                        is_title: 0,
+                        img_type: 'Главное изображение'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                name: 'План этажа',
+                images: [
+                    {
+                        dir_id: 2,
+                        dir_name: 'План этажа',
+                        file_id: 4536256,
+                        file_name: 'Подъезд 1. Этаж 4',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4536256/_3vpgjtVkp_5bnwxNzA1OTk3NzU5fGVmZThj/podezd_1._yetazh_4.jpg',
+                        is_title: 0
+                    }
+                ]
+            },
+            {
+                id: 3,
+                name: 'Галерея',
+                images: [
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548524,
+                        file_name: 'Entrance',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4548524/_3vpgjxblZj7bnwxNzA2NjAzMDg4fDJhMzRh/entrance.jpg',
+                        is_title: 0
+                    },
+                    {
+                        dir_id: 3,
+                        dir_name: 'Галерея',
+                        file_id: 4548525,
+                        file_name: 'Cam_11',
+                        file_ext: 'jpg',
+                        file_url: 'https://macroserver.ru/estate/files/get/6522211/4548525/_3vpgjxblZj6bnwxNzA2NjAzMDg5fDA0MGMw/cam_11.jpg',
+                        is_title: 0
+                    }
+                ]
+            }
+        ],
+        tags: [
+            ''
+        ],
+        rooms: 1,
+        sq: 34.46,
         sq_land: 0,
         home_number: 2,
         state: 1
@@ -4052,6 +4455,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 85.33,
         sq_land: 0,
         home_number: 2,
@@ -4128,6 +4532,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 123.05,
         sq_land: 0,
         home_number: 2,
@@ -4200,6 +4605,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 47.29,
         sq_land: 0,
         home_number: 2,
@@ -4276,6 +4682,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 121.22,
         sq_land: 0,
         home_number: 2,
@@ -4348,6 +4755,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинна'
         ],
+        rooms: 2,
         sq: 67.97,
         sq_land: 0,
         home_number: 2,
@@ -4420,6 +4828,7 @@ const crmData = [
         tags: [
             'Терраса'
         ],
+        rooms: 1,
         sq: 49.88,
         sq_land: 0,
         home_number: 2,
@@ -4492,6 +4901,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 2,
         sq: 58.27,
         sq_land: 0,
         home_number: 2,
@@ -4564,6 +4974,7 @@ const crmData = [
         tags: [
             'Терраса'
         ],
+        rooms: 1,
         sq: 46.56,
         sq_land: 0,
         home_number: 2,
@@ -4638,6 +5049,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 74.08,
         sq_land: 0,
         home_number: 2,
@@ -4710,6 +5122,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 46.06,
         sq_land: 0,
         home_number: 2,
@@ -4782,6 +5195,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 43.11,
         sq_land: 0,
         home_number: 2,
@@ -4854,6 +5268,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостинна'
         ],
+        rooms: 2,
         sq: 58.02,
         sq_land: 0,
         home_number: 2,
@@ -4928,6 +5343,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 67.61,
         sq_land: 0,
         home_number: 2,
@@ -5000,6 +5416,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 42.61,
         sq_land: 0,
         home_number: 2,
@@ -5073,6 +5490,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 69.88,
         sq_land: 0,
         home_number: 2,
@@ -5147,6 +5565,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 67.61,
         sq_land: 0,
         home_number: 2,
@@ -5219,6 +5638,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 46.06,
         sq_land: 0,
         home_number: 2,
@@ -5295,6 +5715,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 81.61,
         sq_land: 0,
         home_number: 2,
@@ -5367,6 +5788,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 42.61,
         sq_land: 0,
         home_number: 2,
@@ -5442,6 +5864,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 65.4,
         sq_land: 0,
         home_number: 2,
@@ -5515,6 +5938,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 69.88,
         sq_land: 0,
         home_number: 2,
@@ -5591,6 +6015,7 @@ const crmData = [
             '2-х уровневая',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 86,
         sq_land: 0,
         home_number: 2,
@@ -5663,6 +6088,7 @@ const crmData = [
         tags: [
             'Терраса'
         ],
+        rooms: 1,
         sq: 46.56,
         sq_land: 0,
         home_number: 2,
@@ -5735,6 +6161,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 30.02,
         sq_land: 0,
         home_number: 2,
@@ -5807,6 +6234,7 @@ const crmData = [
         tags: [
             'Терраса'
         ],
+        rooms: 2,
         sq: 58.27,
         sq_land: 0,
         home_number: 2,
@@ -5879,6 +6307,7 @@ const crmData = [
         tags: [
             'Терраса'
         ],
+        rooms: 1,
         sq: 44,
         sq_land: 0,
         home_number: 2,
@@ -5954,6 +6383,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 71.26,
         sq_land: 0,
         home_number: 2,
@@ -6027,6 +6457,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 69.88,
         sq_land: 0,
         home_number: 2,
@@ -6099,6 +6530,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 43.11,
         sq_land: 0,
         home_number: 2,
@@ -6171,6 +6603,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 42.61,
         sq_land: 0,
         home_number: 2,
@@ -6243,6 +6676,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 40.75,
         sq_land: 0,
         home_number: 2,
@@ -6317,6 +6751,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 67.59,
         sq_land: 0,
         home_number: 2,
@@ -6389,6 +6824,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 2,
         sq: 58.02,
         sq_land: 0,
         home_number: 2,
@@ -6461,6 +6897,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 2,
         sq: 54.6,
         sq_land: 0,
         home_number: 2,
@@ -6537,6 +6974,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 86,
         sq_land: 0,
         home_number: 2,
@@ -6612,6 +7050,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 65.4,
         sq_land: 0,
         home_number: 2,
@@ -6688,6 +7127,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 81.61,
         sq_land: 0,
         home_number: 2,
@@ -6762,6 +7202,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 67.59,
         sq_land: 0,
         home_number: 2,
@@ -6843,6 +7284,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 30.68,
         sq_land: 0,
         home_number: 3,
@@ -6924,6 +7366,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостиная'
         ],
+        rooms: 1,
         sq: 46.23,
         sq_land: 0,
         home_number: 3,
@@ -7006,6 +7449,7 @@ const crmData = [
             'Терраса',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 60.83,
         sq_land: 0,
         home_number: 3,
@@ -7087,6 +7531,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостиная'
         ],
+        rooms: 1,
         sq: 45.1,
         sq_land: 0,
         home_number: 3,
@@ -7168,6 +7613,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостиная'
         ],
+        rooms: 1,
         sq: 46.23,
         sq_land: 0,
         home_number: 3,
@@ -7251,6 +7697,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 85.56,
         sq_land: 0,
         home_number: 3,
@@ -7332,6 +7779,7 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 57.38,
         sq_land: 0,
         home_number: 3,
@@ -7413,6 +7861,7 @@ const crmData = [
         tags: [
             '2-х уровневая'
         ],
+        rooms: 2,
         sq: 67.11,
         sq_land: 0,
         home_number: 3,
@@ -7498,6 +7947,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 90.06,
         sq_land: 0,
         home_number: 3,
@@ -7579,6 +8029,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостиная'
         ],
+        rooms: 1,
         sq: 45.1,
         sq_land: 0,
         home_number: 3,
@@ -7664,6 +8115,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 114.23,
         sq_land: 0,
         home_number: 3,
@@ -7749,6 +8201,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 97.17,
         sq_land: 0,
         home_number: 3,
@@ -7830,6 +8283,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 34.46,
         sq_land: 0,
         home_number: 3,
@@ -7914,6 +8368,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 89.15,
         sq_land: 0,
         home_number: 3,
@@ -7998,6 +8453,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 72.19,
         sq_land: 0,
         home_number: 3,
@@ -8079,6 +8535,7 @@ const crmData = [
         tags: [
             'Терраса'
         ],
+        rooms: 1,
         sq: 46.57,
         sq_land: 0,
         home_number: 3,
@@ -8162,6 +8619,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 85.9,
         sq_land: 0,
         home_number: 3,
@@ -8243,6 +8701,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 43.25,
         sq_land: 0,
         home_number: 3,
@@ -8325,6 +8784,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 70.75,
         sq_land: 0,
         home_number: 3,
@@ -8407,6 +8867,7 @@ const crmData = [
             'Большая кухня-гостиная',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 76.83,
         sq_land: 0,
         home_number: 3,
@@ -8490,6 +8951,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 85.9,
         sq_land: 0,
         home_number: 3,
@@ -8571,6 +9033,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 43.25,
         sq_land: 0,
         home_number: 3,
@@ -8653,6 +9116,7 @@ const crmData = [
             'Большая кухня-гостиная',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 76.83,
         sq_land: 0,
         home_number: 3,
@@ -8734,6 +9198,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 34.46,
         sq_land: 0,
         home_number: 3,
@@ -8819,6 +9284,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 123.1,
         sq_land: 0,
         home_number: 3,
@@ -8900,6 +9366,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 43.25,
         sq_land: 0,
         home_number: 3,
@@ -8981,6 +9448,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 43.25,
         sq_land: 0,
         home_number: 3,
@@ -9066,6 +9534,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 121.68,
         sq_land: 0,
         home_number: 3,
@@ -9149,6 +9618,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 83.3,
         sq_land: 0,
         home_number: 3,
@@ -9230,6 +9700,7 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.97,
         sq_land: 0,
         home_number: 3,
@@ -9312,6 +9783,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 3,
         sq: 79.86,
         sq_land: 0,
         home_number: 3,
@@ -9393,6 +9865,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.99,
         sq_land: 0,
         home_number: 3,
@@ -9474,6 +9947,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 39.39,
         sq_land: 0,
         home_number: 3,
@@ -9555,6 +10029,7 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 68.97,
         sq_land: 0,
         home_number: 3,
@@ -9636,6 +10111,7 @@ const crmData = [
         tags: [
             'Большая кухня-гостиная'
         ],
+        rooms: 2,
         sq: 57.12,
         sq_land: 0,
         home_number: 3,
@@ -9717,88 +10193,8 @@ const crmData = [
         tags: [
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 55.89,
-        sq_land: 0,
-        home_number: 3,
-        state: 1
-    },
-    {
-        id: 6479662,
-        number: '64',
-        floor: 3,
-        section: 3,
-        cost: 5198700,
-        cost_str: '5 198 700',
-        images: [
-            {
-                id: 1,
-                name: 'Планировки',
-                images: [
-                    {
-                        dir_id: 1,
-                        dir_name: 'Планировки',
-                        file_id: 4536816,
-                        file_name: 'Планировка К1-39.99-В-39.99',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/3190376/4536816/2H5LEA5rAAZ03XwxNzA2MDExMzkzfDc1MDhi/planirovka_k1-39_99-v-39.99.jpg',
-                        is_title: 0,
-                        img_type: 'Главное изображение'
-                    }
-                ]
-            },
-            {
-                id: 2,
-                name: 'План этажа',
-                images: [
-                    {
-                        dir_id: 2,
-                        dir_name: 'План этажа',
-                        file_id: 4536939,
-                        file_name: 'Подъезд 3. Этаж 3',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/3190376/4536939/2H5LEA5rAQR73XwxNzA2MDEzODg1fGI4ZTIw/podezd_3._yetazh_3.jpg',
-                        is_title: 0
-                    }
-                ]
-            },
-            {
-                id: 3,
-                name: 'Галерея',
-                images: [
-                    {
-                        dir_id: 3,
-                        dir_name: 'Галерея',
-                        file_id: 4548516,
-                        file_name: 'Cam_3',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/3190376/4548516/2H5LEAllDQZ03XwxNzA2NjAzMDA5fGM4MTY3/cam_3.jpg',
-                        is_title: 0
-                    },
-                    {
-                        dir_id: 3,
-                        dir_name: 'Галерея',
-                        file_id: 4548517,
-                        file_name: 'Cam_11',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/3190376/4548517/2H5LEAllDQZ13XwxNzA2NjAzMDA5fDViNWE1/cam_11.jpg',
-                        is_title: 0
-                    },
-                    {
-                        dir_id: 3,
-                        dir_name: 'Галерея',
-                        file_id: 4548518,
-                        file_name: 'Cam_2',
-                        file_ext: 'jpg',
-                        file_url: 'https://macroserver.ru/estate/files/get/3190376/4548518/2H5LEAllDQZ63XwxNzA2NjAzMDA5fDdmNzE1/cam_2.jpg',
-                        is_title: 0
-                    }
-                ]
-            }
-        ],
-        tags: [
-            ''
-        ],
-        sq: 39.99,
         sq_land: 0,
         home_number: 3,
         state: 1
@@ -9883,6 +10279,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 113.87,
         sq_land: 0,
         home_number: 3,
@@ -9968,6 +10365,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 94.59,
         sq_land: 0,
         home_number: 3,
@@ -10052,6 +10450,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 61.97,
         sq_land: 0,
         home_number: 3,
@@ -10137,6 +10536,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 2,
         sq: 90.53,
         sq_land: 0,
         home_number: 3,
@@ -10220,6 +10620,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 73.88,
         sq_land: 0,
         home_number: 3,
@@ -10301,6 +10702,7 @@ const crmData = [
         tags: [
             'Терраса'
         ],
+        rooms: 1,
         sq: 50.51,
         sq_land: 0,
         home_number: 3,
@@ -10384,6 +10786,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 71.86,
         sq_land: 0,
         home_number: 3,
@@ -10465,6 +10868,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 34.46,
         sq_land: 0,
         home_number: 3,
@@ -10547,6 +10951,7 @@ const crmData = [
             'Большая кухня-гостиная',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 76.83,
         sq_land: 0,
         home_number: 3,
@@ -10629,6 +11034,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 70.75,
         sq_land: 0,
         home_number: 3,
@@ -10710,6 +11116,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 47.29,
         sq_land: 0,
         home_number: 3,
@@ -10793,6 +11200,7 @@ const crmData = [
             '2 сан.узла',
             'Мастер-спальня'
         ],
+        rooms: 2,
         sq: 68.49,
         sq_land: 0,
         home_number: 3,
@@ -10876,6 +11284,7 @@ const crmData = [
             '2 сан.узла',
             'Мастер-спальня'
         ],
+        rooms: 3,
         sq: 85.9,
         sq_land: 0,
         home_number: 3,
@@ -10958,6 +11367,7 @@ const crmData = [
             'Большая кухня-гостиная',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 76.83,
         sq_land: 0,
         home_number: 3,
@@ -11040,6 +11450,7 @@ const crmData = [
             'Мастер-спальня',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 70.75,
         sq_land: 0,
         home_number: 3,
@@ -11121,6 +11532,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 47.29,
         sq_land: 0,
         home_number: 3,
@@ -11204,6 +11616,7 @@ const crmData = [
             '2 сан.узла',
             'Мастер-спальня'
         ],
+        rooms: 3,
         sq: 85.9,
         sq_land: 0,
         home_number: 3,
@@ -11285,6 +11698,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 34.46,
         sq_land: 0,
         home_number: 3,
@@ -11367,6 +11781,7 @@ const crmData = [
             'Большая кухня-гостиная',
             '2 сан.узла'
         ],
+        rooms: 2,
         sq: 76.83,
         sq_land: 0,
         home_number: 3,
@@ -11452,6 +11867,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 121.68,
         sq_land: 0,
         home_number: 3,
@@ -11533,6 +11949,7 @@ const crmData = [
         tags: [
             ''
         ],
+        rooms: 1,
         sq: 47.29,
         sq_land: 0,
         home_number: 3,
@@ -11618,6 +12035,7 @@ const crmData = [
             '2 сан.узла',
             'Второй свет'
         ],
+        rooms: 3,
         sq: 123.1,
         sq_land: 0,
         home_number: 3,

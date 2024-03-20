@@ -10,7 +10,7 @@
         @include rfs(280px, min-width);
         @include button-style($color, $background);
     }
-    
+
     &--secondary {
         $color: #fff;
         $background: #2D2D39;
@@ -18,6 +18,28 @@
         @include rfs(280px, min-width);
         @include button-style($color, $background)
 	}
+
+    &--tertiary {
+        $color: #2D2D39;
+        $background: #EBEBEB;
+        border-radius: 10px;
+        padding: 10px 14px;
+
+        @include button-style($color, $background)
+    }
+
+    &--outline {
+        $color: #2E3F4F;
+        $background: transparent;
+
+        @include button-style($color, $background);
+
+        border: 1px solid #f2cfbe;
+
+        &:focus {
+            box-shadow: 0 0 0 0;
+        }
+    }
 
     &--primary-back {
         gap: 7px;
@@ -106,6 +128,7 @@
         cursor: not-allowed;
     }
 }
+
 
 .btn-pin {
     $color-primary: #F2CFBE;
@@ -259,6 +282,12 @@
             span {
                 display: none;
             }
+        }
+    }
+
+    .btn-pin {
+        &--lg {
+            padding: 8px;
         }
     }
 }
