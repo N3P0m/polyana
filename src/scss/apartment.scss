@@ -1,0 +1,16 @@
+.swiper-preview {
+	margin-bottom: 30px;
+	width: 100%;
+
+	&__slide {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media (width <= 768px) {
+	.house-info__container {
+		gap: 40px;
+	}
+
+}

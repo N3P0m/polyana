@@ -1,0 +1,81 @@
+<section class="wrapper-inner-xl">
+    <div class="common-heading wrapper-inner-sm">
+        <button class="btn btn--primary-back common-heading__right"><span>Выбрать квартиру</span></button>
+        <h2 class="h2 common-heading__middle">Квартира №6</h2>
+    </div>
+    <div class="house-info wrapper-inner-sm">
+        <div class="house-info__title text-center h5"></div>
+        <div class="house-info__container">
+            <div class="house-info__column house-info__column--with-padding ">
+<!--                <img src="./assets/img/components/houses/house-classic.webp" width="380" height="380" alt="">-->
+                <swiper-container class="swiper-preview" init="false">
+                    <swiper-slide class="swiper-preview__slide preview-element" data-micromodal-trigger="popup-with-preview">
+                        <img data-img="planImg" src="https://macroserver.ru/estate/files/get/5092182/4536761/oUV4DW4gRK8OLnwxNzA3MTc3NjAwfDU4MTg1/planirovka_k4-257_6-1-257.6.jpg" width="300" height="300" alt="">
+                    </swiper-slide>
+                    <swiper-slide class="swiper-preview__slide preview-element" data-micromodal-trigger="popup-with-preview">
+                        <img data-img="planImg" src="./assets/img/components/houses/house-classic.webp" width="300" height="300" alt="">
+                    </swiper-slide>
+                </swiper-container>
+                <div class="switcher">
+                    <div class="switcher-container">
+                        <div class="tabs">
+                            <input type="radio" id="radio-1" name="tabs" checked />
+                            <label class="tab swiper-preview-control" for="radio-1" data-slide="0">План квартиры</label>
+                            <input type="radio" id="radio-2" name="tabs" />
+                            <label class="tab swiper-preview-control" for="radio-2" data-slide="1">План этажа</label>
+                            <span class="glider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="house-info__props house-info__column ">
+                <div class="house-info__props-list">
+                    <div class="house-info__prop house-info__prop--name">Площадь&nbsp;(м2)
+                    </div>
+                    <div class="house-info__prop house-info__prop--value">257,6</div>
+                    <div class="house-info__prop house-info__prop--name">Дом
+                    </div>
+                    <div class="house-info__prop house-info__prop--value">1</div>
+                    <div class="house-info__prop house-info__prop--name">Секция</div>
+                    <div class="house-info__prop house-info__prop--value">2</div>
+                    <div class="house-info__prop house-info__prop--name">Этаж</div>
+                    <div class="house-info__prop house-info__prop--value">2</div>
+                    <div class="house-info__prop house-info__prop--name">Цена</div>
+                    <div class="house-info__prop house-info__prop--value">30 392 500 ₽</div>
+                </div>
+                <div class="house-info__tags">
+                    <button class="btn-pin btn-pin--lg">
+                        <i class="icon-selection icon-selection--light"></i>
+                        <span>Второй <br> свет</span>
+                    </button>
+                    <button class="btn-pin btn-pin--lg">
+                        <i class="icon-selection icon-selection--bedroom"></i>
+                        <span>Мастер <br> спальня</span>
+                    </button>
+                    <button class="btn-pin btn-pin--lg">
+                        <i class="icon-selection icon-selection--terrace"></i>
+                        <span>Террасса</span>
+                    </button>
+                    <!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
+                    <!--                        <i class="icon-selection icon-selection&#45;&#45;fireplace"></i>-->
+                    <!--                        <span>Террасса <br> c камином</span>-->
+                    <!--                    </button>-->
+                    <!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
+                    <!--                        <i class="icon-selection icon-selection&#45;&#45;parking"></i>-->
+                    <!--                        <span>Машино-<br>место<br> с навесом</span>-->
+                    <!--                    </button>-->
+                    <!--                    <button class="btn-pin btn-pin&#45;&#45;lg">-->
+                    <!--                        <i class="icon-selection icon-selection&#45;&#45;garage"></i>-->
+                    <!--                        <span>Гараж</span>-->
+                    <!--                    </button>-->
+                </div>
+                <div class="house-info__btn-group">
+                    <button class="btn btn--primary" data-micromodal-trigger="popup-form">Забронировать</button>
+                    <button class="btn btn--primary" disabled>Скачать презентацию</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+

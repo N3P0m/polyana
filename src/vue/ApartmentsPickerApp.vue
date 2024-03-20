@@ -115,7 +115,7 @@ import {computed, ref, watch, getCurrentInstance} from "vue";
 import {useSwipe, useWindowSize, useElementVisibility} from '@vueuse/core'
 import PopupFull from "@/vue/components/PopupFull.vue";
 
-import {crmData} from "@/vue/test-data/apartments-data";
+// import {crmData} from "@/vue/test-data/apartments-data";
 import ApartmentsPickerFilter from "@/vue/components/apartments/ApartmentsPickerFilter.vue";
 import ApartmentItem from "@/vue/components/apartments/ApartmentItem.vue";
 

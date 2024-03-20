@@ -239,6 +239,7 @@ const config = {
         'houses': path.resolve(__dirname, './src/houses.js'),
         'house': path.resolve(__dirname, './src/house.js'),
         'apartments': path.resolve(__dirname, './src/apartments.js'),
+        'apartment': path.resolve(__dirname, './src/apartment.js'),
         'error404': path.resolve(__dirname, './src/error404.js')
     },
     resolve: {

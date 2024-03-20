@@ -35,14 +35,26 @@ const pins = reactive([
     isActive: false,
     value: 'Большая кухня-гостинная'
   },
+  // {
+  //   label: 'Вид на<br>"В некотором<br> Царстве',
+  //   iconClass: 'icon-selection--church',
+  //   isActive: false,
+  //   value: '2-х уровневая'
+  // },
   {
-    label: 'Вид на<br>"В некотором<br> Царстве',
-    iconClass: 'icon-selection--church',
+    label: 'Мансардные <br> окна',
+    iconClass: 'icon-selection--mansards',
     isActive: false,
     value: '2-х уровневая'
   },
   {
     label: 'Мастер-<br>спальня',
+    iconClass: 'icon-selection--bedroom',
+    isActive: false,
+    value: 'Мастер-спальня'
+  },
+  {
+    label: 'Два <br> санузла',
     iconClass: 'icon-selection--master',
     isActive: false,
     value: '2 сан.узла'

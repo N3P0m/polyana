@@ -1,7 +1,7 @@
 <template>
   <transition name="slide">
 
-  <div class="popup-full" id="popup-full" v-if="modelValue" tabindex="0">
+  <div class="popup-full" id="popup-full" v-show="modelValue" tabindex="0">
     <div class="popup-full__header">
       <div class="popup-full__heading">
         <slot name="header">
