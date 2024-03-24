@@ -80,7 +80,7 @@ const pluginsProd = [
         fix: true
     }),
     new MiniCssExtractPlugin({
-        filename: 'css/[name].[hash].css'
+        filename: 'css/[name].css'
     }),
     // new ImageMinimizerPlugin({
     //   minimizerOptions: {
@@ -108,12 +108,23 @@ const pluginsProd = [
     //     ]
     //   }
     // })
+    new TerserPlugin({
+        terserOptions: {
+            compress: {
+                drop_console: true
+            }
+        }
+    }),
     new VueLoaderPlugin()
 ]
 
 const plugins = mode === 'development' ? pluginsDev : pluginsProd
 const rules = {
     production: [
+        {
+            test: /\.vue$/,
+            loader: 'vue-loader'
+        },
         {
             test: /\.html$/,
             use: {
@@ -163,10 +174,10 @@ const rules = {
         // Images
         {
             test: /\.(png|jpe?g|webp|svg|gif)$/,
-            type: 'asset/resource',
-            generator: {
-                filename: 'assets/img/[name][ext]'
-            }
+            type: 'asset/resource'
+            // generator: {
+            //     filename: 'assets/img/[name][ext]'
+            // }
         },
         // Fonts
         {
