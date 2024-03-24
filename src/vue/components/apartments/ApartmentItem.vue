@@ -1,25 +1,26 @@
 <template>
-  <component :is="tag" class="apartment-item">
-    <img class="apartment-item__img" :src="house.images[0].images[0].file_url" alt="" >
-    <div class="apartment-item__header">
-      <span class="apartment-item__value">Дом {{ house.home_number }}</span>
-      <span class="apartment-item__value">Секция {{ house.section }}</span>
-      <span class="apartment-item__value">Этаж {{house.floor}}</span>
-    </div>
-    <ul class="apartment-item__main">
-      <div class="apartment-item__value">
-          {{ house.sq }} м²
+  <component :is="tag" class="apartment-item" v-bind="$attrs">
+<!--    <a :href="'/apartment?apartmentid=' + house.id">-->
+      <img class="apartment-item__img" :src="house.images[0].images[0].file_url" alt="" >
+      <div class="apartment-item__header">
+        <span class="apartment-item__value">Дом {{ house.home_number }}</span>
+        <span class="apartment-item__value">Секция {{ house.section }}</span>
+        <span class="apartment-item__value">Этаж {{house.floor}}</span>
       </div>
-      <div class="apartment-item__value apartment-item__value--price">
-        {{ amount }}
+      <ul class="apartment-item__main">
+        <div class="apartment-item__value">
+            {{ house.sq }} м²
+        </div>
+        <div class="apartment-item__value apartment-item__value--price">
+          {{ amount }}
+        </div>
+      </ul>
+      <div class="apartment-item__footer">
+        <button class="btn btn--primary apartment-item__btn">
+          Подробнее
+        </button>
       </div>
-    </ul>
-    <div class="apartment-item__footer">
-      <a :href="'/house?apartment=' + house.number" class="btn btn--primary apartment-item__btn">
-        Подробнее
-      </a>
-    </div>
-
+<!--    </a>-->
   </component>
 </template>
 

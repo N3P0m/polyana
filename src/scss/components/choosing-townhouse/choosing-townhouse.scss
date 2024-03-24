@@ -194,6 +194,7 @@
             width: 100%;
             aspect-ratio: 1/1;
             object-fit: contain;
+            max-height: 800px;
         }
     }
 
@@ -223,6 +224,7 @@
         .choosing-townhouse-info__house-preview {
             img {
                 max-width: 625px;
+                max-height: 625px;
             }
         }
     }
@@ -233,6 +235,7 @@
         .choosing-townhouse-info__house-preview {
             img {
                 max-width: 425px;
+                max-height: 425px;
             }
         }
     }
@@ -468,7 +471,11 @@
             align-self: center;
             justify-self: center;
 
-            @include rfs(640px, width)
+            @include rfs(640px, width);
+
+            img {
+                @include rfs(640px, max-height);
+            }
         }
 
     }

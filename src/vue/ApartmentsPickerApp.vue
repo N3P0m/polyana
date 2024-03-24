@@ -51,11 +51,11 @@
           </div>
         </button>
     </div>
-    <ul class="dt-house-picker__list dt-house-picker__list--apartments" v-auto-animate>
+    <div class="dt-house-picker__list dt-house-picker__list--apartments" v-auto-animate>
       <template v-for="house in viewedData" :key="house.id">
-        <ApartmentItem tag="li" :house="house"/>
+        <ApartmentItem tag="a" :house="house" :href="'/apartment?apartmentid=' + house.id"/>
       </template>
-    </ul>
+    </div>
     <transition name="fade">
       <div class="text-center view-more" @click="viewMore" v-if="filteredHouseDataBySq.length > elementsPerView">
         <button class="btn btn--primary">Загрузить еще</button>

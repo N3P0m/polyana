@@ -255,10 +255,11 @@ input[type="number"] {
 
     &--apartments {
         grid-template-columns: repeat(5, min-content);
+        justify-content: center;
         @include rfs(30px, gap);
 
         .dt-house-picker-filters__active-pins {
-            grid-column: span 3;
+            grid-column: span 4;
         }
 
         .dt-house-picker-filters__building-filter {
@@ -439,6 +440,10 @@ input[type="number"] {
             .active-pins {
                 grid-template-columns: repeat(5, max-content);
                 grid-column: span 2;
+            }
+
+            .dt-house-picker-filters__active-pins {
+                grid-column: span 3;
             }
         }
     }
