@@ -1,3 +1,9 @@
 import '@/scss/apartments.scss'
 
-import '@/vue/apartments-picker'
+let loader = true
+console.log(loader)
+import('@/vue/apartments-picker')
+    .then(() => {
+        loader = false
+        console.log(loader)
+    })

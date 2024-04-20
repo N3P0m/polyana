@@ -71,3 +71,20 @@
 	}
 }
 
+
+.gp-viewed {
+	display: block;
+}
+.gp-mobile {
+	display: none;
+}
+
+
+@media (width <= 768px) {
+	.gp-viewed {
+		display: none;
+	}
+	.gp-mobile {
+		display: block;
+	}
+}

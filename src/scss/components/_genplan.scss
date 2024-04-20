@@ -1,0 +1,127 @@
+.genplan {
+	position: relative;
+	width: 100%;
+
+	&__img {
+
+	}
+
+	&__mask {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	&__house {
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	&__house-mask {
+		opacity: 0;
+
+
+		transition: 0.3s ease-out;
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+	&__doodle {
+
+		//opacity: 0;
+		//transition: 0.3s ease-out;
+		animation: slide-out-bck-center 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+		&--active {
+			animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+		}
+
+		@keyframes slide-in-top {
+			0% {
+				transform: translateY(-200px);
+				opacity: 0;
+			}
+			100% {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes slide-out-bck-center {
+			0% {
+				transform: translateZ(0);
+				opacity: 1;
+			}
+			100% {
+				transform: translateZ(-1100px);
+				opacity: 0;
+			}
+		}
+	}
+
+	&__text {
+		font-family: Grafita, sans-serif;
+		font-size: 14px;
+		fill: #2E3F4F;
+
+		&--xl {
+			font-size: 24px;
+		}
+	}
+}
+
+.doodle {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE2MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNjAgNzkuOTg1NkwxNTkuODg1IDkyLjYzNjFMMTU5LjU2OSAxMDAuMDI1TDE1OS4wNTEgMTA2LjIwN0wxNTguMzA0IDExMS42NDFMMTU3LjM1NSAxMTYuNTU3TDE1Ni4yMDUgMTIxLjFMMTU0LjgyNSAxMjUuMjY5TDE1My4yNDMgMTI5LjE1TDE1MS40NjEgMTMyLjc3M0wxNDkuNDQ4IDEzNi4xMzdMMTQ3LjIzNCAxMzkuMjQyTDE0NC43OTEgMTQyLjE0NkwxNDIuMTQ2IDE0NC43OTFMMTM5LjI0MiAxNDcuMjM0TDEzNi4xMzcgMTQ5LjQ0OEwxMzIuNzczIDE1MS40NjFMMTI5LjE1IDE1My4yNDNMMTI1LjI2OSAxNTQuODI1TDEyMS4xIDE1Ni4yMDVMMTE2LjU1NyAxNTcuMzU1TDExMS42NDEgMTU4LjMwNEwxMDYuMjA3IDE1OS4wNTFMMTAwLjAyNSAxNTkuNTY5TDkyLjYzNjEgMTU5Ljg4NUw3OS45ODU2IDE2MEw2Ny4zNjM5IDE1OS44ODVMNTkuOTc0OCAxNTkuNTY5TDUzLjc5MzQgMTU5LjA1MUw0OC4zNTk0IDE1OC4zMDRMNDMuNDQzIDE1Ny4zNTVMMzguOTAwMyAxNTYuMjA1TDM0LjczMTQgMTU0LjgyNUwzMC44NSAxNTMuMjQzTDI3LjIyNzMgMTUxLjQ2MUwyMy44NjM0IDE0OS40NDhMMjAuNzU4MyAxNDcuMjM0TDE3Ljg1NDQgMTQ0Ljc5MUwxNS4yMDkzIDE0Mi4xNDZMMTIuNzY1NSAxMzkuMjQyTDEwLjU1MTcgMTM2LjEzN0w4LjUzOTA5IDEzMi43NzNMNi43NTY1MSAxMjkuMTVMNS4xNzUyIDEyNS4yNjlMMy43OTUxNSAxMjEuMUwyLjY0NTEgMTE2LjU1N0wxLjY5NjMyIDExMS42NDFMMC45NDg3ODcgMTA2LjIwN0wwLjQzMTI2NyAxMDAuMDI1TDAuMTE1MDA0IDkyLjYzNjFMMCA4MC4wMTQ0TDAuMTE1MDA0IDY3LjM2MzlMMC40MzEyNjcgNTkuOTc0OEwwLjk0ODc4NyA1My43OTM0TDEuNjk2MzIgNDguMzU5NEwyLjY0NTEgNDMuNDQzTDMuNzk1MTUgMzguOTAwM0w1LjE3NTIgMzQuNzMxNEw2Ljc1NjUxIDMwLjg1TDguNTM5MDkgMjcuMjI3M0wxMC41NTE3IDIzLjg2MzRMMTIuNzY1NSAyMC43NTgzTDE1LjIwOTMgMTcuODU0NEwxNy44NTQ0IDE1LjIwOTNMMjAuNzU4MyAxMi43NjU1TDIzLjg2MzQgMTAuNTUxN0wyNy4yMjczIDguNTM5MDlMMzAuODUgNi43NTY1MUwzNC43MzE0IDUuMTc1MkwzOC45MDAzIDMuNzk1MTVMNDMuNDQzIDIuNjQ1MUw0OC4zNTk0IDEuNjk2MzJMNTMuNzkzNCAwLjk0ODc4N0w1OS45NzQ4IDAuNDMxMjY3TDY3LjM2MzkgMC4xMTUwMDRMNzkuOTg1NiAwTDkyLjYzNjEgMC4xMTUwMDRMMTAwLjAyNSAwLjQzMTI2N0wxMDYuMjA3IDAuOTQ4Nzg3TDExMS42NDEgMS42OTYzMkwxMTYuNTU3IDIuNjQ1MUwxMjEuMSAzLjc5NTE1TDEyNS4yNjkgNS4xNzUyTDEyOS4xNSA2Ljc1NjUxTDEzMi43NzMgOC41MzkwOUwxMzYuMTM3IDEwLjU1MTdMMTM5LjI0MiAxMi43NjU1TDE0Mi4xNDYgMTUuMjA5M0wxNDQuNzkxIDE3Ljg1NDRMMTQ3LjIzNCAyMC43NTgzTDE0OS40NDggMjMuODYzNEwxNTEuNDYxIDI3LjIyNzNMMTUzLjI0MyAzMC44NUwxNTQuODI1IDM0LjczMTRMMTU2LjIwNSAzOC45MDAzTDE1Ny4zNTUgNDMuNDQzTDE1OC4zMDQgNDguMzU5NEwxNTkuMDUxIDUzLjc5MzRMMTU5LjU2OSA1OS45NzQ4TDE1OS44ODUgNjcuMzYzOUwxNjAgNzkuOTg1NloiIGZpbGw9IiNGMkNGQkUiLz4KPHBhdGggZD0iTTgzLjI5MjkgMTc1LjIyNUM4MS43MDI5IDE3Ny41MzEgNzguMjk3MSAxNzcuNTMxIDc2LjcwNzIgMTc1LjIyNUw2NC4zMjQ4IDE1Ny4yNzFDNjIuNDk0OCAxNTQuNjE3IDY0LjM5NDMgMTUxIDY3LjYxNzYgMTUxTDkyLjM4MjQgMTUxQzk1LjYwNTcgMTUxIDk3LjUwNTIgMTU0LjYxNyA5NS42NzUyIDE1Ny4yNzFMODMuMjkyOSAxNzUuMjI1WiIgZmlsbD0iI0YyQ0ZCRSIvPgo8L3N2Zz4K");
+	background-position: center;
+	background-size: contain;
+	position: absolute;
+	width: 160px;
+	height: 180px;
+	top: 9999999px;
+	gap: 6px;
+	line-height: 120%;
+	font-family: Grafita, sans-serif;
+
+	@include rfs(160px,	width);
+	@include rfs(180px, height);
+	@include rfs(14px, font-size);
+	@include rfs(30px, padding-top);
+	@include rfs(6px, gap);
+
+	&__heading {
+		@include rfs(24px, font-size);
+		@include rfs(8px, margin-bottom);
+	}
+
+
+}
+
+
+@media (width <= 992px) {
+	.genplan {
+		.doodle {
+			@include rfs(160px,	width);
+			@include rfs(180px, height);
+			@include rfs(12px, font-size);
+			@include rfs(24px, padding-top);
+			@include rfs(2px, gap);
+
+			&__heading {
+				@include rfs(4px, margin-bottom);
+				@include rfs(18px, font-size);
+			}
+		}
+	}
+}
+
+@media (width <= 768px) {
+	.genplan {
+		display: none;
+	}
+}

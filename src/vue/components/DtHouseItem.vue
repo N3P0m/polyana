@@ -14,7 +14,7 @@
           <span class="dt-house-item__caption">Площадь дома&nbsp;(м2)</span>
         </li>
         <li class="dt-house-item__prop">
-          <span class="dt-house-item__value">13,0</span>
+          <span class="dt-house-item__value">{{ house.sq_land }}</span>
           <span class="dt-house-item__caption">Площадь участка&nbsp;(сот.)</span>
         </li>
       </ul>
@@ -23,7 +23,7 @@
       </div>
     </ul>
     <div class="dt-house-item__footer">
-      <a :href="'/house?district=' + house.number" class="btn btn--primary dt-house-item__btn">
+      <a :href="'/house?district=' + house.number" class="btn btn--primary dt-house-item__btn" style="width: 80%;">
         Подробнее
       </a>
     </div>

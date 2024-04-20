@@ -20,7 +20,7 @@
 
 import VueMultiselect from "vue-multiselect";
 import 'vue-multiselect/dist/vue-multiselect.css';
-import {ref, computed, watch, onMounted, nextTick, reactive} from "vue";
+import {ref, computed, watch, onMounted} from "vue";
 
 const emit = defineEmits(['update:apartmentInfo'])
 const props = defineProps({
@@ -39,8 +39,7 @@ const selectedValues = ref({
   val1: {label: "Дом", value: null},
   val2: {label: "Секция", value: null},
 })
-const selectValue = ref({label: "Дом", value: null})
-const selectValue2 = ref({label: "Секция", value: null})
+
 const options1 = [{label: "Все", value: null}, {label: 'Корпус 1', value: 1}, {label: 'Корпус 2', value: 2}, {label: 'Корпус 3', value: 3}]
 const options2 = [
   [{label: "Все", value: null}, {label: 'Секция 1', value: 1}, {label: 'Секция 2', value: 2}, {label: 'Секция 3', value: 3},],
@@ -54,8 +53,8 @@ const currentOptions = computed(() => {
 })
 
 
-watch(() => props.apartmentInfo.activeHouse, (newValue) => {
-  selectedValues.value.val1 = options1.find((option) => option.value === props.apartmentInfo.activeHouse)
+watch(() => props.apartmentInfo.activeHouse, () => {
+  updateHouseNumberValue()
 })
 
 
@@ -81,6 +80,17 @@ function apartmentInfoUnion() {
     activeHousePart:  selectedValues.value.val2.value,
   }
 }
+
+function updateHouseNumberValue() {
+  selectedValues.value.val1 = options1.find((option) => option.value === props.apartmentInfo.activeHouse)
+}
+
+
+onMounted(() => {
+    if (props.apartmentInfo.activeHouse)  {
+      updateHouseNumberValue()
+    }
+})
 
 
 

@@ -255,7 +255,7 @@ const props = defineProps({
   }
 })
 
-const activeHouse = ref(props.apartmentInfo)
+const activeHouse = ref(props.apartmentInfo.activeHouse)
 const activeHousePart = ref(null)
 const btnLabel = ref('Выбрать секцию на схеме');
 const isShow = ref(false)

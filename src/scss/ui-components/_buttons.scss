@@ -338,6 +338,12 @@
 
 .switcher {
     position: relative;
+
+    &--position {
+        position: absolute;
+        right: 0;
+        min-width: 280px;
+    }
 }
 
 .switcher-container {
@@ -439,5 +445,20 @@
     }
 }
 
+@media (width <= 992px) {
+    .switcher {
+        .tab {
+            width: 90px;
+            height: 30px;
+            font-size: 0.725rem;
+        }
+
+        .glider {
+            width: 90px;
+            height: 30px;
+
+        }
+    }
+}
 
 

@@ -2,7 +2,7 @@
   <div class="dt-house-picker-filters dt-house-picker-filters--apartments">
     <div class="dt-house-picker-filters__select">
       <div class="dt-house-picker-filters__subheading p3">&nbsp;</div>
-      <SelectUnion v-model:apartmentInfo="apartmentInfo" />
+      <SelectUnion v-model:apartmentInfo="apartmentInfoRef" />
     </div>
     <div class="dt-house-picker-filters__slider">
       <h3 class="dt-house-picker-filters__subheading p3">Площадь (м2)</h3>
@@ -31,7 +31,7 @@
       <ActivePinsNumbers :max-count="limitRooms" v-model="roomsValue"/>
     </div>
     <div class="dt-house-picker-filters__building-filter">
-      <BuildingFilter v-model:apartmentInfo="apartmentInfo"></BuildingFilter>
+      <BuildingFilter v-model:apartmentInfo="apartmentInfoRef"></BuildingFilter>
     </div>
     <div class="dt-house-picker-filters__active-pins">
       <ActivePinsWithIcon v-model="tagsValue"/>
@@ -42,7 +42,7 @@
 
 import RangeSlider from "@/vue/components/RangeSlider.vue";
 import ActivePinsNumbers from "@/vue/components/ActivePinsNumbers.vue";
-import {defineComponent, ref, watch} from "vue";
+import {ref, watch} from "vue";
 import BuildingFilter from "@/vue/components/apartments/BuildingFilter.vue";
 import ActivePinsWithIcon from "@/vue/components/apartments/ActivePinsWithIcon.vue";
 import SelectUnion from "@/vue/components/ui/SelectUnion.vue";
@@ -62,7 +62,7 @@ const emit = defineEmits([
   "update:roomsValue"
 ]);
 
-const {minSq, maxSq, minCost, maxCost, currentFloorValue, tags} = defineProps({
+const {minSq, maxSq, minCost, maxCost, currentFloorValue, apartmentInfo, tags} = defineProps({
   limitSqMax: {
     type: Number
   },
@@ -101,6 +101,15 @@ const {minSq, maxSq, minCost, maxCost, currentFloorValue, tags} = defineProps({
     type: Number || null,
     default: null
   },
+  apartmentInfo: {
+    type: Object,
+    default: () => {
+      return {
+        activeHouse: null,
+        activeHousePart: null
+      }
+    }
+  },
   tags: {
     type: Array,
     default: () => []
@@ -115,9 +124,8 @@ const floorValue = ref(currentFloorValue);
 const floorsValue = ref([]);
 const roomsValue = ref([]);
 const tagsValue = ref(tags)
-const apartmentInfo = ref({
-  activeHouse: null,
-  activeHousePart: null
+const apartmentInfoRef = ref({
+  ...apartmentInfo
 })
 
 
@@ -140,7 +148,7 @@ watch(floorValue, (newValue) => {
 watch(tagsValue, (newValue) => {
   emit("update:tags", newValue)
 })
-watch(apartmentInfo, (newValue) => {
+watch(apartmentInfoRef, (newValue) => {
   emit("update:apartmentInfo", newValue)
 }, {deep: true})
 watch(floorsValue, (newValue) => {
