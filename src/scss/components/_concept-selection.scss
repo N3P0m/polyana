@@ -4,6 +4,13 @@
     margin: 0 auto;
 }
 
+.conception-switcher {
+    height: 50px;
+    display: flex;
+    position: relative;
+    justify-content: center
+}
+
 .concept-selection {
     &__tabs {
         display: flex;
@@ -132,6 +139,10 @@
 
         }
 
+    }
+
+    .conception-switcher {
+        display: none;
     }
 }
 @media (width <= 575px) {

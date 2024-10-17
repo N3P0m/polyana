@@ -1,7 +1,7 @@
 .choosing-townhouse {
 
     @include rfs(45px, padding-top);
-    @include rfs(118px, margin-bottom);
+    //@include rfs(60px, margin-bottom);
 
     &__heading {
         display: flex;

@@ -11,7 +11,7 @@ const swiperEl = document.querySelector('swiper-container')
 register()
 
 const houseColors = document.getElementById('house-colors')
-const colorsInputs = houseColors.querySelectorAll('[name="houseColor"]')
+const colorsInputs = houseColors ? houseColors.querySelectorAll('[name="houseColor"]') : null
 const houseColor = document.getElementById('house-color')
 
 function getHouseColor () {
@@ -26,9 +26,10 @@ function changeHouseColor (e) {
     }
 }
 
-houseColor.value = getHouseColor()
-
-colorsInputs.forEach(input => input.addEventListener('change', changeHouseColor))
+if (colorsInputs) {
+    houseColor.value = getHouseColor()
+    colorsInputs.forEach(input => input.addEventListener('change', changeHouseColor))
+}
 
 // const test = document.querySelector('.townhouse-pin')
 // const testContainer = document.querySelector('.townhouse-picker__pin-list')

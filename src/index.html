@@ -11,19 +11,8 @@
     <meta name="twitter:card" content="summary"/>
     <meta property="og:image" content="assets/img/og/OGpict.png"/>
     <title>Поляна - резиденция загородной жизни</title>
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-TZTZ3VH');</script>
+<!--    eslint-disable -->
+
     <!--    <link rel="stylesheet" href="css/normalize.css" />-->
     <!--    <link rel="stylesheet" href="css/style.css" />-->
 </head>
@@ -33,6 +22,19 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <include src="./components/header.html">
+    <script>(function (w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start':
+				new Date().getTime(), event: 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+		j.async = true;
+		j.src =
+			'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-TZTZ3VH');</script>
 <main>
     <h1 class="visually-hidden">Поляна - резиденция загородной жизни</h1>
     <include src="./components/main-page/main-view.html">
@@ -45,6 +47,7 @@
     <include src="./components/main-page/improvement.html">
     <include src="./components/main-page/advantages.html">
     <include src="./components/main-page/comfort.html">
+    <include src="./components/main-page/progress.html">
     <include src="./components/main-page/details.html">
     <include src="./components/callback-widget.html">
 

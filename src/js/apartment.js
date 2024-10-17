@@ -22,7 +22,6 @@ Object.assign(swiperContainer, swiperOptions)
 swiperContainer.initialize()
 
 swiperControls.forEach(control => control.addEventListener('click', (e) => {
-    console.log(e.currentTarget.dataset.slide)
     swiperContainer.swiper.slideTo(e.currentTarget.dataset.slide)
     // swiperContainer.swiper.slideNext()
 }))

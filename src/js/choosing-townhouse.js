@@ -1,6 +1,7 @@
 import './components/townhouse-picker'
 import './components/tabs'
 import './components/gallery'
+import './components/genplan'
 import './components/form'
 
 // const test = document.querySelector('.townhouse-pin')

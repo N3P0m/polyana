@@ -1,7 +1,5 @@
-import { loadAnimation } from 'lottie-web/'
 import { toggleBtnLoader } from '../helpers/toggle-btn-loader'
 import '../helpers/phone-mask'
-import animationData from '../lottie/ok.json'
 import JustValidate from 'just-validate'
 
 import Swiper from 'swiper'
@@ -93,8 +91,6 @@ applicationFormSwiperContainer.forEach((container, index) => {
                 window.Comagic && window.Comagic.addOfflineRequest(values)
                 swipers[`swiper-${index + 1}`].slideNext()
                 await defay(300)
-                startAnimation()
-                startAnimation()
             })
             .catch(() => {
                 alert('Что-то пошло не так, перезагрузите страницу и попробуйте снова')
@@ -107,28 +103,3 @@ applicationFormSwiperContainer.forEach((container, index) => {
 
 const defay = (time) => new Promise(resolve => setTimeout(resolve, time))
 // eslint-disable-next-line no-unused-vars
-
-const lot = document.querySelector('.success-message__icon')
-const ok = loadAnimation({
-    container: lot, // the dom element
-    renderer: 'svg',
-    loop: false,
-    autoplay: true,
-    animationData, // the animation data
-    // ...or if your animation contains repeaters:
-    // animationData: cloneDeep(animationData), // e.g. lodash.clonedeep
-    rendererSettings: {
-    // context: canvasContext, // the canvas context, only support "2d" context
-        preserveAspectRatio: 'xMinYMin slice', // Supports the same options as the svg element's preserveAspectRatio property
-        // clearCanvas: false,
-        progressiveLoad: true, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
-        hideOnTransparent: true // Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
-    // className: 'some-css-class-name',
-    // id: 'some-id'
-    }
-})
-ok.stop()
-
-function startAnimation () {
-    ok.play()
-}

@@ -24,7 +24,11 @@
     padding-top: 30px;
     padding-bottom: 120px;
     -webkit-box-pack: center;
-    -ms-flex-pack: center
+    -ms-flex-pack: center;
+
+    .swiper {
+        width: 100%;
+    }
 }
 
 
@@ -49,3 +53,4 @@
 
 
 }
+

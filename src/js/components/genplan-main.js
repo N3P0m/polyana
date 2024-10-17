@@ -1,7 +1,7 @@
 const genplan = document.querySelector('.genplan')
 const genplanHouse = genplan.querySelectorAll('.genplan__house')
 const houseActiveClass = 'genplan__house-mask--active'
-const doodleActiveClass = 'genplan__doodle--active'
+// const doodleActiveClass = 'genplan__doodle--active'
 
 const genplanLinks = {
     1: '/house',
@@ -12,17 +12,17 @@ const genplanLinks = {
 function houseHoverHandler (e) {
     const target = e.target
     const mask = genplan.querySelector(`[data-house-mask="${target.dataset.house}"]`)
-    const doodle = genplan.querySelector(`[data-doodle-house="${target.dataset.house}"]`)
+    // const doodle = genplan.querySelector(`[data-doodle-house="${target.dataset.house}"]`)
 
     if (e.type === 'mouseover') {
         // console.log(e.type)
         mask.classList.add(houseActiveClass)
-        doodle.classList.add(doodleActiveClass)
+        // doodle.classList.add(doodleActiveClass)
     }
     if (e.type === 'mouseout') {
         mask.classList.remove(houseActiveClass)
         // console.log(e.type)
-        doodle.classList.remove(doodleActiveClass)
+        // doodle.classList.remove(doodleActiveClass)
     }
 }
 

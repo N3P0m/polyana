@@ -48,6 +48,7 @@ const pins = reactive([
     isActive: false,
     value: 'Терраса с камином'
   },
+
   {
     label: 'Терраса',
     iconClass: 'icon-selection--terrace',

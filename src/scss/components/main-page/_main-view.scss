@@ -31,6 +31,10 @@
     @include rfs(2.25rem, font-size);
 }
 
+section[id] {
+    scroll-margin-top: 6rem;
+}
+
 
 @media (width <= 991px) {
     .promo-top {

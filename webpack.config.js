@@ -4,7 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader');
+const { VueLoaderPlugin } = require('vue-loader')
+const CopyPlugin = require('copy-webpack-plugin')
+const partytown = require('@builder.io/partytown/utils')
 // const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 // const json = require('json-loader!./file.json');
@@ -47,12 +49,20 @@ const processNestedHtml = (content, loaderContext, dir = null) =>
             const filePath = path.resolve(dir || loaderContext.context, src)
             loaderContext.dependency(filePath)
             return `<!-- START ${src.split('/').at(-1)} --> \n` +
-                processNestedHtml(loaderContext.fs.readFileSync(filePath, 'utf8'), loaderContext, path.dirname(filePath)) +
-                    `\n <!-- END ${src.split('/').at(-1)} -->`
+				processNestedHtml(loaderContext.fs.readFileSync(filePath, 'utf8'), loaderContext, path.dirname(filePath)) +
+				`\n <!-- END ${src.split('/').at(-1)} -->`
         })
 
 const pluginsDev = [
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+        patterns: [
+            {
+                from: partytown.libDirPath(),
+                to: path.join(__dirname, './dist', '~partytown')
+            }
+        ]
+    }),
     ...htmlPlugins,
     // new StylelintPlugin({
     //     fix: false,
@@ -61,9 +71,9 @@ const pluginsDev = [
     new MiniCssExtractPlugin({
         filename: 'css/[name].css'
     }),
-    new ESLintPlugin({
-        fix: true
-    }),
+    // new ESLintPlugin({
+    //     fix: true
+    // }),
     new TerserPlugin({
         terserOptions: {
             compress: {
@@ -247,11 +257,12 @@ const config = {
         'choosing-house': path.resolve(__dirname, './src/choosing-house.js'),
         'choosing-townhouse': path.resolve(__dirname, './src/choosing-townhouse.js'),
         'terms-of-purchase-detail': path.resolve(__dirname, './src/terms-of-purchase-detail.js'),
-        'houses': path.resolve(__dirname, './src/houses.js'),
-        'house': path.resolve(__dirname, './src/house.js'),
-        'apartments': path.resolve(__dirname, './src/apartments.js'),
-        'apartment': path.resolve(__dirname, './src/apartment.js'),
-        'error404': path.resolve(__dirname, './src/error404.js')
+        houses: path.resolve(__dirname, './src/houses.js'),
+        house: path.resolve(__dirname, './src/house.js'),
+        apartments: path.resolve(__dirname, './src/apartments.js'),
+        apartment: path.resolve(__dirname, './src/apartment.js'),
+        error404: path.resolve(__dirname, './src/error404.js'),
+        '404-med': path.resolve(__dirname, './src/404-med.js')
     },
     resolve: {
         alias: {

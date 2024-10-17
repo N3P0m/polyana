@@ -6,7 +6,7 @@ const doodle = genplan.querySelector('.genplan__doodle')
 const houseActiveClass = 'genplan__house-mask--active'
 const doodleActiveClass = 'genplan__doodle--active'
 
-const crmData = window.crmData
+const crmData = window.crmDataHouses
 
 // console.log(crmData)
 
